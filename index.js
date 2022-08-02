@@ -1,6 +1,6 @@
 const S3 = require('aws-sdk/clients/s3');
 const core = require('@actions/core');
-const github = require('@actions/github');
+const fs = require('fs');
 
 try {
     const endpoint = core.getInput('endpoint');
@@ -19,10 +19,10 @@ try {
 
     var uploadParams = { Bucket: bucket, Key: '', Body: '' };
 
-    var fs = require('fs');
     var fileStream = fs.createReadStream(file);
     fileStream.on('error', function (err) {
         console.log('File Error', err);
+        core.setFailed(err);
     });
     uploadParams.Body = fileStream;
     if (destination == "") {
@@ -34,6 +34,7 @@ try {
     s3.upload(uploadParams, function (err, data) {
         if (err) {
             console.log("Error", err);
+            core.setFailed(err);
         } if (data) {
             console.log("Upload Success", data.Location);
         }
