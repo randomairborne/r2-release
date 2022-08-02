@@ -1,4 +1,4 @@
-import S3 from 'aws-sdk/clients/s3.js';
+const S3 = require('aws-sdk/clients/s3');
 const core = require('@actions/core');
 const github = require('@actions/github');
 
