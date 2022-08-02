@@ -1,0 +1,25 @@
+name: 'R2 Release'
+description: 'Upload a file to CloudFlare R2 to release it'
+inputs:
+  endpoint:
+    description: 'S3 API endpoint'
+    required: true
+  accesskeyid:
+    description: 'S3 access key ID'
+    required: true
+  secretaccesskey:
+    description: 'S3 access key'
+    required: true
+  bucket:
+    description: 'This.... is a BUCKET. DEAR GOD.'
+    required: true
+  file:
+    description: 'File you would like to upload'
+    required: true
+  destination:
+    description: 'S3 end filepath (defaults to the name of the file at the root of the bucket)'
+    required: false
+    default: ""
+runs:
+  using: 'node16'
+  main: 'index.js'
