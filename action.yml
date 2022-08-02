@@ -1,5 +1,7 @@
 name: 'R2 Release'
 description: 'Upload a file to CloudFlare R2 to release it'
+icon: 'archive'
+color: 'blue'
 inputs:
   endpoint:
     description: 'S3 API endpoint'
