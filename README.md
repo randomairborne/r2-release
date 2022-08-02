@@ -29,7 +29,7 @@ DEAR GOD<br>
 **Optional** Where you want the file to end up. Defaults to '/(filename)'.
 
 ## Example usage
-
+```yaml
 uses: randomairborne/r2-release@main
 with:
   endpoint: ${{ secrets.S3_ENDPOINT }}
@@ -38,3 +38,4 @@ with:
   bucket: 'my-s3-bucket'
   file: './target/release/my-app.exe'
   destination: '/download/my-app.exe'
+  ```
