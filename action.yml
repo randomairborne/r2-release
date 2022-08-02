@@ -20,7 +20,7 @@ inputs:
     description: 'File you would like to upload'
     required: true
   destination:
-    description: 'S3 end filepath (defaults to the name of the file at the root of the bucket)'
+    description: 'S3 end filepath (defaults to the name of the file)'
     required: false
     default: ""
 runs:
