@@ -4,16 +4,16 @@ const fs = require('fs');
 
 try {
     const endpoint = core.getInput('endpoint');
-    const accesskeyid = core.getInput('accesskeyid');
-    const secretaccesskey = core.getInput('secretaccesskey');
+    const accessKeyID = core.getInput('access_key_id');
+    const secretAccessKey = core.getInput('secret_access_key');
     const bucket = core.getInput('bucket');
     const file = core.getInput('file');
     const destination = core.getInput('destination');
 
     const s3 = new S3({
         endpoint: endpoint,
-        accessKeyId: accesskeyid,
-        secretAccessKey: secretaccesskey,
+        accessKeyId: accessKeyID,
+        secretAccessKey: secretAccessKey,
         signatureVersion: 'v4',
     });
 

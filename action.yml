@@ -5,22 +5,22 @@ branding:
   color: 'blue'
 inputs:
   endpoint:
-    description: 'S3 API endpoint'
+    description: 'R2 API endpoint'
     required: true
-  accesskeyid:
-    description: 'S3 access key ID'
+  access_key_id:
+    description: 'R2 Access Key ID'
     required: true
-  secretaccesskey:
-    description: 'S3 access key'
+  secret_access_key:
+    description: 'R2 Access Key'
     required: true
   bucket:
-    description: 'This.... is a BUCKET. DEAR GOD.'
+    description: 'Bucket name'
     required: true
   file:
     description: 'File you would like to upload'
     required: true
   destination:
-    description: 'S3 end filepath (defaults to the name of the file)'
+    description: 'R2 end filepath (defaults to the name of the file)'
     required: false
     default: ""
 runs:

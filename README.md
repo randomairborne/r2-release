@@ -1,24 +1,23 @@
 # r2-upload action
 
-This action uploads a file to Cloudflare R2 (or any other S3 provider)
+This action uploads a file to Cloudflare R2
 
 ## Inputs
 
 ## `endpoint`
 
-**Required** The S3 endpoint URL.
+**Required** The R2 endpoint URL. Example: `https://<accountid>.r2.cloudflarestorage.com`
 
-## `accesskeyid`
+## `access_key_id`
 
-**Required** The S3 access key ID.
+**Required** The R2 Access Key ID.
 
-## `secretaccesskey`
+## `secret_access_key`
 
-**Required** The S3 access key.
+**Required** The R2 Access Key.
 
 ## `bucket`
-DEAR GOD<br>
-**Required** The S3 bucket you want to upload to.
+**Required** The R2 bucket you want to upload to.
 
 ## `file`
 
@@ -30,12 +29,13 @@ DEAR GOD<br>
 
 ## Example usage
 ```yaml
-uses: randomairborne/r2-release@main
-with:
-  endpoint: ${{ secrets.S3_ENDPOINT }}
-  accesskeyid: ${{ secrets.S3_ACCESS_KEY_ID }}
-  secretaccesskey: ${{ secrets.S3_SECRET_ACCESS_KEY }}
-  bucket: 'my-s3-bucket'
-  file: './target/release/my-app.exe'
-  destination: '/download/my-app.exe'
-  ```
+- name: Upload file to R2
+  uses: magicwallet/r2-upload@main
+  with:
+    endpoint: ${{ secrets.R2_ENDPOINT }}
+    access_key_id: ${{ secrets.R2_ACCESS_KEY_ID }}
+    secret_access_key: ${{ secrets.R2_ACCESS_SECRET_KEY }}
+    bucket: ${{ secrets.R2_BUCKET }}
+    file: ./index.html
+    destination: '/public'
+```
