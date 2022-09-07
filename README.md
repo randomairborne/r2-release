@@ -1,4 +1,4 @@
-# r2-release action
+# r2-upload action
 
 This action uploads a file to Cloudflare R2 (or any other S3 provider)
 
