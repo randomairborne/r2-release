@@ -1,5 +1,5 @@
-name: 'R2 Release'
-description: 'Upload a file to CloudFlare R2 to release it'
+name: 'R2 Upload'
+description: 'Upload a file to CloudFlare R2 bucket'
 branding:
   icon: 'archive'
   color: 'blue'
