@@ -20,11 +20,11 @@ declare class SageMakerFeatureStoreRuntime extends Service {
    */
   batchGetRecord(callback?: (err: AWSError, data: SageMakerFeatureStoreRuntime.Types.BatchGetRecordResponse) => void): Request<SageMakerFeatureStoreRuntime.Types.BatchGetRecordResponse, AWSError>;
   /**
-   * Deletes a Record from a FeatureGroup. A new record will show up in the OfflineStore when the DeleteRecord API is called. This record will have a value of True in the is_deleted column.
+   * Deletes a Record from a FeatureGroup in the OnlineStore. Feature Store supports both SOFT_DELETE and HARD_DELETE. For SOFT_DELETE (default), feature columns are set to null and the record is no longer retrievable by GetRecord or BatchGetRecord. For HARD_DELETE, the complete Record is removed from the OnlineStore. In both cases, Feature Store appends the deleted record marker to the OfflineStore with feature values set to null, is_deleted value set to True, and EventTime set to the delete input EventTime. Note that the EventTime specified in DeleteRecord should be set later than the EventTime of the existing record in the OnlineStore for that RecordIdentifer. If it is not, the deletion does not occur:   For SOFT_DELETE, the existing (undeleted) record remains in the OnlineStore, though the delete record marker is still written to the OfflineStore.    HARD_DELETE returns EventTime: 400 ValidationException to indicate that the delete operation failed. No delete record marker is written to the OfflineStore.  
    */
   deleteRecord(params: SageMakerFeatureStoreRuntime.Types.DeleteRecordRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Deletes a Record from a FeatureGroup. A new record will show up in the OfflineStore when the DeleteRecord API is called. This record will have a value of True in the is_deleted column.
+   * Deletes a Record from a FeatureGroup in the OnlineStore. Feature Store supports both SOFT_DELETE and HARD_DELETE. For SOFT_DELETE (default), feature columns are set to null and the record is no longer retrievable by GetRecord or BatchGetRecord. For HARD_DELETE, the complete Record is removed from the OnlineStore. In both cases, Feature Store appends the deleted record marker to the OfflineStore with feature values set to null, is_deleted value set to True, and EventTime set to the delete input EventTime. Note that the EventTime specified in DeleteRecord should be set later than the EventTime of the existing record in the OnlineStore for that RecordIdentifer. If it is not, the deletion does not occur:   For SOFT_DELETE, the existing (undeleted) record remains in the OnlineStore, though the delete record marker is still written to the OfflineStore.    HARD_DELETE returns EventTime: 400 ValidationException to indicate that the delete operation failed. No delete record marker is written to the OfflineStore.  
    */
   deleteRecord(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
@@ -55,11 +55,11 @@ declare namespace SageMakerFeatureStoreRuntime {
      */
     RecordIdentifierValueAsString: ValueAsString;
     /**
-     * The error code of an error that has occured when attempting to retrieve a batch of Records. For more information on errors, see  Errors.
+     * The error code of an error that has occurred when attempting to retrieve a batch of Records. For more information on errors, see Errors.
      */
     ErrorCode: ValueAsString;
     /**
-     * The error message of an error that has occured when attempting to retrieve a record in the batch.
+     * The error message of an error that has occurred when attempting to retrieve a record in the batch.
      */
     ErrorMessage: Message;
   }
@@ -91,7 +91,7 @@ declare namespace SageMakerFeatureStoreRuntime {
      */
     Records: BatchGetRecordResultDetails;
     /**
-     * A list of errors that have occured when retrieving a batch of Records.
+     * A list of errors that have occurred when retrieving a batch of Records.
      */
     Errors: BatchGetRecordErrors;
     /**
@@ -105,7 +105,7 @@ declare namespace SageMakerFeatureStoreRuntime {
      */
     FeatureGroupName: ValueAsString;
     /**
-     * The value of the record identifer in string format.
+     * The value of the record identifier in string format.
      */
     RecordIdentifierValueAsString: ValueAsString;
     /**
@@ -127,7 +127,16 @@ declare namespace SageMakerFeatureStoreRuntime {
      * Timestamp indicating when the deletion event occurred. EventTime can be used to query data at a certain point in time.
      */
     EventTime: ValueAsString;
+    /**
+     * A list of stores from which you're deleting the record. By default, Feature Store deletes the record from all of the stores that you're using for the FeatureGroup.
+     */
+    TargetStores?: TargetStores;
+    /**
+     * The name of the deletion mode for deleting the record. By default, the deletion mode is set to SoftDelete.
+     */
+    DeletionMode?: DeletionMode;
   }
+  export type DeletionMode = "SoftDelete"|"HardDelete"|string;
   export type FeatureGroupName = string;
   export type FeatureName = string;
   export type FeatureNames = FeatureName[];
@@ -143,7 +152,7 @@ declare namespace SageMakerFeatureStoreRuntime {
   }
   export interface GetRecordRequest {
     /**
-     * The name of the feature group in which you want to put the records.
+     * The name of the feature group from which you want to retrieve a record.
      */
     FeatureGroupName: FeatureGroupName;
     /**
@@ -171,9 +180,15 @@ declare namespace SageMakerFeatureStoreRuntime {
      * List of FeatureValues to be inserted. This will be a full over-write. If you only want to update few of the feature values, do the following:   Use GetRecord to retrieve the latest record.   Update the record returned from GetRecord.    Use PutRecord to update feature values.  
      */
     Record: Record;
+    /**
+     * A list of stores to which you're adding the record. By default, Feature Store adds the record to all of the stores that you're using for the FeatureGroup.
+     */
+    TargetStores?: TargetStores;
   }
   export type Record = FeatureValue[];
   export type RecordIdentifiers = ValueAsString[];
+  export type TargetStore = "OnlineStore"|"OfflineStore"|string;
+  export type TargetStores = TargetStore[];
   export type UnprocessedIdentifiers = BatchGetRecordIdentifier[];
   export type ValueAsString = string;
   /**

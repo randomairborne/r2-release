@@ -3,6 +3,7 @@
 var forEach = require('for-each');
 var availableTypedArrays = require('available-typed-arrays');
 var callBound = require('call-bind/callBound');
+var gOPD = require('gopd');
 
 var $toString = callBound('Object.prototype.toString');
 var hasToStringTag = require('has-tostringtag/shams')();
@@ -12,7 +13,6 @@ var typedArrays = availableTypedArrays();
 
 var $slice = callBound('String.prototype.slice');
 var toStrTags = {};
-var gOPD = require('es-abstract/helpers/getOwnPropertyDescriptor');
 var getPrototypeOf = Object.getPrototypeOf; // require('getprototypeof');
 if (hasToStringTag && gOPD && getPrototypeOf) {
 	forEach(typedArrays, function (typedArray) {

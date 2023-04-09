@@ -44,43 +44,43 @@ declare class Imagebuilder extends Service {
    */
   createDistributionConfiguration(callback?: (err: AWSError, data: Imagebuilder.Types.CreateDistributionConfigurationResponse) => void): Request<Imagebuilder.Types.CreateDistributionConfigurationResponse, AWSError>;
   /**
-   *  Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
+   * Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
    */
   createImage(params: Imagebuilder.Types.CreateImageRequest, callback?: (err: AWSError, data: Imagebuilder.Types.CreateImageResponse) => void): Request<Imagebuilder.Types.CreateImageResponse, AWSError>;
   /**
-   *  Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
+   * Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
    */
   createImage(callback?: (err: AWSError, data: Imagebuilder.Types.CreateImageResponse) => void): Request<Imagebuilder.Types.CreateImageResponse, AWSError>;
   /**
-   *  Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
+   * Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
    */
   createImagePipeline(params: Imagebuilder.Types.CreateImagePipelineRequest, callback?: (err: AWSError, data: Imagebuilder.Types.CreateImagePipelineResponse) => void): Request<Imagebuilder.Types.CreateImagePipelineResponse, AWSError>;
   /**
-   *  Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
+   * Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
    */
   createImagePipeline(callback?: (err: AWSError, data: Imagebuilder.Types.CreateImagePipelineResponse) => void): Request<Imagebuilder.Types.CreateImagePipelineResponse, AWSError>;
   /**
-   *  Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
+   * Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
    */
   createImageRecipe(params: Imagebuilder.Types.CreateImageRecipeRequest, callback?: (err: AWSError, data: Imagebuilder.Types.CreateImageRecipeResponse) => void): Request<Imagebuilder.Types.CreateImageRecipeResponse, AWSError>;
   /**
-   *  Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
+   * Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
    */
   createImageRecipe(callback?: (err: AWSError, data: Imagebuilder.Types.CreateImageRecipeResponse) => void): Request<Imagebuilder.Types.CreateImageRecipeResponse, AWSError>;
   /**
-   *  Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+   * Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
    */
   createInfrastructureConfiguration(params: Imagebuilder.Types.CreateInfrastructureConfigurationRequest, callback?: (err: AWSError, data: Imagebuilder.Types.CreateInfrastructureConfigurationResponse) => void): Request<Imagebuilder.Types.CreateInfrastructureConfigurationResponse, AWSError>;
   /**
-   *  Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+   * Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
    */
   createInfrastructureConfiguration(callback?: (err: AWSError, data: Imagebuilder.Types.CreateInfrastructureConfigurationResponse) => void): Request<Imagebuilder.Types.CreateInfrastructureConfigurationResponse, AWSError>;
   /**
-   *  Deletes a component build version.
+   * Deletes a component build version.
    */
   deleteComponent(params: Imagebuilder.Types.DeleteComponentRequest, callback?: (err: AWSError, data: Imagebuilder.Types.DeleteComponentResponse) => void): Request<Imagebuilder.Types.DeleteComponentResponse, AWSError>;
   /**
-   *  Deletes a component build version.
+   * Deletes a component build version.
    */
   deleteComponent(callback?: (err: AWSError, data: Imagebuilder.Types.DeleteComponentResponse) => void): Request<Imagebuilder.Types.DeleteComponentResponse, AWSError>;
   /**
@@ -92,11 +92,11 @@ declare class Imagebuilder extends Service {
    */
   deleteContainerRecipe(callback?: (err: AWSError, data: Imagebuilder.Types.DeleteContainerRecipeResponse) => void): Request<Imagebuilder.Types.DeleteContainerRecipeResponse, AWSError>;
   /**
-   *  Deletes a distribution configuration.
+   * Deletes a distribution configuration.
    */
   deleteDistributionConfiguration(params: Imagebuilder.Types.DeleteDistributionConfigurationRequest, callback?: (err: AWSError, data: Imagebuilder.Types.DeleteDistributionConfigurationResponse) => void): Request<Imagebuilder.Types.DeleteDistributionConfigurationResponse, AWSError>;
   /**
-   *  Deletes a distribution configuration.
+   * Deletes a distribution configuration.
    */
   deleteDistributionConfiguration(callback?: (err: AWSError, data: Imagebuilder.Types.DeleteDistributionConfigurationResponse) => void): Request<Imagebuilder.Types.DeleteDistributionConfigurationResponse, AWSError>;
   /**
@@ -108,43 +108,43 @@ declare class Imagebuilder extends Service {
    */
   deleteImage(callback?: (err: AWSError, data: Imagebuilder.Types.DeleteImageResponse) => void): Request<Imagebuilder.Types.DeleteImageResponse, AWSError>;
   /**
-   *  Deletes an image pipeline.
+   * Deletes an image pipeline.
    */
   deleteImagePipeline(params: Imagebuilder.Types.DeleteImagePipelineRequest, callback?: (err: AWSError, data: Imagebuilder.Types.DeleteImagePipelineResponse) => void): Request<Imagebuilder.Types.DeleteImagePipelineResponse, AWSError>;
   /**
-   *  Deletes an image pipeline.
+   * Deletes an image pipeline.
    */
   deleteImagePipeline(callback?: (err: AWSError, data: Imagebuilder.Types.DeleteImagePipelineResponse) => void): Request<Imagebuilder.Types.DeleteImagePipelineResponse, AWSError>;
   /**
-   *  Deletes an image recipe.
+   * Deletes an image recipe.
    */
   deleteImageRecipe(params: Imagebuilder.Types.DeleteImageRecipeRequest, callback?: (err: AWSError, data: Imagebuilder.Types.DeleteImageRecipeResponse) => void): Request<Imagebuilder.Types.DeleteImageRecipeResponse, AWSError>;
   /**
-   *  Deletes an image recipe.
+   * Deletes an image recipe.
    */
   deleteImageRecipe(callback?: (err: AWSError, data: Imagebuilder.Types.DeleteImageRecipeResponse) => void): Request<Imagebuilder.Types.DeleteImageRecipeResponse, AWSError>;
   /**
-   *  Deletes an infrastructure configuration.
+   * Deletes an infrastructure configuration.
    */
   deleteInfrastructureConfiguration(params: Imagebuilder.Types.DeleteInfrastructureConfigurationRequest, callback?: (err: AWSError, data: Imagebuilder.Types.DeleteInfrastructureConfigurationResponse) => void): Request<Imagebuilder.Types.DeleteInfrastructureConfigurationResponse, AWSError>;
   /**
-   *  Deletes an infrastructure configuration.
+   * Deletes an infrastructure configuration.
    */
   deleteInfrastructureConfiguration(callback?: (err: AWSError, data: Imagebuilder.Types.DeleteInfrastructureConfigurationResponse) => void): Request<Imagebuilder.Types.DeleteInfrastructureConfigurationResponse, AWSError>;
   /**
-   *  Gets a component object.
+   * Gets a component object.
    */
   getComponent(params: Imagebuilder.Types.GetComponentRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetComponentResponse) => void): Request<Imagebuilder.Types.GetComponentResponse, AWSError>;
   /**
-   *  Gets a component object.
+   * Gets a component object.
    */
   getComponent(callback?: (err: AWSError, data: Imagebuilder.Types.GetComponentResponse) => void): Request<Imagebuilder.Types.GetComponentResponse, AWSError>;
   /**
-   *  Gets a component policy.
+   * Gets a component policy.
    */
   getComponentPolicy(params: Imagebuilder.Types.GetComponentPolicyRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetComponentPolicyResponse) => void): Request<Imagebuilder.Types.GetComponentPolicyResponse, AWSError>;
   /**
-   *  Gets a component policy.
+   * Gets a component policy.
    */
   getComponentPolicy(callback?: (err: AWSError, data: Imagebuilder.Types.GetComponentPolicyResponse) => void): Request<Imagebuilder.Types.GetComponentPolicyResponse, AWSError>;
   /**
@@ -164,61 +164,77 @@ declare class Imagebuilder extends Service {
    */
   getContainerRecipePolicy(callback?: (err: AWSError, data: Imagebuilder.Types.GetContainerRecipePolicyResponse) => void): Request<Imagebuilder.Types.GetContainerRecipePolicyResponse, AWSError>;
   /**
-   *  Gets a distribution configuration.
+   * Gets a distribution configuration.
    */
   getDistributionConfiguration(params: Imagebuilder.Types.GetDistributionConfigurationRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetDistributionConfigurationResponse) => void): Request<Imagebuilder.Types.GetDistributionConfigurationResponse, AWSError>;
   /**
-   *  Gets a distribution configuration.
+   * Gets a distribution configuration.
    */
   getDistributionConfiguration(callback?: (err: AWSError, data: Imagebuilder.Types.GetDistributionConfigurationResponse) => void): Request<Imagebuilder.Types.GetDistributionConfigurationResponse, AWSError>;
   /**
-   *  Gets an image.
+   * Gets an image.
    */
   getImage(params: Imagebuilder.Types.GetImageRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetImageResponse) => void): Request<Imagebuilder.Types.GetImageResponse, AWSError>;
   /**
-   *  Gets an image.
+   * Gets an image.
    */
   getImage(callback?: (err: AWSError, data: Imagebuilder.Types.GetImageResponse) => void): Request<Imagebuilder.Types.GetImageResponse, AWSError>;
   /**
-   *  Gets an image pipeline.
+   * Gets an image pipeline.
    */
   getImagePipeline(params: Imagebuilder.Types.GetImagePipelineRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetImagePipelineResponse) => void): Request<Imagebuilder.Types.GetImagePipelineResponse, AWSError>;
   /**
-   *  Gets an image pipeline.
+   * Gets an image pipeline.
    */
   getImagePipeline(callback?: (err: AWSError, data: Imagebuilder.Types.GetImagePipelineResponse) => void): Request<Imagebuilder.Types.GetImagePipelineResponse, AWSError>;
   /**
-   *  Gets an image policy.
+   * Gets an image policy.
    */
   getImagePolicy(params: Imagebuilder.Types.GetImagePolicyRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetImagePolicyResponse) => void): Request<Imagebuilder.Types.GetImagePolicyResponse, AWSError>;
   /**
-   *  Gets an image policy.
+   * Gets an image policy.
    */
   getImagePolicy(callback?: (err: AWSError, data: Imagebuilder.Types.GetImagePolicyResponse) => void): Request<Imagebuilder.Types.GetImagePolicyResponse, AWSError>;
   /**
-   *  Gets an image recipe.
+   * Gets an image recipe.
    */
   getImageRecipe(params: Imagebuilder.Types.GetImageRecipeRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetImageRecipeResponse) => void): Request<Imagebuilder.Types.GetImageRecipeResponse, AWSError>;
   /**
-   *  Gets an image recipe.
+   * Gets an image recipe.
    */
   getImageRecipe(callback?: (err: AWSError, data: Imagebuilder.Types.GetImageRecipeResponse) => void): Request<Imagebuilder.Types.GetImageRecipeResponse, AWSError>;
   /**
-   *  Gets an image recipe policy.
+   * Gets an image recipe policy.
    */
   getImageRecipePolicy(params: Imagebuilder.Types.GetImageRecipePolicyRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetImageRecipePolicyResponse) => void): Request<Imagebuilder.Types.GetImageRecipePolicyResponse, AWSError>;
   /**
-   *  Gets an image recipe policy.
+   * Gets an image recipe policy.
    */
   getImageRecipePolicy(callback?: (err: AWSError, data: Imagebuilder.Types.GetImageRecipePolicyResponse) => void): Request<Imagebuilder.Types.GetImageRecipePolicyResponse, AWSError>;
   /**
-   *  Gets an infrastructure configuration.
+   * Gets an infrastructure configuration.
    */
   getInfrastructureConfiguration(params: Imagebuilder.Types.GetInfrastructureConfigurationRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetInfrastructureConfigurationResponse) => void): Request<Imagebuilder.Types.GetInfrastructureConfigurationResponse, AWSError>;
   /**
-   *  Gets an infrastructure configuration.
+   * Gets an infrastructure configuration.
    */
   getInfrastructureConfiguration(callback?: (err: AWSError, data: Imagebuilder.Types.GetInfrastructureConfigurationResponse) => void): Request<Imagebuilder.Types.GetInfrastructureConfigurationResponse, AWSError>;
+  /**
+   * Get the runtime information that was logged for a specific runtime instance of the workflow.
+   */
+  getWorkflowExecution(params: Imagebuilder.Types.GetWorkflowExecutionRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetWorkflowExecutionResponse) => void): Request<Imagebuilder.Types.GetWorkflowExecutionResponse, AWSError>;
+  /**
+   * Get the runtime information that was logged for a specific runtime instance of the workflow.
+   */
+  getWorkflowExecution(callback?: (err: AWSError, data: Imagebuilder.Types.GetWorkflowExecutionResponse) => void): Request<Imagebuilder.Types.GetWorkflowExecutionResponse, AWSError>;
+  /**
+   * Get the runtime information that was logged for a specific runtime instance of the workflow step.
+   */
+  getWorkflowStepExecution(params: Imagebuilder.Types.GetWorkflowStepExecutionRequest, callback?: (err: AWSError, data: Imagebuilder.Types.GetWorkflowStepExecutionResponse) => void): Request<Imagebuilder.Types.GetWorkflowStepExecutionResponse, AWSError>;
+  /**
+   * Get the runtime information that was logged for a specific runtime instance of the workflow step.
+   */
+  getWorkflowStepExecution(callback?: (err: AWSError, data: Imagebuilder.Types.GetWorkflowStepExecutionResponse) => void): Request<Imagebuilder.Types.GetWorkflowStepExecutionResponse, AWSError>;
   /**
    * Imports a component and transforms its data into a component document.
    */
@@ -236,19 +252,19 @@ declare class Imagebuilder extends Service {
    */
   importVmImage(callback?: (err: AWSError, data: Imagebuilder.Types.ImportVmImageResponse) => void): Request<Imagebuilder.Types.ImportVmImageResponse, AWSError>;
   /**
-   *  Returns the list of component build versions for the specified semantic version.  The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.  Filtering: With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards. 
+   * Returns the list of component build versions for the specified semantic version.  The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.  Filtering: With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards. 
    */
   listComponentBuildVersions(params: Imagebuilder.Types.ListComponentBuildVersionsRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListComponentBuildVersionsResponse) => void): Request<Imagebuilder.Types.ListComponentBuildVersionsResponse, AWSError>;
   /**
-   *  Returns the list of component build versions for the specified semantic version.  The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.  Filtering: With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards. 
+   * Returns the list of component build versions for the specified semantic version.  The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.  Filtering: With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards. 
    */
   listComponentBuildVersions(callback?: (err: AWSError, data: Imagebuilder.Types.ListComponentBuildVersionsResponse) => void): Request<Imagebuilder.Types.ListComponentBuildVersionsResponse, AWSError>;
   /**
-   * Returns the list of component build versions for the specified semantic version.  The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.  Filtering: With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards. 
+   * Returns the list of components that can be filtered by name, or by using the listed filters to streamline results. Newly created components can take up to two minutes to appear in the ListComponents API Results.  The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.  Filtering: With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards. 
    */
   listComponents(params: Imagebuilder.Types.ListComponentsRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListComponentsResponse) => void): Request<Imagebuilder.Types.ListComponentsResponse, AWSError>;
   /**
-   * Returns the list of component build versions for the specified semantic version.  The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.  Filtering: With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards. 
+   * Returns the list of components that can be filtered by name, or by using the listed filters to streamline results. Newly created components can take up to two minutes to appear in the ListComponents API Results.  The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.  Filtering: With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards. 
    */
   listComponents(callback?: (err: AWSError, data: Imagebuilder.Types.ListComponentsResponse) => void): Request<Imagebuilder.Types.ListComponentsResponse, AWSError>;
   /**
@@ -268,11 +284,11 @@ declare class Imagebuilder extends Service {
    */
   listDistributionConfigurations(callback?: (err: AWSError, data: Imagebuilder.Types.ListDistributionConfigurationsResponse) => void): Request<Imagebuilder.Types.ListDistributionConfigurationsResponse, AWSError>;
   /**
-   *  Returns a list of image build versions.
+   * Returns a list of image build versions.
    */
   listImageBuildVersions(params: Imagebuilder.Types.ListImageBuildVersionsRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListImageBuildVersionsResponse) => void): Request<Imagebuilder.Types.ListImageBuildVersionsResponse, AWSError>;
   /**
-   *  Returns a list of image build versions.
+   * Returns a list of image build versions.
    */
   listImageBuildVersions(callback?: (err: AWSError, data: Imagebuilder.Types.ListImageBuildVersionsResponse) => void): Request<Imagebuilder.Types.ListImageBuildVersionsResponse, AWSError>;
   /**
@@ -284,11 +300,11 @@ declare class Imagebuilder extends Service {
    */
   listImagePackages(callback?: (err: AWSError, data: Imagebuilder.Types.ListImagePackagesResponse) => void): Request<Imagebuilder.Types.ListImagePackagesResponse, AWSError>;
   /**
-   *  Returns a list of images created by the specified pipeline.
+   * Returns a list of images created by the specified pipeline.
    */
   listImagePipelineImages(params: Imagebuilder.Types.ListImagePipelineImagesRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListImagePipelineImagesResponse) => void): Request<Imagebuilder.Types.ListImagePipelineImagesResponse, AWSError>;
   /**
-   *  Returns a list of images created by the specified pipeline.
+   * Returns a list of images created by the specified pipeline.
    */
   listImagePipelineImages(callback?: (err: AWSError, data: Imagebuilder.Types.ListImagePipelineImagesResponse) => void): Request<Imagebuilder.Types.ListImagePipelineImagesResponse, AWSError>;
   /**
@@ -300,43 +316,75 @@ declare class Imagebuilder extends Service {
    */
   listImagePipelines(callback?: (err: AWSError, data: Imagebuilder.Types.ListImagePipelinesResponse) => void): Request<Imagebuilder.Types.ListImagePipelinesResponse, AWSError>;
   /**
-   *  Returns a list of image recipes.
+   * Returns a list of image recipes.
    */
   listImageRecipes(params: Imagebuilder.Types.ListImageRecipesRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListImageRecipesResponse) => void): Request<Imagebuilder.Types.ListImageRecipesResponse, AWSError>;
   /**
-   *  Returns a list of image recipes.
+   * Returns a list of image recipes.
    */
   listImageRecipes(callback?: (err: AWSError, data: Imagebuilder.Types.ListImageRecipesResponse) => void): Request<Imagebuilder.Types.ListImageRecipesResponse, AWSError>;
   /**
-   *  Returns the list of images that you have access to.
+   * Returns a list of image scan aggregations for your account. You can filter by the type of key that Image Builder uses to group results. For example, if you want to get a list of findings by severity level for one of your pipelines, you might specify your pipeline with the imagePipelineArn filter. If you don't specify a filter, Image Builder returns an aggregation for your account. To streamline results, you can use the following filters in your request:    accountId     imageBuildVersionArn     imagePipelineArn     vulnerabilityId   
+   */
+  listImageScanFindingAggregations(params: Imagebuilder.Types.ListImageScanFindingAggregationsRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListImageScanFindingAggregationsResponse) => void): Request<Imagebuilder.Types.ListImageScanFindingAggregationsResponse, AWSError>;
+  /**
+   * Returns a list of image scan aggregations for your account. You can filter by the type of key that Image Builder uses to group results. For example, if you want to get a list of findings by severity level for one of your pipelines, you might specify your pipeline with the imagePipelineArn filter. If you don't specify a filter, Image Builder returns an aggregation for your account. To streamline results, you can use the following filters in your request:    accountId     imageBuildVersionArn     imagePipelineArn     vulnerabilityId   
+   */
+  listImageScanFindingAggregations(callback?: (err: AWSError, data: Imagebuilder.Types.ListImageScanFindingAggregationsResponse) => void): Request<Imagebuilder.Types.ListImageScanFindingAggregationsResponse, AWSError>;
+  /**
+   * Returns a list of image scan findings for your account.
+   */
+  listImageScanFindings(params: Imagebuilder.Types.ListImageScanFindingsRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListImageScanFindingsResponse) => void): Request<Imagebuilder.Types.ListImageScanFindingsResponse, AWSError>;
+  /**
+   * Returns a list of image scan findings for your account.
+   */
+  listImageScanFindings(callback?: (err: AWSError, data: Imagebuilder.Types.ListImageScanFindingsResponse) => void): Request<Imagebuilder.Types.ListImageScanFindingsResponse, AWSError>;
+  /**
+   * Returns the list of images that you have access to. Newly created images can take up to two minutes to appear in the ListImages API Results.
    */
   listImages(params: Imagebuilder.Types.ListImagesRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListImagesResponse) => void): Request<Imagebuilder.Types.ListImagesResponse, AWSError>;
   /**
-   *  Returns the list of images that you have access to.
+   * Returns the list of images that you have access to. Newly created images can take up to two minutes to appear in the ListImages API Results.
    */
   listImages(callback?: (err: AWSError, data: Imagebuilder.Types.ListImagesResponse) => void): Request<Imagebuilder.Types.ListImagesResponse, AWSError>;
   /**
-   *  Returns a list of infrastructure configurations.
+   * Returns a list of infrastructure configurations.
    */
   listInfrastructureConfigurations(params: Imagebuilder.Types.ListInfrastructureConfigurationsRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListInfrastructureConfigurationsResponse) => void): Request<Imagebuilder.Types.ListInfrastructureConfigurationsResponse, AWSError>;
   /**
-   *  Returns a list of infrastructure configurations.
+   * Returns a list of infrastructure configurations.
    */
   listInfrastructureConfigurations(callback?: (err: AWSError, data: Imagebuilder.Types.ListInfrastructureConfigurationsResponse) => void): Request<Imagebuilder.Types.ListInfrastructureConfigurationsResponse, AWSError>;
   /**
-   *  Returns the list of tags for the specified resource.
+   * Returns the list of tags for the specified resource.
    */
   listTagsForResource(params: Imagebuilder.Types.ListTagsForResourceRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListTagsForResourceResponse) => void): Request<Imagebuilder.Types.ListTagsForResourceResponse, AWSError>;
   /**
-   *  Returns the list of tags for the specified resource.
+   * Returns the list of tags for the specified resource.
    */
   listTagsForResource(callback?: (err: AWSError, data: Imagebuilder.Types.ListTagsForResourceResponse) => void): Request<Imagebuilder.Types.ListTagsForResourceResponse, AWSError>;
   /**
-   *  Applies a policy to a component. We recommend that you call the RAM API CreateResourceShare to share resources. If you call the Image Builder API PutComponentPolicy, you must also call the RAM API PromoteResourceShareCreatedFromPolicy in order for the resource to be visible to all principals with whom the resource is shared.
+   * Returns a list of workflow runtime instance metadata objects for a specific image build version.
+   */
+  listWorkflowExecutions(params: Imagebuilder.Types.ListWorkflowExecutionsRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListWorkflowExecutionsResponse) => void): Request<Imagebuilder.Types.ListWorkflowExecutionsResponse, AWSError>;
+  /**
+   * Returns a list of workflow runtime instance metadata objects for a specific image build version.
+   */
+  listWorkflowExecutions(callback?: (err: AWSError, data: Imagebuilder.Types.ListWorkflowExecutionsResponse) => void): Request<Imagebuilder.Types.ListWorkflowExecutionsResponse, AWSError>;
+  /**
+   * Shows runtime data for each step in a runtime instance of the workflow that you specify in the request.
+   */
+  listWorkflowStepExecutions(params: Imagebuilder.Types.ListWorkflowStepExecutionsRequest, callback?: (err: AWSError, data: Imagebuilder.Types.ListWorkflowStepExecutionsResponse) => void): Request<Imagebuilder.Types.ListWorkflowStepExecutionsResponse, AWSError>;
+  /**
+   * Shows runtime data for each step in a runtime instance of the workflow that you specify in the request.
+   */
+  listWorkflowStepExecutions(callback?: (err: AWSError, data: Imagebuilder.Types.ListWorkflowStepExecutionsResponse) => void): Request<Imagebuilder.Types.ListWorkflowStepExecutionsResponse, AWSError>;
+  /**
+   * Applies a policy to a component. We recommend that you call the RAM API CreateResourceShare to share resources. If you call the Image Builder API PutComponentPolicy, you must also call the RAM API PromoteResourceShareCreatedFromPolicy in order for the resource to be visible to all principals with whom the resource is shared.
    */
   putComponentPolicy(params: Imagebuilder.Types.PutComponentPolicyRequest, callback?: (err: AWSError, data: Imagebuilder.Types.PutComponentPolicyResponse) => void): Request<Imagebuilder.Types.PutComponentPolicyResponse, AWSError>;
   /**
-   *  Applies a policy to a component. We recommend that you call the RAM API CreateResourceShare to share resources. If you call the Image Builder API PutComponentPolicy, you must also call the RAM API PromoteResourceShareCreatedFromPolicy in order for the resource to be visible to all principals with whom the resource is shared.
+   * Applies a policy to a component. We recommend that you call the RAM API CreateResourceShare to share resources. If you call the Image Builder API PutComponentPolicy, you must also call the RAM API PromoteResourceShareCreatedFromPolicy in order for the resource to be visible to all principals with whom the resource is shared.
    */
   putComponentPolicy(callback?: (err: AWSError, data: Imagebuilder.Types.PutComponentPolicyResponse) => void): Request<Imagebuilder.Types.PutComponentPolicyResponse, AWSError>;
   /**
@@ -356,63 +404,73 @@ declare class Imagebuilder extends Service {
    */
   putImagePolicy(callback?: (err: AWSError, data: Imagebuilder.Types.PutImagePolicyResponse) => void): Request<Imagebuilder.Types.PutImagePolicyResponse, AWSError>;
   /**
-   *  Applies a policy to an image recipe. We recommend that you call the RAM API CreateResourceShare to share resources. If you call the Image Builder API PutImageRecipePolicy, you must also call the RAM API PromoteResourceShareCreatedFromPolicy in order for the resource to be visible to all principals with whom the resource is shared.
+   * Applies a policy to an image recipe. We recommend that you call the RAM API CreateResourceShare to share resources. If you call the Image Builder API PutImageRecipePolicy, you must also call the RAM API PromoteResourceShareCreatedFromPolicy in order for the resource to be visible to all principals with whom the resource is shared.
    */
   putImageRecipePolicy(params: Imagebuilder.Types.PutImageRecipePolicyRequest, callback?: (err: AWSError, data: Imagebuilder.Types.PutImageRecipePolicyResponse) => void): Request<Imagebuilder.Types.PutImageRecipePolicyResponse, AWSError>;
   /**
-   *  Applies a policy to an image recipe. We recommend that you call the RAM API CreateResourceShare to share resources. If you call the Image Builder API PutImageRecipePolicy, you must also call the RAM API PromoteResourceShareCreatedFromPolicy in order for the resource to be visible to all principals with whom the resource is shared.
+   * Applies a policy to an image recipe. We recommend that you call the RAM API CreateResourceShare to share resources. If you call the Image Builder API PutImageRecipePolicy, you must also call the RAM API PromoteResourceShareCreatedFromPolicy in order for the resource to be visible to all principals with whom the resource is shared.
    */
   putImageRecipePolicy(callback?: (err: AWSError, data: Imagebuilder.Types.PutImageRecipePolicyResponse) => void): Request<Imagebuilder.Types.PutImageRecipePolicyResponse, AWSError>;
   /**
-   *  Manually triggers a pipeline to create an image.
+   * Manually triggers a pipeline to create an image.
    */
   startImagePipelineExecution(params: Imagebuilder.Types.StartImagePipelineExecutionRequest, callback?: (err: AWSError, data: Imagebuilder.Types.StartImagePipelineExecutionResponse) => void): Request<Imagebuilder.Types.StartImagePipelineExecutionResponse, AWSError>;
   /**
-   *  Manually triggers a pipeline to create an image.
+   * Manually triggers a pipeline to create an image.
    */
   startImagePipelineExecution(callback?: (err: AWSError, data: Imagebuilder.Types.StartImagePipelineExecutionResponse) => void): Request<Imagebuilder.Types.StartImagePipelineExecutionResponse, AWSError>;
   /**
-   *  Adds a tag to a resource.
+   * Adds a tag to a resource.
    */
   tagResource(params: Imagebuilder.Types.TagResourceRequest, callback?: (err: AWSError, data: Imagebuilder.Types.TagResourceResponse) => void): Request<Imagebuilder.Types.TagResourceResponse, AWSError>;
   /**
-   *  Adds a tag to a resource.
+   * Adds a tag to a resource.
    */
   tagResource(callback?: (err: AWSError, data: Imagebuilder.Types.TagResourceResponse) => void): Request<Imagebuilder.Types.TagResourceResponse, AWSError>;
   /**
-   *  Removes a tag from a resource.
+   * Removes a tag from a resource.
    */
   untagResource(params: Imagebuilder.Types.UntagResourceRequest, callback?: (err: AWSError, data: Imagebuilder.Types.UntagResourceResponse) => void): Request<Imagebuilder.Types.UntagResourceResponse, AWSError>;
   /**
-   *  Removes a tag from a resource.
+   * Removes a tag from a resource.
    */
   untagResource(callback?: (err: AWSError, data: Imagebuilder.Types.UntagResourceResponse) => void): Request<Imagebuilder.Types.UntagResourceResponse, AWSError>;
   /**
-   *  Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
+   * Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
    */
   updateDistributionConfiguration(params: Imagebuilder.Types.UpdateDistributionConfigurationRequest, callback?: (err: AWSError, data: Imagebuilder.Types.UpdateDistributionConfigurationResponse) => void): Request<Imagebuilder.Types.UpdateDistributionConfigurationResponse, AWSError>;
   /**
-   *  Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
+   * Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
    */
   updateDistributionConfiguration(callback?: (err: AWSError, data: Imagebuilder.Types.UpdateDistributionConfigurationResponse) => void): Request<Imagebuilder.Types.UpdateDistributionConfigurationResponse, AWSError>;
   /**
-   *  Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.  UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed. 
+   * Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.  UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed. 
    */
   updateImagePipeline(params: Imagebuilder.Types.UpdateImagePipelineRequest, callback?: (err: AWSError, data: Imagebuilder.Types.UpdateImagePipelineResponse) => void): Request<Imagebuilder.Types.UpdateImagePipelineResponse, AWSError>;
   /**
-   *  Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.  UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed. 
+   * Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.  UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed. 
    */
   updateImagePipeline(callback?: (err: AWSError, data: Imagebuilder.Types.UpdateImagePipelineResponse) => void): Request<Imagebuilder.Types.UpdateImagePipelineResponse, AWSError>;
   /**
-   *  Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+   * Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
    */
   updateInfrastructureConfiguration(params: Imagebuilder.Types.UpdateInfrastructureConfigurationRequest, callback?: (err: AWSError, data: Imagebuilder.Types.UpdateInfrastructureConfigurationResponse) => void): Request<Imagebuilder.Types.UpdateInfrastructureConfigurationResponse, AWSError>;
   /**
-   *  Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+   * Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
    */
   updateInfrastructureConfiguration(callback?: (err: AWSError, data: Imagebuilder.Types.UpdateInfrastructureConfigurationResponse) => void): Request<Imagebuilder.Types.UpdateInfrastructureConfigurationResponse, AWSError>;
 }
 declare namespace Imagebuilder {
+  export interface AccountAggregation {
+    /**
+     * Identifies the account that owns the aggregated resource findings.
+     */
+    accountId?: NonEmptyString;
+    /**
+     * Counts by severity level for medium severity and higher level findings, plus a total for all of the findings.
+     */
+    severityCounts?: SeverityCounts;
+  }
   export type AccountId = string;
   export type AccountList = AccountId[];
   export interface AdditionalInstanceConfiguration {
@@ -470,7 +528,7 @@ declare namespace Imagebuilder {
      */
     kmsKeyId?: NonEmptyString;
     /**
-     *  Launch permissions can be used to configure which Amazon Web Services accounts can use the AMI to launch instances.
+     * Launch permissions can be used to configure which Amazon Web Services accounts can use the AMI to launch instances.
      */
     launchPermission?: LaunchPermissionConfiguration;
   }
@@ -481,7 +539,7 @@ declare namespace Imagebuilder {
   export type BuildType = "USER_INITIATED"|"SCHEDULED"|"IMPORT"|string;
   export interface CancelImageCreationRequest {
     /**
-     * The Amazon Resource Name (ARN) of the image whose creation you want to cancel.
+     * The Amazon Resource Name (ARN) of the image that you want to cancel creation for.
      */
     imageBuildVersionArn: ImageBuildVersionArn;
     /**
@@ -499,7 +557,7 @@ declare namespace Imagebuilder {
      */
     clientToken?: ClientToken;
     /**
-     * The Amazon Resource Name (ARN) of the image whose creation has been cancelled.
+     * The ARN of the image whose creation this request canceled.
      */
     imageBuildVersionArn?: ImageBuildVersionArn;
   }
@@ -526,15 +584,15 @@ declare namespace Imagebuilder {
      */
     changeDescription?: NonEmptyString;
     /**
-     * The type of the component denotes whether the component is used to build the image or only to test it.
+     * The component type specifies whether Image Builder uses the component to build the image or only to test it.
      */
     type?: ComponentType;
     /**
-     * The platform of the component.
+     * The operating system platform of the component.
      */
     platform?: Platform;
     /**
-     * The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.
+     * The operating system (OS) version supported by the component. If the OS information is available, Image Builder performs a prefix match against the base image OS version during image recipe creation.
      */
     supportedOsVersions?: OsVersionList;
     /**
@@ -542,7 +600,7 @@ declare namespace Imagebuilder {
      */
     state?: ComponentState;
     /**
-     * Contains parameter details for each of the parameters that are defined for the component.
+     * Contains parameter details for each of the parameters that the component document defined for the component.
      */
     parameters?: ComponentParameterDetailList;
     /**
@@ -562,13 +620,21 @@ declare namespace Imagebuilder {
      */
     encrypted?: NullableBoolean;
     /**
-     * The date that the component was created.
+     * The date that Image Builder created the component.
      */
     dateCreated?: DateTime;
     /**
-     * The tags associated with the component.
+     * The tags that apply to the component.
      */
     tags?: TagMap;
+    /**
+     * Contains the name of the publisher if this is a third-party component. Otherwise, this property is empty.
+     */
+    publisher?: NonEmptyString;
+    /**
+     * Indicates whether component source is hidden from view in the console, and from component detail results for API, CLI, or SDK operations.
+     */
+    obfuscate?: Boolean;
   }
   export type ComponentBuildVersionArn = string;
   export interface ComponentConfiguration {
@@ -577,7 +643,7 @@ declare namespace Imagebuilder {
      */
     componentArn: ComponentVersionArnOrBuildVersionArn;
     /**
-     * A group of parameter settings that are used to configure the component for a specific recipe.
+     * A group of parameter settings that Image Builder uses to configure the component for a specific recipe.
      */
     parameters?: ComponentParameterList;
   }
@@ -644,11 +710,11 @@ declare namespace Imagebuilder {
      */
     version?: VersionNumber;
     /**
-     * The platform of the component.
+     * The operating system platform of the component.
      */
     platform?: Platform;
     /**
-     * The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.
+     * The operating system (OS) version that the component supports. If the OS information is available, Image Builder performs a prefix match against the base image OS version during image recipe creation.
      */
     supportedOsVersions?: OsVersionList;
     /**
@@ -656,7 +722,7 @@ declare namespace Imagebuilder {
      */
     state?: ComponentState;
     /**
-     * The type of the component denotes whether the component is used to build the image or only to test it.
+     * The component type specifies whether Image Builder uses the component to build the image or only to test it.
      */
     type?: ComponentType;
     /**
@@ -668,17 +734,25 @@ declare namespace Imagebuilder {
      */
     description?: NonEmptyString;
     /**
-     * The change description of the component.
+     * The change description for the current version of the component.
      */
     changeDescription?: NonEmptyString;
     /**
-     * The date that the component was created.
+     * The original creation date of the component.
      */
     dateCreated?: DateTime;
     /**
-     * The tags associated with the component.
+     * The tags that apply to the component.
      */
     tags?: TagMap;
+    /**
+     * Contains the name of the publisher if this is a third-party component. Otherwise, this property is empty.
+     */
+    publisher?: NonEmptyString;
+    /**
+     * Indicates whether component source is hidden from view in the console, and from component detail results for API, CLI, or SDK operations.
+     */
+    obfuscate?: Boolean;
   }
   export type ComponentSummaryList = ComponentSummary[];
   export type ComponentType = "BUILD"|"TEST"|string;
@@ -778,7 +852,7 @@ declare namespace Imagebuilder {
      */
     version?: VersionNumber;
     /**
-     * Components for build and test that are included in the container recipe.
+     * Build and test components that are included in the container recipe. Recipes require a minimum of one build component, and can have a maximum of 20 build and test components in any combination.
      */
     components?: ComponentConfigurationList;
     /**
@@ -866,7 +940,7 @@ declare namespace Imagebuilder {
      */
     semanticVersion: VersionNumber;
     /**
-     * The description of the component. Describes the contents of the component.
+     * Describes the contents of the component.
      */
     description?: NonEmptyString;
     /**
@@ -874,11 +948,11 @@ declare namespace Imagebuilder {
      */
     changeDescription?: NonEmptyString;
     /**
-     * The platform of the component.
+     * The operating system platform of the component.
      */
     platform: Platform;
     /**
-     *  The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.
+     * The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.
      */
     supportedOsVersions?: OsVersionList;
     /**
@@ -890,11 +964,11 @@ declare namespace Imagebuilder {
      */
     uri?: Uri;
     /**
-     * The ID of the KMS key that should be used to encrypt this component.
+     * The ID of the KMS key that is used to encrypt this component.
      */
     kmsKeyId?: NonEmptyString;
     /**
-     * The tags of the component.
+     * The tags that apply to the component.
      */
     tags?: TagMap;
     /**
@@ -912,7 +986,7 @@ declare namespace Imagebuilder {
      */
     clientToken?: ClientToken;
     /**
-     * The Amazon Resource Name (ARN) of the component that was created by this request.
+     * The Amazon Resource Name (ARN) of the component that this request created.
      */
     componentBuildVersionArn?: ComponentBuildVersionArn;
   }
@@ -934,7 +1008,7 @@ declare namespace Imagebuilder {
      */
     semanticVersion: VersionNumber;
     /**
-     * Components for build and test that are included in the container recipe.
+     * Components for build and test that are included in the container recipe. Recipes require a minimum of one build component, and can have a maximum of 20 build and test components in any combination.
      */
     components: ComponentConfigurationList;
     /**
@@ -998,51 +1072,51 @@ declare namespace Imagebuilder {
   }
   export interface CreateDistributionConfigurationRequest {
     /**
-     *  The name of the distribution configuration.
+     * The name of the distribution configuration.
      */
     name: ResourceName;
     /**
-     *  The description of the distribution configuration.
+     * The description of the distribution configuration.
      */
     description?: NonEmptyString;
     /**
-     *  The distributions of the distribution configuration.
+     * The distributions of the distribution configuration.
      */
     distributions: DistributionList;
     /**
-     *  The tags of the distribution configuration.
+     * The tags of the distribution configuration.
      */
     tags?: TagMap;
     /**
-     *  The idempotency token of the distribution configuration.
+     * The idempotency token of the distribution configuration.
      */
     clientToken: ClientToken;
   }
   export interface CreateDistributionConfigurationResponse {
     /**
-     *  The request ID that uniquely identifies this request.
+     * The request ID that uniquely identifies this request.
      */
     requestId?: NonEmptyString;
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      */
     clientToken?: ClientToken;
     /**
-     *  The Amazon Resource Name (ARN) of the distribution configuration that was created by this request.
+     * The Amazon Resource Name (ARN) of the distribution configuration that was created by this request.
      */
     distributionConfigurationArn?: DistributionConfigurationArn;
   }
   export interface CreateImagePipelineRequest {
     /**
-     *  The name of the image pipeline.
+     * The name of the image pipeline.
      */
     name: ResourceName;
     /**
-     *  The description of the image pipeline.
+     * The description of the image pipeline.
      */
     description?: NonEmptyString;
     /**
-     *  The Amazon Resource Name (ARN) of the image recipe that will be used to configure images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the image recipe that will be used to configure images created by this image pipeline.
      */
     imageRecipeArn?: ImageRecipeArn;
     /**
@@ -1050,59 +1124,63 @@ declare namespace Imagebuilder {
      */
     containerRecipeArn?: ContainerRecipeArn;
     /**
-     *  The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images created by this image pipeline.
      */
     infrastructureConfigurationArn: InfrastructureConfigurationArn;
     /**
-     *  The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images created by this image pipeline.
      */
     distributionConfigurationArn?: DistributionConfigurationArn;
     /**
-     *  The image test configuration of the image pipeline.
+     * The image test configuration of the image pipeline.
      */
     imageTestsConfiguration?: ImageTestsConfiguration;
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      */
     enhancedImageMetadataEnabled?: NullableBoolean;
     /**
-     *  The schedule of the image pipeline.
+     * The schedule of the image pipeline.
      */
     schedule?: Schedule;
     /**
-     *  The status of the image pipeline.
+     * The status of the image pipeline.
      */
     status?: PipelineStatus;
     /**
-     *  The tags of the image pipeline.
+     * The tags of the image pipeline.
      */
     tags?: TagMap;
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      */
     clientToken: ClientToken;
+    /**
+     * Contains settings for vulnerability scans.
+     */
+    imageScanningConfiguration?: ImageScanningConfiguration;
   }
   export interface CreateImagePipelineResponse {
     /**
-     *  The request ID that uniquely identifies this request.
+     * The request ID that uniquely identifies this request.
      */
     requestId?: NonEmptyString;
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      */
     clientToken?: ClientToken;
     /**
-     *  The Amazon Resource Name (ARN) of the image pipeline that was created by this request.
+     * The Amazon Resource Name (ARN) of the image pipeline that was created by this request.
      */
     imagePipelineArn?: ImagePipelineArn;
   }
   export interface CreateImageRecipeRequest {
     /**
-     *  The name of the image recipe.
+     * The name of the image recipe.
      */
     name: ResourceName;
     /**
-     *  The description of the image recipe.
+     * The description of the image recipe.
      */
     description?: NonEmptyString;
     /**
@@ -1110,7 +1188,7 @@ declare namespace Imagebuilder {
      */
     semanticVersion: VersionNumber;
     /**
-     * The components of the image recipe.
+     * The components included in the image recipe.
      */
     components: ComponentConfigurationList;
     /**
@@ -1122,7 +1200,7 @@ declare namespace Imagebuilder {
      */
     blockDeviceMappings?: InstanceBlockDeviceMappings;
     /**
-     *  The tags of the image recipe.
+     * The tags of the image recipe.
      */
     tags?: TagMap;
     /**
@@ -1154,7 +1232,7 @@ declare namespace Imagebuilder {
   }
   export interface CreateImageRequest {
     /**
-     *  The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      */
     imageRecipeArn?: ImageRecipeArn;
     /**
@@ -1162,41 +1240,45 @@ declare namespace Imagebuilder {
      */
     containerRecipeArn?: ContainerRecipeArn;
     /**
-     *  The Amazon Resource Name (ARN) of the distribution configuration that defines and configures the outputs of your pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that defines and configures the outputs of your pipeline.
      */
     distributionConfigurationArn?: DistributionConfigurationArn;
     /**
-     *  The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment in which your image will be built and tested.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment in which your image will be built and tested.
      */
     infrastructureConfigurationArn: InfrastructureConfigurationArn;
     /**
-     *  The image tests configuration of the image.
+     * The image tests configuration of the image.
      */
     imageTestsConfiguration?: ImageTestsConfiguration;
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      */
     enhancedImageMetadataEnabled?: NullableBoolean;
     /**
-     *  The tags of the image.
+     * The tags of the image.
      */
     tags?: TagMap;
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      */
     clientToken: ClientToken;
+    /**
+     * Contains settings for vulnerability scans.
+     */
+    imageScanningConfiguration?: ImageScanningConfiguration;
   }
   export interface CreateImageResponse {
     /**
-     *  The request ID that uniquely identifies this request.
+     * The request ID that uniquely identifies this request.
      */
     requestId?: NonEmptyString;
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      */
     clientToken?: ClientToken;
     /**
-     *  The Amazon Resource Name (ARN) of the image that was created by this request.
+     * The Amazon Resource Name (ARN) of the image that this request created.
      */
     imageBuildVersionArn?: ImageBuildVersionArn;
   }
@@ -1272,7 +1354,64 @@ declare namespace Imagebuilder {
      */
     infrastructureConfigurationArn?: InfrastructureConfigurationArn;
   }
+  export interface CvssScore {
+    /**
+     * The CVSS base score.
+     */
+    baseScore?: NonNegativeDouble;
+    /**
+     * The vector string of the CVSS score.
+     */
+    scoringVector?: NonEmptyString;
+    /**
+     * The CVSS version that generated the score.
+     */
+    version?: NonEmptyString;
+    /**
+     * The source of the CVSS score.
+     */
+    source?: NonEmptyString;
+  }
+  export interface CvssScoreAdjustment {
+    /**
+     * The metric that Amazon Inspector used to adjust the CVSS score.
+     */
+    metric?: NonEmptyString;
+    /**
+     * The reason for the CVSS score adjustment.
+     */
+    reason?: NonEmptyString;
+  }
+  export type CvssScoreAdjustmentList = CvssScoreAdjustment[];
+  export interface CvssScoreDetails {
+    /**
+     * The source for the CVSS score.
+     */
+    scoreSource?: NonEmptyString;
+    /**
+     * The source of the finding.
+     */
+    cvssSource?: NonEmptyString;
+    /**
+     * The CVSS version that generated the score.
+     */
+    version?: NonEmptyString;
+    /**
+     * The CVSS score.
+     */
+    score?: NonNegativeDouble;
+    /**
+     * A vector that measures the severity of the vulnerability.
+     */
+    scoringVector?: NonEmptyString;
+    /**
+     * An object that contains details about an adjustment that Amazon Inspector made to the CVSS score for the finding.
+     */
+    adjustments?: CvssScoreAdjustmentList;
+  }
+  export type CvssScoreList = CvssScore[];
   export type DateTime = string;
+  export type DateTimeTimestamp = Date;
   export interface DeleteComponentRequest {
     /**
      * The Amazon Resource Name (ARN) of the component build version to delete.
@@ -1285,7 +1424,7 @@ declare namespace Imagebuilder {
      */
     requestId?: NonEmptyString;
     /**
-     * The Amazon Resource Name (ARN) of the component build version that was deleted.
+     * The ARN of the component build version that this request deleted.
      */
     componentBuildVersionArn?: ComponentBuildVersionArn;
   }
@@ -1365,7 +1504,7 @@ declare namespace Imagebuilder {
      */
     requestId?: NonEmptyString;
     /**
-     * The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.
+     * The ARN of the Image Builder image resource that this request deleted.
      */
     imageBuildVersionArn?: ImageBuildVersionArn;
   }
@@ -1515,7 +1654,7 @@ declare namespace Imagebuilder {
      */
     volumeType?: EbsVolumeType;
     /**
-     *  For GP3 volumes only – The throughput in MiB/s that the volume supports. 
+     *  For GP3 volumes only – The throughput in MiB/s that the volume supports.
      */
     throughput?: EbsVolumeThroughput;
   }
@@ -1523,6 +1662,16 @@ declare namespace Imagebuilder {
   export type EbsVolumeSizeInteger = number;
   export type EbsVolumeThroughput = number;
   export type EbsVolumeType = "standard"|"io1"|"io2"|"gp2"|"gp3"|"sc1"|"st1"|string;
+  export interface EcrConfiguration {
+    /**
+     * The name of the container repository that Amazon Inspector scans to identify findings for your container images. The name includes the path for the repository location. If you don’t provide this information, Image Builder creates a repository in your account named image-builder-image-scanning-repository for vulnerability scans of your output container images.
+     */
+    repositoryName?: NonEmptyString;
+    /**
+     * Tags for Image Builder to apply to the output container image that &amp;INS; scans. Tags can help you identify and manage your scanned images.
+     */
+    containerTags?: StringList;
+  }
   export type EmptyString = string;
   export interface FastLaunchConfiguration {
     /**
@@ -1599,7 +1748,7 @@ declare namespace Imagebuilder {
   }
   export interface GetComponentRequest {
     /**
-     * The Amazon Resource Name (ARN) of the component that you want to retrieve. Regex requires "/\d+$" suffix.
+     * The Amazon Resource Name (ARN) of the component that you want to get. Regex requires the suffix /\d+$.
      */
     componentBuildVersionArn: ComponentVersionArnOrBuildVersionArn;
   }
@@ -1727,7 +1876,7 @@ declare namespace Imagebuilder {
   }
   export interface GetImageRequest {
     /**
-     * The Amazon Resource Name (ARN) of the image that you want to retrieve.
+     * The Amazon Resource Name (ARN) of the image that you want to get.
      */
     imageBuildVersionArn: ImageVersionArnOrBuildVersionArn;
   }
@@ -1757,6 +1906,142 @@ declare namespace Imagebuilder {
      */
     infrastructureConfiguration?: InfrastructureConfiguration;
   }
+  export interface GetWorkflowExecutionRequest {
+    /**
+     * Use the unique identifier for a runtime instance of the workflow to get runtime details.
+     */
+    workflowExecutionId: WorkflowExecutionId;
+  }
+  export interface GetWorkflowExecutionResponse {
+    /**
+     * The request ID that uniquely identifies this request.
+     */
+    requestId?: NonEmptyString;
+    /**
+     * The Amazon Resource Name (ARN) of the build version for the Image Builder workflow resource that defines the specified runtime instance of the workflow.
+     */
+    workflowBuildVersionArn?: WorkflowBuildVersionArn;
+    /**
+     * The unique identifier that Image Builder assigned to keep track of runtime details when it ran the workflow.
+     */
+    workflowExecutionId?: WorkflowExecutionId;
+    /**
+     * The Amazon Resource Name (ARN) of the image resource build version that the specified runtime instance of the workflow created.
+     */
+    imageBuildVersionArn?: ImageBuildVersionArn;
+    /**
+     * The type of workflow that Image Builder ran for the specified runtime instance of the workflow.
+     */
+    type?: WorkflowType;
+    /**
+     * The current runtime status for the specified runtime instance of the workflow.
+     */
+    status?: WorkflowExecutionStatus;
+    /**
+     * The output message from the specified runtime instance of the workflow, if applicable.
+     */
+    message?: WorkflowExecutionMessage;
+    /**
+     * The total number of steps in the specified runtime instance of the workflow that ran. This number should equal the sum of the step counts for steps that succeeded, were skipped, and failed.
+     */
+    totalStepCount?: WorkflowStepCount;
+    /**
+     * A runtime count for the number of steps that ran successfully in the specified runtime instance of the workflow.
+     */
+    totalStepsSucceeded?: WorkflowStepCount;
+    /**
+     * A runtime count for the number of steps that failed in the specified runtime instance of the workflow.
+     */
+    totalStepsFailed?: WorkflowStepCount;
+    /**
+     * A runtime count for the number of steps that were skipped in the specified runtime instance of the workflow.
+     */
+    totalStepsSkipped?: WorkflowStepCount;
+    /**
+     * The timestamp when the specified runtime instance of the workflow started.
+     */
+    startTime?: DateTime;
+    /**
+     * The timestamp when the specified runtime instance of the workflow finished.
+     */
+    endTime?: DateTime;
+  }
+  export interface GetWorkflowStepExecutionRequest {
+    /**
+     * Use the unique identifier for a specific runtime instance of the workflow step to get runtime details for that step.
+     */
+    stepExecutionId: WorkflowStepExecutionId;
+  }
+  export interface GetWorkflowStepExecutionResponse {
+    /**
+     * The request ID that uniquely identifies this request.
+     */
+    requestId?: NonEmptyString;
+    /**
+     * The unique identifier for the runtime version of the workflow step that you specified in the request.
+     */
+    stepExecutionId?: WorkflowStepExecutionId;
+    /**
+     * The Amazon Resource Name (ARN) of the build version for the Image Builder workflow resource that defines this workflow step.
+     */
+    workflowBuildVersionArn?: WorkflowBuildVersionArn;
+    /**
+     * The unique identifier that Image Builder assigned to keep track of runtime details when it ran the workflow.
+     */
+    workflowExecutionId?: WorkflowExecutionId;
+    /**
+     * The Amazon Resource Name (ARN) of the image resource build version that the specified runtime instance of the workflow step creates.
+     */
+    imageBuildVersionArn?: ImageBuildVersionArn;
+    /**
+     * The name of the specified runtime instance of the workflow step.
+     */
+    name?: WorkflowStepName;
+    /**
+     * Describes the specified workflow step.
+     */
+    description?: WorkflowStepDescription;
+    /**
+     * The name of the action that the specified step performs.
+     */
+    action?: WorkflowStepAction;
+    /**
+     * The current status for the specified runtime version of the workflow step.
+     */
+    status?: WorkflowStepExecutionStatus;
+    /**
+     * Reports on the rollback status of the specified runtime version of the workflow step, if applicable.
+     */
+    rollbackStatus?: WorkflowStepExecutionRollbackStatus;
+    /**
+     * The output message from the specified runtime instance of the workflow step, if applicable.
+     */
+    message?: WorkflowStepMessage;
+    /**
+     * Input parameters that Image Builder provided for the specified runtime instance of the workflow step.
+     */
+    inputs?: WorkflowStepInputs;
+    /**
+     * The file names that the specified runtime version of the workflow step created as output.
+     */
+    outputs?: WorkflowStepOutputs;
+    /**
+     * The timestamp when the specified runtime version of the workflow step started.
+     */
+    startTime?: DateTime;
+    /**
+     * The timestamp when the specified runtime instance of the workflow step finished.
+     */
+    endTime?: DateTime;
+    /**
+     * The action to perform if the workflow step fails.
+     */
+    onFailure?: NonEmptyString;
+    /**
+     * The maximum duration in seconds for this step to complete its action.
+     */
+    timeoutSeconds?: WorkflowStepTimeoutSecondsInteger;
+  }
   export type HttpPutResponseHopLimit = number;
   export type HttpTokens = string;
   export interface Image {
@@ -1765,7 +2050,7 @@ declare namespace Imagebuilder {
      */
     arn?: ImageBuilderArn;
     /**
-     * Specifies whether this is an AMI or container image.
+     * Specifies whether this image produces an AMI or a container image.
      */
     type?: ImageType;
     /**
@@ -1777,15 +2062,15 @@ declare namespace Imagebuilder {
      */
     version?: VersionNumber;
     /**
-     * The platform of the image.
+     * The image operating system platform, such as Linux or Windows.
      */
     platform?: Platform;
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Indicates whether Image Builder collects additional information about the image, such as the operating system (OS) version and package list.
      */
     enhancedImageMetadataEnabled?: NullableBoolean;
     /**
-     * The operating system version of the instance. For example, Amazon Linux 2, Ubuntu 18, or Microsoft Windows Server 2019.
+     * The operating system version for instances that launch from this image. For example, Amazon Linux 2, Ubuntu 18, or Microsoft Windows Server 2019.
      */
     osVersion?: OsVersion;
     /**
@@ -1793,11 +2078,11 @@ declare namespace Imagebuilder {
      */
     state?: ImageState;
     /**
-     * The image recipe used when creating the image.
+     * For images that distribute an AMI, this is the image recipe that Image Builder used to create the image. For container images, this is empty.
      */
     imageRecipe?: ImageRecipe;
     /**
-     * The recipe that is used to create an Image Builder container image.
+     * For container images, this is the container recipe that Image Builder used to create the image. For images that distribute an AMI, this is empty.
      */
     containerRecipe?: ContainerRecipe;
     /**
@@ -1809,34 +2094,57 @@ declare namespace Imagebuilder {
      */
     sourcePipelineArn?: Arn;
     /**
-     * The infrastructure used when creating this image.
+     * The infrastructure that Image Builder used to create this image.
      */
     infrastructureConfiguration?: InfrastructureConfiguration;
     /**
-     * The distribution configuration used when creating this image.
+     * The distribution configuration that Image Builder used to create this image.
      */
     distributionConfiguration?: DistributionConfiguration;
     /**
-     * The image tests configuration used when creating this image.
+     * The image tests that ran when that Image Builder created this image.
      */
     imageTestsConfiguration?: ImageTestsConfiguration;
     /**
-     * The date on which this image was created.
+     * The date on which Image Builder created this image.
      */
     dateCreated?: DateTime;
     /**
-     * The output resources produced when creating this image.
+     * The output resources that Image Builder produces for this image.
      */
     outputResources?: OutputResources;
     /**
-     * The tags of the image.
+     * The tags that apply to this image.
      */
     tags?: TagMap;
     /**
      * Indicates the type of build that created this image. The build can be initiated in the following ways:    USER_INITIATED – A manual pipeline build request.    SCHEDULED – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from EventBridge.    IMPORT – A VM import created the image to use as the base image for the recipe.  
      */
     buildType?: BuildType;
+    /**
+     * The origin of the base image that Image Builder used to build this image.
+     */
+    imageSource?: ImageSource;
+    /**
+     * Contains information about the current state of scans for this image.
+     */
+    scanState?: ImageScanState;
+    /**
+     * Contains settings for vulnerability scans.
+     */
+    imageScanningConfiguration?: ImageScanningConfiguration;
   }
+  export interface ImageAggregation {
+    /**
+     * The Amazon Resource Name (ARN) that identifies the image for this aggregation.
+     */
+    imageBuildVersionArn?: ImageBuildVersionArn;
+    /**
+     * Counts by severity level for medium severity and higher level findings, plus a total for all of the findings for the specified image.
+     */
+    severityCounts?: SeverityCounts;
+  }
+  export type ImageBuildMessage = string;
   export type ImageBuildVersionArn = string;
   export type ImageBuilderArn = string;
   export interface ImagePackage {
@@ -1868,7 +2176,7 @@ declare namespace Imagebuilder {
      */
     platform?: Platform;
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      */
     enhancedImageMetadataEnabled?: NullableBoolean;
     /**
@@ -1908,17 +2216,31 @@ declare namespace Imagebuilder {
      */
     dateUpdated?: DateTime;
     /**
-     * The date on which this image pipeline was last run.
+     * This is no longer supported, and does not return a value.
      */
     dateLastRun?: DateTime;
     /**
-     * The date on which this image pipeline will next be run.
+     * This is no longer supported, and does not return a value.
      */
     dateNextRun?: DateTime;
     /**
      * The tags of this image pipeline.
      */
     tags?: TagMap;
+    /**
+     * Contains settings for vulnerability scans.
+     */
+    imageScanningConfiguration?: ImageScanningConfiguration;
+  }
+  export interface ImagePipelineAggregation {
+    /**
+     * The Amazon Resource Name (ARN) that identifies the image pipeline for this aggregation.
+     */
+    imagePipelineArn?: ImagePipelineArn;
+    /**
+     * Counts by severity level for medium severity and higher level findings, plus a total for all of the findings for the specified image pipeline.
+     */
+    severityCounts?: SeverityCounts;
   }
   export type ImagePipelineArn = string;
   export type ImagePipelineList = ImagePipeline[];
@@ -1952,7 +2274,7 @@ declare namespace Imagebuilder {
      */
     version?: VersionNumber;
     /**
-     * The components of the image recipe.
+     * The components that are included in the image recipe. Recipes require a minimum of one build component, and can have a maximum of 20 build and test components in any combination.
      */
     components?: ComponentConfigurationList;
     /**
@@ -2012,13 +2334,125 @@ declare namespace Imagebuilder {
     tags?: TagMap;
   }
   export type ImageRecipeSummaryList = ImageRecipeSummary[];
+  export interface ImageScanFinding {
+    /**
+     * The Amazon Web Services account ID that's associated with the finding.
+     */
+    awsAccountId?: NonEmptyString;
+    /**
+     * The Amazon Resource Name (ARN) of the image build version that's associated with the finding.
+     */
+    imageBuildVersionArn?: ImageBuildVersionArn;
+    /**
+     * The Amazon Resource Name (ARN) of the image pipeline that's associated with the finding.
+     */
+    imagePipelineArn?: ImagePipelineArn;
+    /**
+     * The type of the finding. Image Builder looks for findings of the type PACKAGE_VULNERABILITY that apply to output images, and excludes other types.
+     */
+    type?: NonEmptyString;
+    /**
+     * The description of the finding.
+     */
+    description?: NonEmptyString;
+    /**
+     * The title of the finding.
+     */
+    title?: NonEmptyString;
+    /**
+     * An object that contains the details about how to remediate the finding.
+     */
+    remediation?: Remediation;
+    /**
+     * The severity of the finding.
+     */
+    severity?: NonEmptyString;
+    /**
+     * The date and time when the finding was first observed.
+     */
+    firstObservedAt?: DateTimeTimestamp;
+    /**
+     * The timestamp when the finding was last updated.
+     */
+    updatedAt?: DateTimeTimestamp;
+    /**
+     * The score that Amazon Inspector assigned for the finding.
+     */
+    inspectorScore?: NonNegativeDouble;
+    /**
+     * An object that contains details of the Amazon Inspector score.
+     */
+    inspectorScoreDetails?: InspectorScoreDetails;
+    /**
+     * An object that contains the details of a package vulnerability finding.
+     */
+    packageVulnerabilityDetails?: PackageVulnerabilityDetails;
+    /**
+     * Details about whether a fix is available for any of the packages that are identified in the finding through a version update.
+     */
+    fixAvailable?: NonEmptyString;
+  }
+  export interface ImageScanFindingAggregation {
+    /**
+     * Returns an object that contains severity counts based on an account ID.
+     */
+    accountAggregation?: AccountAggregation;
+    /**
+     * Returns an object that contains severity counts based on the Amazon Resource Name (ARN) for a specific image.
+     */
+    imageAggregation?: ImageAggregation;
+    /**
+     * Returns an object that contains severity counts based on an image pipeline ARN.
+     */
+    imagePipelineAggregation?: ImagePipelineAggregation;
+    /**
+     * Returns an object that contains severity counts based on vulnerability ID.
+     */
+    vulnerabilityIdAggregation?: VulnerabilityIdAggregation;
+  }
+  export type ImageScanFindingAggregationsList = ImageScanFindingAggregation[];
+  export interface ImageScanFindingsFilter {
+    /**
+     * The name of the image scan finding filter. Filter names are case-sensitive.
+     */
+    name?: FilterName;
+    /**
+     * The filter values. Filter values are case-sensitive.
+     */
+    values?: ImageScanFindingsFilterValues;
+  }
+  export type ImageScanFindingsFilterList = ImageScanFindingsFilter[];
+  export type ImageScanFindingsFilterValues = FilterValue[];
+  export type ImageScanFindingsList = ImageScanFinding[];
+  export interface ImageScanState {
+    /**
+     * The current state of vulnerability scans for the image.
+     */
+    status?: ImageScanStatus;
+    /**
+     * The reason for the scan status for the image.
+     */
+    reason?: NonEmptyString;
+  }
+  export type ImageScanStatus = "PENDING"|"SCANNING"|"COLLECTING"|"COMPLETED"|"ABANDONED"|"FAILED"|"TIMED_OUT"|string;
+  export interface ImageScanningConfiguration {
+    /**
+     * A setting that indicates whether Image Builder keeps a snapshot of the vulnerability scans that Amazon Inspector runs against the build instance when you create a new image.
+     */
+    imageScanningEnabled?: NullableBoolean;
+    /**
+     * Contains Amazon ECR settings for vulnerability scans.
+     */
+    ecrConfiguration?: EcrConfiguration;
+  }
+  export type ImageSource = "AMAZON_MANAGED"|"AWS_MARKETPLACE"|"IMPORTED"|"CUSTOM"|string;
   export interface ImageState {
     /**
      * The status of the image.
      */
     status?: ImageStatus;
     /**
-     * The reason for the image's status.
+     * The reason for the status of the image.
      */
     reason?: NonEmptyString;
   }
@@ -2033,7 +2467,7 @@ declare namespace Imagebuilder {
      */
     name?: ResourceName;
     /**
-     * Specifies whether this is an AMI or container image.
+     * Specifies whether this image produces an AMI or a container image.
      */
     type?: ImageType;
     /**
@@ -2041,11 +2475,11 @@ declare namespace Imagebuilder {
      */
     version?: VersionNumber;
     /**
-     * The platform of the image.
+     * The image operating system platform, such as Linux or Windows.
      */
     platform?: Platform;
     /**
-     * The operating system version of the instance. For example, Amazon Linux 2, Ubuntu 18, or Microsoft Windows Server 2019.
+     * The operating system version of the instances that launch from this image. For example, Amazon Linux 2, Ubuntu 18, or Microsoft Windows Server 2019.
      */
     osVersion?: OsVersion;
     /**
@@ -2057,21 +2491,25 @@ declare namespace Imagebuilder {
      */
     owner?: NonEmptyString;
     /**
-     * The date on which this image was created.
+     * The date on which Image Builder created this image.
      */
     dateCreated?: DateTime;
     /**
-     * The output resources produced when creating this image.
+     * The output resources that Image Builder produced when it created this image.
      */
     outputResources?: OutputResources;
     /**
-     * The tags of the image.
+     * The tags that apply to this image.
      */
     tags?: TagMap;
     /**
      * Indicates the type of build that created this image. The build can be initiated in the following ways:    USER_INITIATED – A manual pipeline build request.    SCHEDULED – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from EventBridge.    IMPORT – A VM import created the image to use as the base image for the recipe.  
      */
     buildType?: BuildType;
+    /**
+     * The origin of the base image that Image Builder used to build this image.
+     */
+    imageSource?: ImageSource;
   }
   export type ImageSummaryList = ImageSummary[];
   export interface ImageTestsConfiguration {
@@ -2080,7 +2518,7 @@ declare namespace Imagebuilder {
      */
     imageTestsEnabled?: NullableBoolean;
     /**
-     * The maximum time in minutes that tests are permitted to run.
+     * The maximum time in minutes that tests are permitted to run.  The timeoutMinutes attribute is not currently active. This value is ignored. 
      */
     timeoutMinutes?: ImageTestsTimeoutMinutes;
   }
@@ -2096,7 +2534,7 @@ declare namespace Imagebuilder {
      */
     name?: ResourceName;
     /**
-     * Specifies whether this image is an AMI or a container image.
+     * Specifies whether this image produces an AMI or a container image.
      */
     type?: ImageType;
     /**
@@ -2104,7 +2542,7 @@ declare namespace Imagebuilder {
      */
     version?: VersionNumber;
     /**
-     * The platform of the image version, for example "Windows" or "Linux".
+     * The operating system platform of the image version, for example "Windows" or "Linux".
      */
     platform?: Platform;
     /**
@@ -2123,13 +2561,17 @@ declare namespace Imagebuilder {
      * Indicates the type of build that created this image. The build can be initiated in the following ways:    USER_INITIATED – A manual pipeline build request.    SCHEDULED – A pipeline build initiated by a cron expression in the Image Builder pipeline, or from EventBridge.    IMPORT – A VM import created the image to use as the base image for the recipe.  
      */
     buildType?: BuildType;
+    /**
+     * The origin of the base image that Image Builder used to build this image.
+     */
+    imageSource?: ImageSource;
   }
   export type ImageVersionArn = string;
   export type ImageVersionArnOrBuildVersionArn = string;
   export type ImageVersionList = ImageVersion[];
   export interface ImportComponentRequest {
     /**
-     *  The name of the component.
+     * The name of the component.
      */
     name: ResourceName;
     /**
@@ -2141,7 +2583,7 @@ declare namespace Imagebuilder {
      */
     description?: NonEmptyString;
     /**
-     * The change description of the component. Describes what change has been made in this version, or what makes this version different from other versions of this component.
+     * The change description of the component. This description indicates the change that has been made in this version, or what makes this version different from other versions of this component.
      */
     changeDescription?: NonEmptyString;
     /**
@@ -2347,6 +2789,12 @@ declare namespace Imagebuilder {
   export type InfrastructureConfigurationSummaryList = InfrastructureConfigurationSummary[];
   export type InlineComponentData = string;
   export type InlineDockerFileTemplate = string;
+  export interface InspectorScoreDetails {
+    /**
+     * An object that contains details about an adjustment that Amazon Inspector made to the CVSS score for the finding.
+     */
+    adjustedCvss?: CvssScoreDetails;
+  }
   export interface InstanceBlockDeviceMapping {
     /**
      * The device to which these mappings apply.
@@ -2382,7 +2830,7 @@ declare namespace Imagebuilder {
      */
     httpTokens?: HttpTokens;
     /**
-     * Limit the number of hops that an instance metadata request can traverse to reach its destination.
+     * Limit the number of hops that an instance metadata request can traverse to reach its destination. The default is one hop. However, if HTTP tokens are required, container image builds need a minimum of two hops.
      */
     httpPutResponseHopLimit?: HttpPutResponseHopLimit;
   }
@@ -2449,13 +2897,13 @@ declare namespace Imagebuilder {
      */
     componentSummaryList?: ComponentSummaryList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
   export interface ListComponentsRequest {
     /**
-     * The owner defines which components you want to list. By default, this request will only show components owned by your account. You can use this field to specify if you want to view components owned by yourself, by Amazon, or those components that have been shared with you by other customers.
+     * Filters results based on the type of owner for the component. By default, this request returns a list of components that your account owns. To see results for other types of owners, you can specify components that Amazon manages, third party components, or components that other accounts have shared with you.
      */
     owner?: Ownership;
     /**
@@ -2463,7 +2911,7 @@ declare namespace Imagebuilder {
      */
     filters?: FilterList;
     /**
-     * Returns the list of component build versions for the specified name.
+     * Returns the list of components for the specified name.
      */
     byName?: Boolean;
     /**
@@ -2485,7 +2933,7 @@ declare namespace Imagebuilder {
      */
     componentVersionList?: ComponentVersionList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2499,11 +2947,11 @@ declare namespace Imagebuilder {
      */
     filters?: FilterList;
     /**
-     * The maximum number of results to return in the list.
+     * The maximum items to return in a request.
      */
     maxResults?: RestrictedInteger;
     /**
-     * Provides a token for pagination, which determines where to begin the next set of results when the current set reaches the maximum for one request.
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      */
     nextToken?: NonEmptyString;
   }
@@ -2517,7 +2965,7 @@ declare namespace Imagebuilder {
      */
     containerRecipeSummaryList?: ContainerRecipeSummaryList;
     /**
-     * The next token field is used for paginated responses. When this is not empty, there are additional container recipes that the service has not included in this response. Use this token with the next request to retrieve additional list items.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: NonEmptyString;
   }
@@ -2545,7 +2993,7 @@ declare namespace Imagebuilder {
      */
     distributionConfigurationSummaryList?: DistributionConfigurationSummaryList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2577,7 +3025,7 @@ declare namespace Imagebuilder {
      */
     imageSummaryList?: ImageSummaryList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2587,7 +3035,7 @@ declare namespace Imagebuilder {
      */
     imageBuildVersionArn: ImageBuildVersionArn;
     /**
-     * The maxiumum number of results to return from the ListImagePackages request.
+     * The maximum items to return in a request.
      */
     maxResults?: RestrictedInteger;
     /**
@@ -2605,7 +3053,7 @@ declare namespace Imagebuilder {
      */
     imagePackageList?: ImagePackageList;
     /**
-     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2637,7 +3085,7 @@ declare namespace Imagebuilder {
      */
     imageSummaryList?: ImageSummaryList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2665,7 +3113,7 @@ declare namespace Imagebuilder {
      */
     imagePipelineList?: ImagePipelineList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2697,7 +3145,60 @@ declare namespace Imagebuilder {
      */
     imageRecipeSummaryList?: ImageRecipeSummaryList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
+     */
+    nextToken?: PaginationToken;
+  }
+  export interface ListImageScanFindingAggregationsRequest {
+    filter?: Filter;
+    /**
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
+     */
+    nextToken?: PaginationToken;
+  }
+  export interface ListImageScanFindingAggregationsResponse {
+    /**
+     * The request ID that uniquely identifies this request.
+     */
+    requestId?: NonEmptyString;
+    /**
+     * The aggregation type specifies what type of key is used to group the image scan findings. Image Builder returns results based on the request filter. If you didn't specify a filter in the request, the type defaults to accountId.  Aggregation types    accountId   imageBuildVersionArn   imagePipelineArn   vulnerabilityId   Each aggregation includes counts by severity level for medium severity and higher level findings, plus a total for all of the findings for each key value.
+     */
+    aggregationType?: NonEmptyString;
+    /**
+     * An array of image scan finding aggregations that match the filter criteria.
+     */
+    responses?: ImageScanFindingAggregationsList;
+    /**
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
+     */
+    nextToken?: PaginationToken;
+  }
+  export interface ListImageScanFindingsRequest {
+    /**
+     * An array of name value pairs that you can use to filter your results. You can use the following filters to streamline results:    imageBuildVersionArn     imagePipelineArn     vulnerabilityId     severity    If you don't request a filter, then all findings in your account are listed.
+     */
+    filters?: ImageScanFindingsFilterList;
+    /**
+     * The maximum items to return in a request.
+     */
+    maxResults?: RestrictedInteger;
+    /**
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
+     */
+    nextToken?: PaginationToken;
+  }
+  export interface ListImageScanFindingsResponse {
+    /**
+     * The request ID that uniquely identifies this request.
+     */
+    requestId?: NonEmptyString;
+    /**
+     * The image scan findings for your account that meet your request filter criteria.
+     */
+    findings?: ImageScanFindingsList;
+    /**
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2737,7 +3238,7 @@ declare namespace Imagebuilder {
      */
     imageVersionList?: ImageVersionList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2765,7 +3266,7 @@ declare namespace Imagebuilder {
      */
     infrastructureConfigurationSummaryList?: InfrastructureConfigurationSummaryList;
     /**
-     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects.
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
      */
     nextToken?: PaginationToken;
   }
@@ -2781,6 +3282,86 @@ declare namespace Imagebuilder {
      */
     tags?: TagMap;
   }
+  export interface ListWorkflowExecutionsRequest {
+    /**
+     * The maximum items to return in a request.
+     */
+    maxResults?: RestrictedInteger;
+    /**
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
+     */
+    nextToken?: PaginationToken;
+    /**
+     * List all workflow runtime instances for the specified image build version resource ARN.
+     */
+    imageBuildVersionArn: ImageBuildVersionArn;
+  }
+  export interface ListWorkflowExecutionsResponse {
+    /**
+     * The request ID that uniquely identifies this request.
+     */
+    requestId?: NonEmptyString;
+    /**
+     * Contains an array of runtime details that represents each time a workflow ran for the requested image build version.
+     */
+    workflowExecutions?: WorkflowExecutionsList;
+    /**
+     * The resource ARN of the image build version for which you requested a list of workflow runtime details.
+     */
+    imageBuildVersionArn?: ImageBuildVersionArn;
+    /**
+     * The output message from the list action, if applicable.
+     */
+    message?: ImageBuildMessage;
+    /**
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
+     */
+    nextToken?: PaginationToken;
+  }
+  export interface ListWorkflowStepExecutionsRequest {
+    /**
+     * The maximum items to return in a request.
+     */
+    maxResults?: RestrictedInteger;
+    /**
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
+     */
+    nextToken?: PaginationToken;
+    /**
+     * The unique identifier that Image Builder assigned to keep track of runtime details when it ran the workflow.
+     */
+    workflowExecutionId: WorkflowExecutionId;
+  }
+  export interface ListWorkflowStepExecutionsResponse {
+    /**
+     * The request ID that uniquely identifies this request.
+     */
+    requestId?: NonEmptyString;
+    /**
+     * Contains an array of runtime details that represents each step in this runtime instance of the workflow.
+     */
+    steps?: WorkflowStepExecutionsList;
+    /**
+     * The build version ARN for the Image Builder workflow resource that defines the steps for this runtime instance of the workflow.
+     */
+    workflowBuildVersionArn?: WorkflowBuildVersionArn;
+    /**
+     * The unique identifier that Image Builder assigned to keep track of runtime details when it ran the workflow.
+     */
+    workflowExecutionId?: WorkflowExecutionId;
+    /**
+     * The image build version resource ARN that's associated with the specified runtime instance of the workflow.
+     */
+    imageBuildVersionArn?: ImageBuildVersionArn;
+    /**
+     * The output message from the list action, if applicable.
+     */
+    message?: ImageBuildMessage;
+    /**
+     * The next token used for paginated responses. When this field isn't empty, there are additional elements that the service has'ot included in this request. Use this token with the next request to retrieve additional objects.
+     */
+    nextToken?: PaginationToken;
+  }
   export interface Logging {
     /**
      * The Amazon S3 logging configuration.
@@ -2789,6 +3370,8 @@ declare namespace Imagebuilder {
   }
   export type MaxParallelLaunches = number;
   export type NonEmptyString = string;
+  export type NonEmptyStringList = NonEmptyString[];
+  export type NonNegativeDouble = number;
   export type NullableBoolean = boolean;
   export type OrganizationArn = string;
   export type OrganizationArnList = OrganizationArn[];
@@ -2806,7 +3389,51 @@ declare namespace Imagebuilder {
      */
     containers?: ContainerList;
   }
-  export type Ownership = "Self"|"Shared"|"Amazon"|string;
+  export type Ownership = "Self"|"Shared"|"Amazon"|"ThirdParty"|string;
+  export type PackageArchitecture = string;
+  export type PackageEpoch = number;
+  export interface PackageVulnerabilityDetails {
+    /**
+     * A unique identifier for this vulnerability.
+     */
+    vulnerabilityId: VulnerabilityId;
+    /**
+     * The packages that this vulnerability impacts.
+     */
+    vulnerablePackages?: VulnerablePackageList;
+    /**
+     * The source of the vulnerability information.
+     */
+    source?: NonEmptyString;
+    /**
+     * CVSS scores for one or more vulnerabilities that Amazon Inspector identified for a package.
+     */
+    cvss?: CvssScoreList;
+    /**
+     * Vulnerabilities that are often related to the findings for the package.
+     */
+    relatedVulnerabilities?: VulnerabilityIdList;
+    /**
+     * A link to the source of the vulnerability information.
+     */
+    sourceUrl?: NonEmptyString;
+    /**
+     * The severity that the vendor assigned to this vulnerability type.
+     */
+    vendorSeverity?: NonEmptyString;
+    /**
+     * The date and time when this vulnerability was first added to the vendor's database.
+     */
+    vendorCreatedAt?: DateTimeTimestamp;
+    /**
+     * The date and time when the vendor last updated this vulnerability in their database.
+     */
+    vendorUpdatedAt?: DateTimeTimestamp;
+    /**
+     * Links to web pages that contain details about the vulnerabilities that Amazon Inspector identified for the package.
+     */
+    referenceUrls?: NonEmptyStringList;
+  }
   export type PaginationToken = string;
   export type PipelineExecutionStartCondition = "EXPRESSION_MATCH_ONLY"|"EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE"|string;
   export type PipelineStatus = "DISABLED"|"ENABLED"|string;
@@ -2892,6 +3519,22 @@ declare namespace Imagebuilder {
     imageRecipeArn?: ImageRecipeArn;
   }
   export type RegionList = NonEmptyString[];
+  export interface Remediation {
+    /**
+     * An object that contains information about the recommended course of action to remediate the finding.
+     */
+    recommendation?: RemediationRecommendation;
+  }
+  export interface RemediationRecommendation {
+    /**
+     * The recommended course of action to remediate the finding.
+     */
+    text?: NonEmptyString;
+    /**
+     * A link to more information about the recommended remediation for this vulnerability.
+     */
+    url?: NonEmptyString;
+  }
   export type ResourceName = string;
   export type ResourcePolicyDocument = string;
   export type ResourceTagMap = {[key: string]: TagValue};
@@ -2939,7 +3582,27 @@ declare namespace Imagebuilder {
     pipelineExecutionStartCondition?: PipelineExecutionStartCondition;
   }
   export type SecurityGroupIds = NonEmptyString[];
+  export type SeverityCountNumber = number;
+  export interface SeverityCounts {
+    /**
+     * The total number of findings across all severity levels for the specified filter.
+     */
+    all?: SeverityCountNumber;
+    /**
+     * The number of critical severity findings for the specified filter.
+     */
+    critical?: SeverityCountNumber;
+    /**
+     * The number of high severity findings for the specified filter.
+     */
+    high?: SeverityCountNumber;
+    /**
+     * The number of medium severity findings for the specified filter.
+     */
+    medium?: SeverityCountNumber;
+  }
   export type SnsTopicArn = string;
+  export type SourceLayerHash = string;
   export interface StartImagePipelineExecutionRequest {
     /**
      * The Amazon Resource Name (ARN) of the image pipeline that you want to manually invoke.
@@ -3061,11 +3724,11 @@ declare namespace Imagebuilder {
      */
     containerRecipeArn?: ContainerRecipeArn;
     /**
-     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images that this image pipeline has updated.
      */
     infrastructureConfigurationArn: InfrastructureConfigurationArn;
     /**
-     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images updated by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and distribute images that this image pipeline has updated.
      */
     distributionConfigurationArn?: DistributionConfigurationArn;
     /**
@@ -3073,7 +3736,7 @@ declare namespace Imagebuilder {
      */
     imageTestsConfiguration?: ImageTestsConfiguration;
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      */
     enhancedImageMetadataEnabled?: NullableBoolean;
     /**
@@ -3088,6 +3751,10 @@ declare namespace Imagebuilder {
      * The idempotency token used to make this request idempotent.
      */
     clientToken: ClientToken;
+    /**
+     * Contains settings for vulnerability scans.
+     */
+    imageScanningConfiguration?: ImageScanningConfiguration;
   }
   export interface UpdateImagePipelineResponse {
     /**
@@ -3174,6 +3841,171 @@ declare namespace Imagebuilder {
   export type Uri = string;
   export type UserDataOverride = string;
   export type VersionNumber = string;
+  export type VulnerabilityId = string;
+  export interface VulnerabilityIdAggregation {
+    /**
+     * The vulnerability Id for this set of counts.
+     */
+    vulnerabilityId?: NonEmptyString;
+    /**
+     * Counts by severity level for medium severity and higher level findings, plus a total for all of the findings for the specified vulnerability.
+     */
+    severityCounts?: SeverityCounts;
+  }
+  export type VulnerabilityIdList = VulnerabilityId[];
+  export interface VulnerablePackage {
+    /**
+     * The name of the vulnerable package.
+     */
+    name?: NonEmptyString;
+    /**
+     * The version of the vulnerable package.
+     */
+    version?: NonEmptyString;
+    /**
+     * The source layer hash of the vulnerable package.
+     */
+    sourceLayerHash?: SourceLayerHash;
+    /**
+     * The epoch of the vulnerable package.
+     */
+    epoch?: PackageEpoch;
+    /**
+     * The release of the vulnerable package.
+     */
+    release?: NonEmptyString;
+    /**
+     * The architecture of the vulnerable package.
+     */
+    arch?: PackageArchitecture;
+    /**
+     * The package manager of the vulnerable package.
+     */
+    packageManager?: NonEmptyString;
+    /**
+     * The file path of the vulnerable package.
+     */
+    filePath?: NonEmptyString;
+    /**
+     * The version of the package that contains the vulnerability fix.
+     */
+    fixedInVersion?: NonEmptyString;
+    /**
+     * The code to run in your environment to update packages with a fix available.
+     */
+    remediation?: NonEmptyString;
+  }
+  export type VulnerablePackageList = VulnerablePackage[];
+  export type WorkflowBuildVersionArn = string;
+  export type WorkflowExecutionId = string;
+  export type WorkflowExecutionMessage = string;
+  export interface WorkflowExecutionMetadata {
+    /**
+     * The Amazon Resource Name (ARN) of the workflow resource build version that ran.
+     */
+    workflowBuildVersionArn?: WorkflowBuildVersionArn;
+    /**
+     * Unique identifier that Image Builder assigns to keep track of runtime resources each time it runs a workflow.
+     */
+    workflowExecutionId?: WorkflowExecutionId;
+    /**
+     * Indicates what type of workflow that Image Builder ran for this runtime instance of the workflow.
+     */
+    type?: WorkflowType;
+    /**
+     * The current runtime status for this workflow.
+     */
+    status?: WorkflowExecutionStatus;
+    /**
+     * The runtime output message from the workflow, if applicable.
+     */
+    message?: WorkflowExecutionMessage;
+    /**
+     * The total number of steps in the workflow. This should equal the sum of the step counts for steps that succeeded, were skipped, and failed.
+     */
+    totalStepCount?: WorkflowStepCount;
+    /**
+     * A runtime count for the number of steps in the workflow that ran successfully.
+     */
+    totalStepsSucceeded?: WorkflowStepCount;
+    /**
+     * A runtime count for the number of steps in the workflow that failed.
+     */
+    totalStepsFailed?: WorkflowStepCount;
+    /**
+     * A runtime count for the number of steps in the workflow that were skipped.
+     */
+    totalStepsSkipped?: WorkflowStepCount;
+    /**
+     * The timestamp when the runtime instance of this workflow started.
+     */
+    startTime?: DateTime;
+    /**
+     * The timestamp when this runtime instance of the workflow finished.
+     */
+    endTime?: DateTime;
+  }
+  export type WorkflowExecutionStatus = "PENDING"|"SKIPPED"|"RUNNING"|"COMPLETED"|"FAILED"|"ROLLBACK_IN_PROGRESS"|"ROLLBACK_COMPLETED"|string;
+  export type WorkflowExecutionsList = WorkflowExecutionMetadata[];
+  export type WorkflowStepAction = string;
+  export type WorkflowStepCount = number;
+  export type WorkflowStepDescription = string;
+  export type WorkflowStepExecutionId = string;
+  export type WorkflowStepExecutionRollbackStatus = "RUNNING"|"COMPLETED"|"SKIPPED"|"FAILED"|string;
+  export type WorkflowStepExecutionStatus = "PENDING"|"SKIPPED"|"RUNNING"|"COMPLETED"|"FAILED"|string;
+  export type WorkflowStepExecutionsList = WorkflowStepMetadata[];
+  export type WorkflowStepInputs = string;
+  export type WorkflowStepMessage = string;
+  export interface WorkflowStepMetadata {
+    /**
+     * A unique identifier for the workflow step, assigned at runtime.
+     */
+    stepExecutionId?: WorkflowStepExecutionId;
+    /**
+     * The name of the workflow step.
+     */
+    name?: WorkflowStepName;
+    /**
+     * Description of the workflow step.
+     */
+    description?: WorkflowStepDescription;
+    /**
+     * The step action name.
+     */
+    action?: WorkflowStepAction;
+    /**
+     * Runtime status for the workflow step.
+     */
+    status?: WorkflowStepExecutionStatus;
+    /**
+     * Reports on the rollback status of the step, if applicable.
+     */
+    rollbackStatus?: WorkflowStepExecutionRollbackStatus;
+    /**
+     * Detailed output message that the workflow step provides at runtime.
+     */
+    message?: WorkflowStepMessage;
+    /**
+     * Input parameters that Image Builder provides for the workflow step.
+     */
+    inputs?: WorkflowStepInputs;
+    /**
+     * The file names that the workflow step created as output for this runtime instance of the workflow.
+     */
+    outputs?: WorkflowStepOutputs;
+    /**
+     * The timestamp when the workflow step started.
+     */
+    startTime?: DateTime;
+    /**
+     * The timestamp when the workflow step finished.
+     */
+    endTime?: DateTime;
+  }
+  export type WorkflowStepName = string;
+  export type WorkflowStepOutputs = string;
+  export type WorkflowStepTimeoutSecondsInteger = number;
+  export type WorkflowType = "BUILD"|"TEST"|"DISTRIBUTION"|string;
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

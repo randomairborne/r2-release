@@ -2,6 +2,7 @@ import {Request} from '../lib/request';
 import {Response} from '../lib/response';
 import {AWSError} from '../lib/error';
 import {Service} from '../lib/service';
+import {WaiterConfiguration} from '../lib/service';
 import {ServiceConfigurationOptions} from '../lib/service';
 import {ConfigBase as Config} from '../lib/config-base';
 interface Blob {}
@@ -36,6 +37,14 @@ declare class GroundStation extends Service {
    */
   createDataflowEndpointGroup(callback?: (err: AWSError, data: GroundStation.Types.DataflowEndpointGroupIdResponse) => void): Request<GroundStation.Types.DataflowEndpointGroupIdResponse, AWSError>;
   /**
+   * Creates an Ephemeris with the specified EphemerisData.
+   */
+  createEphemeris(params: GroundStation.Types.CreateEphemerisRequest, callback?: (err: AWSError, data: GroundStation.Types.EphemerisIdResponse) => void): Request<GroundStation.Types.EphemerisIdResponse, AWSError>;
+  /**
+   * Creates an Ephemeris with the specified EphemerisData.
+   */
+  createEphemeris(callback?: (err: AWSError, data: GroundStation.Types.EphemerisIdResponse) => void): Request<GroundStation.Types.EphemerisIdResponse, AWSError>;
+  /**
    * Creates a mission profile.  dataflowEdges is a list of lists of strings. Each lower level list of strings has two elements: a from ARN and a to ARN.
    */
   createMissionProfile(params: GroundStation.Types.CreateMissionProfileRequest, callback?: (err: AWSError, data: GroundStation.Types.MissionProfileIdResponse) => void): Request<GroundStation.Types.MissionProfileIdResponse, AWSError>;
@@ -60,6 +69,14 @@ declare class GroundStation extends Service {
    */
   deleteDataflowEndpointGroup(callback?: (err: AWSError, data: GroundStation.Types.DataflowEndpointGroupIdResponse) => void): Request<GroundStation.Types.DataflowEndpointGroupIdResponse, AWSError>;
   /**
+   * Deletes an ephemeris
+   */
+  deleteEphemeris(params: GroundStation.Types.DeleteEphemerisRequest, callback?: (err: AWSError, data: GroundStation.Types.EphemerisIdResponse) => void): Request<GroundStation.Types.EphemerisIdResponse, AWSError>;
+  /**
+   * Deletes an ephemeris
+   */
+  deleteEphemeris(callback?: (err: AWSError, data: GroundStation.Types.EphemerisIdResponse) => void): Request<GroundStation.Types.EphemerisIdResponse, AWSError>;
+  /**
    * Deletes a mission profile.
    */
   deleteMissionProfile(params: GroundStation.Types.DeleteMissionProfileRequest, callback?: (err: AWSError, data: GroundStation.Types.MissionProfileIdResponse) => void): Request<GroundStation.Types.MissionProfileIdResponse, AWSError>;
@@ -75,6 +92,22 @@ declare class GroundStation extends Service {
    * Describes an existing contact.
    */
   describeContact(callback?: (err: AWSError, data: GroundStation.Types.DescribeContactResponse) => void): Request<GroundStation.Types.DescribeContactResponse, AWSError>;
+  /**
+   * Describes an existing ephemeris.
+   */
+  describeEphemeris(params: GroundStation.Types.DescribeEphemerisRequest, callback?: (err: AWSError, data: GroundStation.Types.DescribeEphemerisResponse) => void): Request<GroundStation.Types.DescribeEphemerisResponse, AWSError>;
+  /**
+   * Describes an existing ephemeris.
+   */
+  describeEphemeris(callback?: (err: AWSError, data: GroundStation.Types.DescribeEphemerisResponse) => void): Request<GroundStation.Types.DescribeEphemerisResponse, AWSError>;
+  /**
+   * Gets the latest configuration information for a registered agent.
+   */
+  getAgentConfiguration(params: GroundStation.Types.GetAgentConfigurationRequest, callback?: (err: AWSError, data: GroundStation.Types.GetAgentConfigurationResponse) => void): Request<GroundStation.Types.GetAgentConfigurationResponse, AWSError>;
+  /**
+   * Gets the latest configuration information for a registered agent.
+   */
+  getAgentConfiguration(callback?: (err: AWSError, data: GroundStation.Types.GetAgentConfigurationResponse) => void): Request<GroundStation.Types.GetAgentConfigurationResponse, AWSError>;
   /**
    * Returns Config information. Only one Config response can be returned.
    */
@@ -140,6 +173,14 @@ declare class GroundStation extends Service {
    */
   listDataflowEndpointGroups(callback?: (err: AWSError, data: GroundStation.Types.ListDataflowEndpointGroupsResponse) => void): Request<GroundStation.Types.ListDataflowEndpointGroupsResponse, AWSError>;
   /**
+   * List existing ephemerides.
+   */
+  listEphemerides(params: GroundStation.Types.ListEphemeridesRequest, callback?: (err: AWSError, data: GroundStation.Types.ListEphemeridesResponse) => void): Request<GroundStation.Types.ListEphemeridesResponse, AWSError>;
+  /**
+   * List existing ephemerides.
+   */
+  listEphemerides(callback?: (err: AWSError, data: GroundStation.Types.ListEphemeridesResponse) => void): Request<GroundStation.Types.ListEphemeridesResponse, AWSError>;
+  /**
    * Returns a list of ground stations. 
    */
   listGroundStations(params: GroundStation.Types.ListGroundStationsRequest, callback?: (err: AWSError, data: GroundStation.Types.ListGroundStationsResponse) => void): Request<GroundStation.Types.ListGroundStationsResponse, AWSError>;
@@ -172,6 +213,14 @@ declare class GroundStation extends Service {
    */
   listTagsForResource(callback?: (err: AWSError, data: GroundStation.Types.ListTagsForResourceResponse) => void): Request<GroundStation.Types.ListTagsForResourceResponse, AWSError>;
   /**
+   * Registers a new agent with AWS Groundstation.
+   */
+  registerAgent(params: GroundStation.Types.RegisterAgentRequest, callback?: (err: AWSError, data: GroundStation.Types.RegisterAgentResponse) => void): Request<GroundStation.Types.RegisterAgentResponse, AWSError>;
+  /**
+   * Registers a new agent with AWS Groundstation.
+   */
+  registerAgent(callback?: (err: AWSError, data: GroundStation.Types.RegisterAgentResponse) => void): Request<GroundStation.Types.RegisterAgentResponse, AWSError>;
+  /**
    * Reserves a contact using specified parameters.
    */
   reserveContact(params: GroundStation.Types.ReserveContactRequest, callback?: (err: AWSError, data: GroundStation.Types.ContactIdResponse) => void): Request<GroundStation.Types.ContactIdResponse, AWSError>;
@@ -196,6 +245,14 @@ declare class GroundStation extends Service {
    */
   untagResource(callback?: (err: AWSError, data: GroundStation.Types.UntagResourceResponse) => void): Request<GroundStation.Types.UntagResourceResponse, AWSError>;
   /**
+   * Update the status of the agent.
+   */
+  updateAgentStatus(params: GroundStation.Types.UpdateAgentStatusRequest, callback?: (err: AWSError, data: GroundStation.Types.UpdateAgentStatusResponse) => void): Request<GroundStation.Types.UpdateAgentStatusResponse, AWSError>;
+  /**
+   * Update the status of the agent.
+   */
+  updateAgentStatus(callback?: (err: AWSError, data: GroundStation.Types.UpdateAgentStatusResponse) => void): Request<GroundStation.Types.UpdateAgentStatusResponse, AWSError>;
+  /**
    * Updates the Config used when scheduling contacts. Updating a Config will not update the execution parameters for existing future contacts scheduled with this Config.
    */
   updateConfig(params: GroundStation.Types.UpdateConfigRequest, callback?: (err: AWSError, data: GroundStation.Types.ConfigIdResponse) => void): Request<GroundStation.Types.ConfigIdResponse, AWSError>;
@@ -204,6 +261,14 @@ declare class GroundStation extends Service {
    */
   updateConfig(callback?: (err: AWSError, data: GroundStation.Types.ConfigIdResponse) => void): Request<GroundStation.Types.ConfigIdResponse, AWSError>;
   /**
+   * Updates an existing ephemeris
+   */
+  updateEphemeris(params: GroundStation.Types.UpdateEphemerisRequest, callback?: (err: AWSError, data: GroundStation.Types.EphemerisIdResponse) => void): Request<GroundStation.Types.EphemerisIdResponse, AWSError>;
+  /**
+   * Updates an existing ephemeris
+   */
+  updateEphemeris(callback?: (err: AWSError, data: GroundStation.Types.EphemerisIdResponse) => void): Request<GroundStation.Types.EphemerisIdResponse, AWSError>;
+  /**
    * Updates a mission profile. Updating a mission profile will not update the execution parameters for existing future contacts.
    */
   updateMissionProfile(params: GroundStation.Types.UpdateMissionProfileRequest, callback?: (err: AWSError, data: GroundStation.Types.MissionProfileIdResponse) => void): Request<GroundStation.Types.MissionProfileIdResponse, AWSError>;
@@ -211,8 +276,50 @@ declare class GroundStation extends Service {
    * Updates a mission profile. Updating a mission profile will not update the execution parameters for existing future contacts.
    */
   updateMissionProfile(callback?: (err: AWSError, data: GroundStation.Types.MissionProfileIdResponse) => void): Request<GroundStation.Types.MissionProfileIdResponse, AWSError>;
+  /**
+   * Waits for the contactScheduled state by periodically calling the underlying GroundStation.describeContactoperation every 5 seconds (at most 180 times). Waits until a contact has been scheduled
+   */
+  waitFor(state: "contactScheduled", params: GroundStation.Types.DescribeContactRequest & {$waiter?: WaiterConfiguration}, callback?: (err: AWSError, data: GroundStation.Types.DescribeContactResponse) => void): Request<GroundStation.Types.DescribeContactResponse, AWSError>;
+  /**
+   * Waits for the contactScheduled state by periodically calling the underlying GroundStation.describeContactoperation every 5 seconds (at most 180 times). Waits until a contact has been scheduled
+   */
+  waitFor(state: "contactScheduled", callback?: (err: AWSError, data: GroundStation.Types.DescribeContactResponse) => void): Request<GroundStation.Types.DescribeContactResponse, AWSError>;
 }
 declare namespace GroundStation {
+  export type AWSRegion = string;
+  export interface AgentDetails {
+    /**
+     * Current agent version.
+     */
+    agentVersion: VersionString;
+    /**
+     * List of versions being used by agent components.
+     */
+    componentVersions: ComponentVersionList;
+    /**
+     * ID of EC2 instance agent is running on.
+     */
+    instanceId: InstanceId;
+    /**
+     * Type of EC2 instance agent is running on.
+     */
+    instanceType: InstanceType;
+    /**
+     * Number of Cpu cores reserved for agent.
+     */
+    reservedCpuCores: ReservedCpuCoresList;
+  }
+  export type AgentStatus = "SUCCESS"|"FAILED"|"ACTIVE"|"INACTIVE"|string;
+  export interface AggregateStatus {
+    /**
+     * Sparse map of failure signatures.
+     */
+    signatureMap?: SignatureMap;
+    /**
+     * Aggregate status.
+     */
+    status: AgentStatus;
+  }
   export type AngleUnits = "DEGREE_ANGLE"|"RADIAN"|string;
   export interface AntennaDemodDecodeDetails {
     /**
@@ -254,6 +361,30 @@ declare namespace GroundStation {
      */
     transmitDisabled?: Boolean;
   }
+  export type AnyArn = string;
+  export type AuditResults = "HEALTHY"|"UNHEALTHY"|string;
+  export interface AwsGroundStationAgentEndpoint {
+    /**
+     * The status of AgentEndpoint.
+     */
+    agentStatus?: AgentStatus;
+    /**
+     * The results of the audit.
+     */
+    auditResults?: AuditResults;
+    /**
+     * The egress address of AgentEndpoint.
+     */
+    egressAddress: ConnectionDetails;
+    /**
+     * The ingress address of AgentEndpoint.
+     */
+    ingressAddress: RangedConnectionDetails;
+    /**
+     * Name string associated with AgentEndpoint. Used as a human-readable identifier for AgentEndpoint.
+     */
+    name: SafeName;
+  }
   export type BandwidthUnits = "GHz"|"MHz"|"kHz"|string;
   export type Boolean = boolean;
   export type BucketArn = string;
@@ -261,8 +392,53 @@ declare namespace GroundStation {
     /**
      * UUID of a contact.
      */
-    contactId: String;
+    contactId: Uuid;
   }
+  export type CapabilityArn = string;
+  export type CapabilityArnList = CapabilityArn[];
+  export interface ComponentStatusData {
+    /**
+     * Bytes received by the component.
+     */
+    bytesReceived?: Long;
+    /**
+     * Bytes sent by the component.
+     */
+    bytesSent?: Long;
+    /**
+     * Capability ARN of the component.
+     */
+    capabilityArn: CapabilityArn;
+    /**
+     * The Component type.
+     */
+    componentType: ComponentType;
+    /**
+     * Dataflow UUID associated with the component.
+     */
+    dataflowId: Uuid;
+    /**
+     * Packets dropped by component.
+     */
+    packetsDropped?: Long;
+    /**
+     * Component status.
+     */
+    status: AgentStatus;
+  }
+  export type ComponentStatusList = ComponentStatusData[];
+  export type ComponentType = "LAMINAR_FLOW"|"PRISM"|"DIGITIZER"|string;
+  export interface ComponentVersion {
+    /**
+     * Component type.
+     */
+    componentType: ComponentType;
+    /**
+     * List of versions.
+     */
+    versions: VersionStringList;
+  }
+  export type ComponentVersionList = ComponentVersion[];
   export type ConfigArn = string;
   export type ConfigCapabilityType = "antenna-downlink"|"antenna-downlink-demod-decode"|"antenna-uplink"|"dataflow-endpoint"|"tracking"|"uplink-echo"|"s3-recording"|string;
   export interface ConfigDetails {
@@ -339,17 +515,27 @@ declare namespace GroundStation {
      */
     uplinkEchoConfig?: UplinkEchoConfig;
   }
+  export interface ConnectionDetails {
+    /**
+     * Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+     */
+    mtu?: Integer;
+    /**
+     * A socket address.
+     */
+    socketAddress: SocketAddress;
+  }
   export interface ContactData {
     /**
      * UUID of a contact.
      */
-    contactId?: String;
+    contactId?: Uuid;
     /**
      * Status of a contact.
      */
     contactStatus?: ContactStatus;
     /**
-     * End time of a contact.
+     * End time of a contact in UTC.
      */
     endTime?: Timestamp;
     /**
@@ -385,7 +571,7 @@ declare namespace GroundStation {
      */
     satelliteArn?: satelliteArn;
     /**
-     * Start time of a contact.
+     * Start time of a contact in UTC.
      */
     startTime?: Timestamp;
     /**
@@ -397,7 +583,7 @@ declare namespace GroundStation {
     /**
      * UUID of a contact.
      */
-    contactId?: String;
+    contactId?: Uuid;
   }
   export type ContactList = ContactData[];
   export type ContactStatus = "AVAILABLE"|"AWS_CANCELLED"|"AWS_FAILED"|"CANCELLED"|"CANCELLING"|"COMPLETED"|"FAILED"|"FAILED_TO_SCHEDULE"|"PASS"|"POSTPASS"|"PREPASS"|"SCHEDULED"|"SCHEDULING"|string;
@@ -417,11 +603,53 @@ declare namespace GroundStation {
   }
   export interface CreateDataflowEndpointGroupRequest {
     /**
+     * Amount of time, in seconds, after a contact ends for the contact to remain in a POSTPASS state. A CloudWatch event is emitted when the contact enters and exits the POSTPASS state.
+     */
+    contactPostPassDurationSeconds?: DataflowEndpointGroupDurationInSeconds;
+    /**
+     * Amount of time, in seconds, prior to contact start for the contact to remain in a PREPASS state. A CloudWatch event is emitted when the contact enters and exits the PREPASS state.
+     */
+    contactPrePassDurationSeconds?: DataflowEndpointGroupDurationInSeconds;
+    /**
      * Endpoint details of each endpoint in the dataflow endpoint group.
      */
     endpointDetails: EndpointDetailsList;
     /**
      * Tags of a dataflow endpoint group.
+     */
+    tags?: TagsMap;
+  }
+  export interface CreateEphemerisRequest {
+    /**
+     * Whether to set the ephemeris status to ENABLED after validation. Setting this to false will set the ephemeris status to DISABLED after validation.
+     */
+    enabled?: Boolean;
+    /**
+     * Ephemeris data.
+     */
+    ephemeris?: EphemerisData;
+    /**
+     * An overall expiration time for the ephemeris in UTC, after which it will become EXPIRED.
+     */
+    expirationTime?: Timestamp;
+    /**
+     * The ARN of a KMS key used to encrypt the ephemeris in Ground Station.
+     */
+    kmsKeyArn?: KeyArn;
+    /**
+     * A name string associated with the ephemeris. Used as a human-readable identifier for the ephemeris.
+     */
+    name: SafeName;
+    /**
+     * Customer-provided priority score to establish the order in which overlapping ephemerides should be used. The default for customer-provided ephemeris priority is 1, and higher numbers take precedence. Priority must be 1 or greater
+     */
+    priority?: CustomerEphemerisPriority;
+    /**
+     * AWS Ground Station satellite ID for this ephemeris.
+     */
+    satelliteId: Uuid;
+    /**
+     * Tags assigned to an ephemeris.
      */
     tags?: TagsMap;
   }
@@ -441,11 +669,19 @@ declare namespace GroundStation {
     /**
      * Smallest amount of time in seconds that you’d like to see for an available contact. AWS Ground Station will not present you with contacts shorter than this duration.
      */
-    minimumViableContactDurationSeconds: DurationInSeconds;
+    minimumViableContactDurationSeconds: PositiveDurationInSeconds;
     /**
      * Name of a mission profile.
      */
     name: SafeName;
+    /**
+     * KMS key to use for encrypting streams.
+     */
+    streamsKmsKey?: KmsKey;
+    /**
+     * Role to use for encrypting streams with KMS key.
+     */
+    streamsKmsRole?: RoleArn;
     /**
      * Tags assigned to a mission profile.
      */
@@ -456,6 +692,7 @@ declare namespace GroundStation {
     trackingConfigArn: ConfigArn;
   }
   export type Criticality = "PREFERRED"|"REMOVED"|"REQUIRED"|string;
+  export type CustomerEphemerisPriority = number;
   export interface DataflowDetail {
     destination?: Destination;
     /**
@@ -495,11 +732,12 @@ declare namespace GroundStation {
     dataflowEndpointRegion?: String;
   }
   export type DataflowEndpointGroupArn = string;
+  export type DataflowEndpointGroupDurationInSeconds = number;
   export interface DataflowEndpointGroupIdResponse {
     /**
      * UUID of a dataflow endpoint group.
      */
-    dataflowEndpointGroupId?: String;
+    dataflowEndpointGroupId?: Uuid;
   }
   export type DataflowEndpointGroupList = DataflowEndpointListItem[];
   export interface DataflowEndpointListItem {
@@ -510,7 +748,7 @@ declare namespace GroundStation {
     /**
      * UUID of a dataflow endpoint group.
      */
-    dataflowEndpointGroupId?: String;
+    dataflowEndpointGroupId?: Uuid;
   }
   export type DataflowEndpointMtuInteger = number;
   export type DataflowList = DataflowDetail[];
@@ -524,7 +762,7 @@ declare namespace GroundStation {
     /**
      * UUID of a Config.
      */
-    configId: String;
+    configId: Uuid;
     /**
      * Type of a Config.
      */
@@ -534,13 +772,19 @@ declare namespace GroundStation {
     /**
      * UUID of a dataflow endpoint group.
      */
-    dataflowEndpointGroupId: String;
+    dataflowEndpointGroupId: Uuid;
+  }
+  export interface DeleteEphemerisRequest {
+    /**
+     * The AWS Ground Station ephemeris ID.
+     */
+    ephemerisId: Uuid;
   }
   export interface DeleteMissionProfileRequest {
     /**
      * UUID of a mission profile.
      */
-    missionProfileId: String;
+    missionProfileId: Uuid;
   }
   export interface DemodulationConfig {
     /**
@@ -552,13 +796,13 @@ declare namespace GroundStation {
     /**
      * UUID of a contact.
      */
-    contactId: String;
+    contactId: Uuid;
   }
   export interface DescribeContactResponse {
     /**
      * UUID of a contact.
      */
-    contactId?: String;
+    contactId?: Uuid;
     /**
      * Status of a contact.
      */
@@ -568,7 +812,7 @@ declare namespace GroundStation {
      */
     dataflowList?: DataflowList;
     /**
-     * End time of a contact.
+     * End time of a contact in UTC.
      */
     endTime?: Timestamp;
     /**
@@ -604,11 +848,59 @@ declare namespace GroundStation {
      */
     satelliteArn?: satelliteArn;
     /**
-     * Start time of a contact.
+     * Start time of a contact in UTC.
      */
     startTime?: Timestamp;
     /**
      * Tags assigned to a contact.
+     */
+    tags?: TagsMap;
+  }
+  export interface DescribeEphemerisRequest {
+    /**
+     * The AWS Ground Station ephemeris ID.
+     */
+    ephemerisId: Uuid;
+  }
+  export interface DescribeEphemerisResponse {
+    /**
+     * The time the ephemeris was uploaded in UTC.
+     */
+    creationTime?: Timestamp;
+    /**
+     * Whether or not the ephemeris is enabled.
+     */
+    enabled?: Boolean;
+    /**
+     * The AWS Ground Station ephemeris ID.
+     */
+    ephemerisId?: Uuid;
+    /**
+     * Reason that an ephemeris failed validation. Only provided for ephemerides with INVALID status.
+     */
+    invalidReason?: EphemerisInvalidReason;
+    /**
+     * A name string associated with the ephemeris. Used as a human-readable identifier for the ephemeris.
+     */
+    name?: SafeName;
+    /**
+     * Customer-provided priority score to establish the order in which overlapping ephemerides should be used. The default for customer-provided ephemeris priority is 1, and higher numbers take precedence. Priority must be 1 or greater
+     */
+    priority?: EphemerisPriority;
+    /**
+     * The AWS Ground Station satellite ID associated with ephemeris.
+     */
+    satelliteId?: Uuid;
+    /**
+     * The status of the ephemeris.
+     */
+    status?: EphemerisStatus;
+    /**
+     * Supplied ephemeris data.
+     */
+    suppliedData?: EphemerisTypeDescription;
+    /**
+     * Tags assigned to an ephemeris.
      */
     tags?: TagsMap;
   }
@@ -620,7 +912,7 @@ declare namespace GroundStation {
     /**
      * UUID of a Config.
      */
-    configId?: String;
+    configId?: Uuid;
     /**
      * Type of a Config.
      */
@@ -629,6 +921,20 @@ declare namespace GroundStation {
      * Region of a dataflow destination.
      */
     dataflowDestinationRegion?: String;
+  }
+  export interface DiscoveryData {
+    /**
+     * List of capabilities to associate with agent.
+     */
+    capabilityArns: CapabilityArnList;
+    /**
+     * List of private IP addresses to associate with agent.
+     */
+    privateIpAddresses: IpAddressList;
+    /**
+     * List of public IP addresses to associate with agent.
+     */
+    publicIpAddresses: IpAddressList;
   }
   export type Double = number;
   export type DurationInSeconds = number;
@@ -655,16 +961,98 @@ declare namespace GroundStation {
   }
   export interface EndpointDetails {
     /**
+     * An agent endpoint.
+     */
+    awsGroundStationAgentEndpoint?: AwsGroundStationAgentEndpoint;
+    /**
      * A dataflow endpoint.
      */
     endpoint?: DataflowEndpoint;
     /**
-     * Endpoint security details.
+     * Endpoint security details including a list of subnets, a list of security groups and a role to connect streams to instances.
      */
     securityDetails?: SecurityDetails;
   }
   export type EndpointDetailsList = EndpointDetails[];
   export type EndpointStatus = "created"|"creating"|"deleted"|"deleting"|"failed"|string;
+  export type EphemeridesList = EphemerisItem[];
+  export interface EphemerisData {
+    oem?: OEMEphemeris;
+    tle?: TLEEphemeris;
+  }
+  export interface EphemerisDescription {
+    /**
+     * Supplied ephemeris data.
+     */
+    ephemerisData?: UnboundedString;
+    /**
+     * Source S3 object used for the ephemeris.
+     */
+    sourceS3Object?: S3Object;
+  }
+  export interface EphemerisIdResponse {
+    /**
+     * The AWS Ground Station ephemeris ID.
+     */
+    ephemerisId?: Uuid;
+  }
+  export type EphemerisInvalidReason = "METADATA_INVALID"|"TIME_RANGE_INVALID"|"TRAJECTORY_INVALID"|"KMS_KEY_INVALID"|"VALIDATION_ERROR"|string;
+  export interface EphemerisItem {
+    /**
+     * The time the ephemeris was uploaded in UTC.
+     */
+    creationTime?: Timestamp;
+    /**
+     * Whether or not the ephemeris is enabled.
+     */
+    enabled?: Boolean;
+    /**
+     * The AWS Ground Station ephemeris ID.
+     */
+    ephemerisId?: Uuid;
+    /**
+     * A name string associated with the ephemeris. Used as a human-readable identifier for the ephemeris.
+     */
+    name?: SafeName;
+    /**
+     * Customer-provided priority score to establish the order in which overlapping ephemerides should be used. The default for customer-provided ephemeris priority is 1, and higher numbers take precedence. Priority must be 1 or greater
+     */
+    priority?: EphemerisPriority;
+    /**
+     * Source S3 object used for the ephemeris.
+     */
+    sourceS3Object?: S3Object;
+    /**
+     * The status of the ephemeris.
+     */
+    status?: EphemerisStatus;
+  }
+  export interface EphemerisMetaData {
+    /**
+     * UUID of a customer-provided ephemeris. This field is not populated for default ephemerides from Space Track.
+     */
+    ephemerisId?: Uuid;
+    /**
+     * The epoch of a default, ephemeris from Space Track in UTC. This field is not populated for customer-provided ephemerides.
+     */
+    epoch?: Timestamp;
+    /**
+     * A name string associated with the ephemeris. Used as a human-readable identifier for the ephemeris. A name is only returned for customer-provider ephemerides that have a name associated.
+     */
+    name?: SafeName;
+    /**
+     * The EphemerisSource that generated a given ephemeris.
+     */
+    source: EphemerisSource;
+  }
+  export type EphemerisPriority = number;
+  export type EphemerisSource = "CUSTOMER_PROVIDED"|"SPACE_TRACK"|string;
+  export type EphemerisStatus = "VALIDATING"|"INVALID"|"ERROR"|"ENABLED"|"DISABLED"|"EXPIRED"|string;
+  export type EphemerisStatusList = EphemerisStatus[];
+  export interface EphemerisTypeDescription {
+    oem?: EphemerisDescription;
+    tle?: EphemerisDescription;
+  }
   export interface Frequency {
     /**
      * Frequency units.
@@ -686,11 +1074,27 @@ declare namespace GroundStation {
     value: Double;
   }
   export type FrequencyUnits = "GHz"|"MHz"|"kHz"|string;
+  export interface GetAgentConfigurationRequest {
+    /**
+     * UUID of agent to get configuration information for.
+     */
+    agentId: Uuid;
+  }
+  export interface GetAgentConfigurationResponse {
+    /**
+     * UUID of agent.
+     */
+    agentId?: Uuid;
+    /**
+     * Tasking document for agent.
+     */
+    taskingDocument?: String;
+  }
   export interface GetConfigRequest {
     /**
      * UUID of a Config.
      */
-    configId: String;
+    configId: Uuid;
     /**
      * Type of a Config.
      */
@@ -726,9 +1130,17 @@ declare namespace GroundStation {
     /**
      * UUID of a dataflow endpoint group.
      */
-    dataflowEndpointGroupId: String;
+    dataflowEndpointGroupId: Uuid;
   }
   export interface GetDataflowEndpointGroupResponse {
+    /**
+     * Amount of time, in seconds, after a contact ends for the contact to remain in a POSTPASS state. A CloudWatch event is emitted when the contact enters and exits the POSTPASS state.
+     */
+    contactPostPassDurationSeconds?: DataflowEndpointGroupDurationInSeconds;
+    /**
+     * Amount of time, in seconds, prior to contact start for the contact to remain in a PREPASS state. A CloudWatch event is emitted when the contact enters and exits the PREPASS state.
+     */
+    contactPrePassDurationSeconds?: DataflowEndpointGroupDurationInSeconds;
     /**
      * ARN of a dataflow endpoint group.
      */
@@ -736,7 +1148,7 @@ declare namespace GroundStation {
     /**
      * UUID of a dataflow endpoint group.
      */
-    dataflowEndpointGroupId?: String;
+    dataflowEndpointGroupId?: Uuid;
     /**
      * Details of a dataflow endpoint.
      */
@@ -750,11 +1162,11 @@ declare namespace GroundStation {
     /**
      * The month being requested, with a value of 1-12.
      */
-    month: Integer;
+    month: Month;
     /**
      * The year being requested, in the format of YYYY.
      */
-    year: Integer;
+    year: Year;
   }
   export interface GetMinuteUsageResponse {
     /**
@@ -782,7 +1194,7 @@ declare namespace GroundStation {
     /**
      * UUID of a mission profile.
      */
-    missionProfileId: String;
+    missionProfileId: Uuid;
   }
   export interface GetMissionProfileResponse {
     /**
@@ -800,7 +1212,7 @@ declare namespace GroundStation {
     /**
      * Smallest amount of time in seconds that you’d like to see for an available contact. AWS Ground Station will not present you with contacts shorter than this duration.
      */
-    minimumViableContactDurationSeconds?: DurationInSeconds;
+    minimumViableContactDurationSeconds?: PositiveDurationInSeconds;
     /**
      * ARN of a mission profile.
      */
@@ -808,15 +1220,23 @@ declare namespace GroundStation {
     /**
      * UUID of a mission profile.
      */
-    missionProfileId?: String;
+    missionProfileId?: Uuid;
     /**
      * Name of a mission profile.
      */
-    name?: String;
+    name?: SafeName;
     /**
      * Region of a mission profile.
      */
-    region?: String;
+    region?: AWSRegion;
+    /**
+     * KMS key to use for encrypting streams.
+     */
+    streamsKmsKey?: KmsKey;
+    /**
+     * Role to use for encrypting streams with KMS key.
+     */
+    streamsKmsRole?: RoleArn;
     /**
      * Tags assigned to a mission profile.
      */
@@ -830,9 +1250,13 @@ declare namespace GroundStation {
     /**
      * UUID of a satellite.
      */
-    satelliteId: String;
+    satelliteId: Uuid;
   }
   export interface GetSatelliteResponse {
+    /**
+     * The current ephemeris being used to compute the trajectory of the satellite.
+     */
+    currentEphemeris?: EphemerisMetaData;
     /**
      * A list of ground stations to which the satellite is on-boarded.
      */
@@ -854,29 +1278,56 @@ declare namespace GroundStation {
     /**
      * UUID of a ground station.
      */
-    groundStationId?: String;
+    groundStationId?: GroundStationName;
     /**
      * Name of a ground station.
      */
-    groundStationName?: String;
+    groundStationName?: GroundStationName;
     /**
      * Ground station Region.
      */
-    region?: String;
+    region?: AWSRegion;
   }
-  export type GroundStationIdList = String[];
+  export type GroundStationIdList = GroundStationName[];
   export type GroundStationList = GroundStationData[];
+  export type GroundStationName = string;
+  export type InstanceId = string;
+  export type InstanceType = string;
   export type Integer = number;
+  export interface IntegerRange {
+    /**
+     * A maximum value.
+     */
+    maximum: Integer;
+    /**
+     * A minimum value.
+     */
+    minimum: Integer;
+  }
+  export type IpAddressList = IpV4Address[];
+  export type IpV4Address = string;
   export type JsonString = string;
+  export type KeyAliasArn = string;
+  export type KeyArn = string;
+  export interface KmsKey {
+    /**
+     * KMS Alias Arn.
+     */
+    kmsAliasArn?: KeyAliasArn;
+    /**
+     * KMS Key Arn.
+     */
+    kmsKeyArn?: KeyArn;
+  }
   export interface ListConfigsRequest {
     /**
      * Maximum number of Configs returned.
      */
-    maxResults?: Integer;
+    maxResults?: PaginationMaxResults;
     /**
      * Next token returned in the request of a previous ListConfigs call. Used to get the next page of results.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
   }
   export interface ListConfigsResponse {
     /**
@@ -886,21 +1337,21 @@ declare namespace GroundStation {
     /**
      * Next token returned in the response of a previous ListConfigs call. Used to get the next page of results.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
   }
   export interface ListContactsRequest {
     /**
-     * End time of a contact.
+     * End time of a contact in UTC.
      */
     endTime: Timestamp;
     /**
      * Name of a ground station.
      */
-    groundStation?: String;
+    groundStation?: GroundStationName;
     /**
      * Maximum number of contacts returned.
      */
-    maxResults?: Integer;
+    maxResults?: PaginationMaxResults;
     /**
      * ARN of a mission profile.
      */
@@ -908,13 +1359,13 @@ declare namespace GroundStation {
     /**
      * Next token returned in the request of a previous ListContacts call. Used to get the next page of results.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
     /**
      * ARN of a satellite.
      */
     satelliteArn?: satelliteArn;
     /**
-     * Start time of a contact.
+     * Start time of a contact in UTC.
      */
     startTime: Timestamp;
     /**
@@ -930,17 +1381,17 @@ declare namespace GroundStation {
     /**
      * Next token returned in the response of a previous ListContacts call. Used to get the next page of results.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
   }
   export interface ListDataflowEndpointGroupsRequest {
     /**
      * Maximum number of dataflow endpoint groups returned.
      */
-    maxResults?: Integer;
+    maxResults?: PaginationMaxResults;
     /**
      * Next token returned in the request of a previous ListDataflowEndpointGroups call. Used to get the next page of results.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
   }
   export interface ListDataflowEndpointGroupsResponse {
     /**
@@ -950,21 +1401,57 @@ declare namespace GroundStation {
     /**
      * Next token returned in the response of a previous ListDataflowEndpointGroups call. Used to get the next page of results.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
+  }
+  export interface ListEphemeridesRequest {
+    /**
+     * The end time to list in UTC. The operation will return an ephemeris if its expiration time is within the time range defined by the startTime and endTime.
+     */
+    endTime: Timestamp;
+    /**
+     * Maximum number of ephemerides to return.
+     */
+    maxResults?: PaginationMaxResults;
+    /**
+     * Pagination token.
+     */
+    nextToken?: PaginationToken;
+    /**
+     * The AWS Ground Station satellite ID to list ephemeris for.
+     */
+    satelliteId: Uuid;
+    /**
+     * The start time to list in UTC. The operation will return an ephemeris if its expiration time is within the time range defined by the startTime and endTime.
+     */
+    startTime: Timestamp;
+    /**
+     * The list of ephemeris status to return.
+     */
+    statusList?: EphemerisStatusList;
+  }
+  export interface ListEphemeridesResponse {
+    /**
+     * List of ephemerides.
+     */
+    ephemerides?: EphemeridesList;
+    /**
+     * Pagination token.
+     */
+    nextToken?: PaginationToken;
   }
   export interface ListGroundStationsRequest {
     /**
      * Maximum number of ground stations returned.
      */
-    maxResults?: Integer;
+    maxResults?: PaginationMaxResults;
     /**
      * Next token that can be supplied in the next call to get the next page of ground stations.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
     /**
      * Satellite ID to retrieve on-boarded ground stations.
      */
-    satelliteId?: String;
+    satelliteId?: Uuid;
   }
   export interface ListGroundStationsResponse {
     /**
@@ -974,17 +1461,17 @@ declare namespace GroundStation {
     /**
      * Next token that can be supplied in the next call to get the next page of ground stations.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
   }
   export interface ListMissionProfilesRequest {
     /**
      * Maximum number of mission profiles returned.
      */
-    maxResults?: Integer;
+    maxResults?: PaginationMaxResults;
     /**
      * Next token returned in the request of a previous ListMissionProfiles call. Used to get the next page of results.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
   }
   export interface ListMissionProfilesResponse {
     /**
@@ -994,23 +1481,23 @@ declare namespace GroundStation {
     /**
      * Next token returned in the response of a previous ListMissionProfiles call. Used to get the next page of results.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
   }
   export interface ListSatellitesRequest {
     /**
      * Maximum number of satellites returned.
      */
-    maxResults?: Integer;
+    maxResults?: PaginationMaxResults;
     /**
      * Next token that can be supplied in the next call to get the next page of satellites.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
   }
   export interface ListSatellitesResponse {
     /**
      * Next token that can be supplied in the next call to get the next page of satellites.
      */
-    nextToken?: String;
+    nextToken?: PaginationToken;
     /**
      * List of satellites.
      */
@@ -1020,7 +1507,7 @@ declare namespace GroundStation {
     /**
      * ARN of a resource.
      */
-    resourceArn: String;
+    resourceArn: AnyArn;
   }
   export interface ListTagsForResourceResponse {
     /**
@@ -1028,12 +1515,13 @@ declare namespace GroundStation {
      */
     tags?: TagsMap;
   }
+  export type Long = number;
   export type MissionProfileArn = string;
   export interface MissionProfileIdResponse {
     /**
      * UUID of a mission profile.
      */
-    missionProfileId?: String;
+    missionProfileId?: Uuid;
   }
   export type MissionProfileList = MissionProfileListItem[];
   export interface MissionProfileListItem {
@@ -1044,26 +1532,77 @@ declare namespace GroundStation {
     /**
      * UUID of a mission profile.
      */
-    missionProfileId?: String;
+    missionProfileId?: Uuid;
     /**
      * Name of a mission profile.
      */
-    name?: String;
+    name?: SafeName;
     /**
      * Region of a mission profile.
      */
-    region?: String;
+    region?: AWSRegion;
   }
+  export type Month = number;
+  export interface OEMEphemeris {
+    /**
+     * The data for an OEM ephemeris, supplied directly in the request rather than through an S3 object.
+     */
+    oemData?: UnboundedString;
+    /**
+     * Identifies the S3 object to be used as the ephemeris.
+     */
+    s3Object?: S3Object;
+  }
+  export type PaginationMaxResults = number;
+  export type PaginationToken = string;
   export type Polarization = "LEFT_HAND"|"NONE"|"RIGHT_HAND"|string;
+  export type PositiveDurationInSeconds = number;
+  export interface RangedConnectionDetails {
+    /**
+     * Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+     */
+    mtu?: RangedConnectionDetailsMtuInteger;
+    /**
+     * A ranged socket address.
+     */
+    socketAddress: RangedSocketAddress;
+  }
+  export type RangedConnectionDetailsMtuInteger = number;
+  export interface RangedSocketAddress {
+    /**
+     * IPv4 socket address.
+     */
+    name: IpV4Address;
+    /**
+     * Port range of a socket address.
+     */
+    portRange: IntegerRange;
+  }
+  export interface RegisterAgentRequest {
+    /**
+     * Detailed information about the agent being registered.
+     */
+    agentDetails: AgentDetails;
+    /**
+     * Data for associating and agent with the capabilities it is managing.
+     */
+    discoveryData: DiscoveryData;
+  }
+  export interface RegisterAgentResponse {
+    /**
+     * UUID of registered agent.
+     */
+    agentId?: Uuid;
+  }
   export interface ReserveContactRequest {
     /**
-     * End time of a contact.
+     * End time of a contact in UTC.
      */
     endTime: Timestamp;
     /**
      * Name of a ground station.
      */
-    groundStation: String;
+    groundStation: GroundStationName;
     /**
      * ARN of a mission profile.
      */
@@ -1073,7 +1612,7 @@ declare namespace GroundStation {
      */
     satelliteArn: satelliteArn;
     /**
-     * Start time of a contact.
+     * Start time of a contact in UTC.
      */
     startTime: Timestamp;
     /**
@@ -1081,8 +1620,25 @@ declare namespace GroundStation {
      */
     tags?: TagsMap;
   }
+  export type ReservedCpuCoresList = Integer[];
   export type RoleArn = string;
+  export type S3BucketName = string;
   export type S3KeyPrefix = string;
+  export interface S3Object {
+    /**
+     * An Amazon S3 Bucket name.
+     */
+    bucket?: S3BucketName;
+    /**
+     * An Amazon S3 key for the ephemeris.
+     */
+    key?: S3ObjectKey;
+    /**
+     * For versioned S3 objects, the version to use for the ephemeris.
+     */
+    version?: S3VersionId;
+  }
+  export type S3ObjectKey = string;
   export interface S3RecordingConfig {
     /**
      * ARN of the bucket to record to.
@@ -1103,13 +1659,18 @@ declare namespace GroundStation {
      */
     bucketArn?: BucketArn;
     /**
-     * Template of the S3 key used.
+     * Key template used for the S3 Recording Configuration
      */
     keyTemplate?: String;
   }
+  export type S3VersionId = string;
   export type SafeName = string;
   export type SatelliteList = SatelliteListItem[];
   export interface SatelliteListItem {
+    /**
+     * The current ephemeris being used to compute the trajectory of the satellite.
+     */
+    currentEphemeris?: EphemerisMetaData;
     /**
      * A list of ground stations to which the satellite is on-boarded.
      */
@@ -1142,6 +1703,7 @@ declare namespace GroundStation {
     subnetIds: SubnetList;
   }
   export type SecurityGroupIdList = String[];
+  export type SignatureMap = {[key: string]: Boolean};
   export interface SocketAddress {
     /**
      * Name of a socket address.
@@ -1154,7 +1716,7 @@ declare namespace GroundStation {
   }
   export interface Source {
     /**
-     * Additional details for a Config, if type is dataflow endpoint or antenna demod decode.
+     * Additional details for a Config, if type is dataflow-endpoint or antenna-downlink-demod-decode 
      */
     configDetails?: ConfigDetails;
     /**
@@ -1187,12 +1749,37 @@ declare namespace GroundStation {
   export type StatusList = ContactStatus[];
   export type String = string;
   export type SubnetList = String[];
-  export type TagKeys = String[];
+  export interface TLEData {
+    /**
+     * First line of two-line element set (TLE) data.
+     */
+    tleLine1: TleLineOne;
+    /**
+     * Second line of two-line element set (TLE) data.
+     */
+    tleLine2: TleLineTwo;
+    /**
+     * The valid time range for the TLE. Gaps or overlap are not permitted.
+     */
+    validTimeRange: TimeRange;
+  }
+  export type TLEDataList = TLEData[];
+  export interface TLEEphemeris {
+    /**
+     * Identifies the S3 object to be used as the ephemeris.
+     */
+    s3Object?: S3Object;
+    /**
+     * The data for a TLE ephemeris, supplied directly in the request rather than through an S3 object.
+     */
+    tleData?: TLEDataList;
+  }
+  export type TagKeys = UnboundedString[];
   export interface TagResourceRequest {
     /**
      * ARN of a resource tag.
      */
-    resourceArn: String;
+    resourceArn: AnyArn;
     /**
      * Tags assigned to a resource.
      */
@@ -1201,24 +1788,61 @@ declare namespace GroundStation {
   export interface TagResourceResponse {
   }
   export type TagsMap = {[key: string]: String};
+  export interface TimeRange {
+    /**
+     * Time in UTC at which the time range ends.
+     */
+    endTime: Timestamp;
+    /**
+     * Time in UTC at which the time range starts.
+     */
+    startTime: Timestamp;
+  }
   export type Timestamp = Date;
+  export type TleLineOne = string;
+  export type TleLineTwo = string;
   export interface TrackingConfig {
     /**
      * Current setting for autotrack.
      */
     autotrack: Criticality;
   }
+  export type UnboundedString = string;
   export interface UntagResourceRequest {
     /**
      * ARN of a resource.
      */
-    resourceArn: String;
+    resourceArn: AnyArn;
     /**
      * Keys of a resource tag.
      */
     tagKeys: TagKeys;
   }
   export interface UntagResourceResponse {
+  }
+  export interface UpdateAgentStatusRequest {
+    /**
+     * UUID of agent to update.
+     */
+    agentId: Uuid;
+    /**
+     * Aggregate status for agent.
+     */
+    aggregateStatus: AggregateStatus;
+    /**
+     * List of component statuses for agent.
+     */
+    componentStatuses: ComponentStatusList;
+    /**
+     * GUID of agent task.
+     */
+    taskId: Uuid;
+  }
+  export interface UpdateAgentStatusResponse {
+    /**
+     * UUID of updated agent.
+     */
+    agentId: Uuid;
   }
   export interface UpdateConfigRequest {
     /**
@@ -1228,7 +1852,7 @@ declare namespace GroundStation {
     /**
      * UUID of a Config.
      */
-    configId: String;
+    configId: Uuid;
     /**
      * Type of a Config.
      */
@@ -1237,6 +1861,24 @@ declare namespace GroundStation {
      * Name of a Config.
      */
     name: SafeName;
+  }
+  export interface UpdateEphemerisRequest {
+    /**
+     * Whether the ephemeris is enabled or not. Changing this value will not require the ephemeris to be re-validated.
+     */
+    enabled: Boolean;
+    /**
+     * The AWS Ground Station ephemeris ID.
+     */
+    ephemerisId: Uuid;
+    /**
+     * A name string associated with the ephemeris. Used as a human-readable identifier for the ephemeris.
+     */
+    name?: SafeName;
+    /**
+     * Customer-provided priority score to establish the order in which overlapping ephemerides should be used. The default for customer-provided ephemeris priority is 1, and higher numbers take precedence. Priority must be 1 or greater
+     */
+    priority?: EphemerisPriority;
   }
   export interface UpdateMissionProfileRequest {
     /**
@@ -1254,15 +1896,23 @@ declare namespace GroundStation {
     /**
      * Smallest amount of time in seconds that you’d like to see for an available contact. AWS Ground Station will not present you with contacts shorter than this duration.
      */
-    minimumViableContactDurationSeconds?: DurationInSeconds;
+    minimumViableContactDurationSeconds?: PositiveDurationInSeconds;
     /**
      * UUID of a mission profile.
      */
-    missionProfileId: String;
+    missionProfileId: Uuid;
     /**
      * Name of a mission profile.
      */
     name?: SafeName;
+    /**
+     * KMS key to use for encrypting streams.
+     */
+    streamsKmsKey?: KmsKey;
+    /**
+     * Role to use for encrypting streams with KMS key.
+     */
+    streamsKmsRole?: RoleArn;
     /**
      * ARN of a tracking Config.
      */
@@ -1289,6 +1939,9 @@ declare namespace GroundStation {
     polarization?: Polarization;
   }
   export type Uuid = string;
+  export type VersionString = string;
+  export type VersionStringList = VersionString[];
+  export type Year = number;
   export type noradSatelliteID = number;
   export type satelliteArn = string;
   /**

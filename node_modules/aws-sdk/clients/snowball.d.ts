@@ -44,11 +44,11 @@ declare class Snowball extends Service {
    */
   createCluster(callback?: (err: AWSError, data: Snowball.Types.CreateClusterResult) => void): Request<Snowball.Types.CreateClusterResult, AWSError>;
   /**
-   * Creates a job to import or export data between Amazon S3 and your on-premises data center. Your Amazon Web Services account must have the right trust policies and permissions in place to create a job for a Snow device. If you're creating a job for a node in a cluster, you only need to provide the clusterId value; the other job attributes are inherited from the cluster.   Only the Snowball; Edge device type is supported when ordering clustered jobs. The device capacity is optional. Availability of device types differ by Amazon Web Services Region. For more information about Region availability, see Amazon Web Services Regional Services.    Snow Family Devices and their capacities.    Snow Family device type: SNC1_SSD    Capacity: T14   Description: Snowcone       Snow Family device type: SNC1_HDD    Capacity: T8   Description: Snowcone       Device type: EDGE_S    Capacity: T98   Description: Snowball Edge Storage Optimized for data transfer only       Device type: EDGE_CG    Capacity: T42   Description: Snowball Edge Compute Optimized with GPU      Device type: EDGE_C    Capacity: T42   Description: Snowball Edge Compute Optimized without GPU      Device type: EDGE    Capacity: T100   Description: Snowball Edge Storage Optimized with EC2 Compute      Device type: STANDARD    Capacity: T50   Description: Original Snowball device  This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region        Device type: STANDARD    Capacity: T80   Description: Original Snowball device  This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region.       
+   * Creates a job to import or export data between Amazon S3 and your on-premises data center. Your Amazon Web Services account must have the right trust policies and permissions in place to create a job for a Snow device. If you're creating a job for a node in a cluster, you only need to provide the clusterId value; the other job attributes are inherited from the cluster.   Only the Snowball; Edge device type is supported when ordering clustered jobs. The device capacity is optional. Availability of device types differ by Amazon Web Services Region. For more information about Region availability, see Amazon Web Services Regional Services.    Snow Family devices and their capacities.    Snow Family device type: SNC1_SSD    Capacity: T14   Description: Snowcone       Snow Family device type: SNC1_HDD    Capacity: T8   Description: Snowcone       Device type: EDGE_S    Capacity: T98   Description: Snowball Edge Storage Optimized for data transfer only       Device type: EDGE_CG    Capacity: T42   Description: Snowball Edge Compute Optimized with GPU      Device type: EDGE_C    Capacity: T42   Description: Snowball Edge Compute Optimized without GPU      Device type: EDGE    Capacity: T100   Description: Snowball Edge Storage Optimized with EC2 Compute      Device type: STANDARD    Capacity: T50   Description: Original Snowball device  This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region        Device type: STANDARD    Capacity: T80   Description: Original Snowball device  This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region.       
    */
   createJob(params: Snowball.Types.CreateJobRequest, callback?: (err: AWSError, data: Snowball.Types.CreateJobResult) => void): Request<Snowball.Types.CreateJobResult, AWSError>;
   /**
-   * Creates a job to import or export data between Amazon S3 and your on-premises data center. Your Amazon Web Services account must have the right trust policies and permissions in place to create a job for a Snow device. If you're creating a job for a node in a cluster, you only need to provide the clusterId value; the other job attributes are inherited from the cluster.   Only the Snowball; Edge device type is supported when ordering clustered jobs. The device capacity is optional. Availability of device types differ by Amazon Web Services Region. For more information about Region availability, see Amazon Web Services Regional Services.    Snow Family Devices and their capacities.    Snow Family device type: SNC1_SSD    Capacity: T14   Description: Snowcone       Snow Family device type: SNC1_HDD    Capacity: T8   Description: Snowcone       Device type: EDGE_S    Capacity: T98   Description: Snowball Edge Storage Optimized for data transfer only       Device type: EDGE_CG    Capacity: T42   Description: Snowball Edge Compute Optimized with GPU      Device type: EDGE_C    Capacity: T42   Description: Snowball Edge Compute Optimized without GPU      Device type: EDGE    Capacity: T100   Description: Snowball Edge Storage Optimized with EC2 Compute      Device type: STANDARD    Capacity: T50   Description: Original Snowball device  This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region        Device type: STANDARD    Capacity: T80   Description: Original Snowball device  This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region.       
+   * Creates a job to import or export data between Amazon S3 and your on-premises data center. Your Amazon Web Services account must have the right trust policies and permissions in place to create a job for a Snow device. If you're creating a job for a node in a cluster, you only need to provide the clusterId value; the other job attributes are inherited from the cluster.   Only the Snowball; Edge device type is supported when ordering clustered jobs. The device capacity is optional. Availability of device types differ by Amazon Web Services Region. For more information about Region availability, see Amazon Web Services Regional Services.    Snow Family devices and their capacities.    Snow Family device type: SNC1_SSD    Capacity: T14   Description: Snowcone       Snow Family device type: SNC1_HDD    Capacity: T8   Description: Snowcone       Device type: EDGE_S    Capacity: T98   Description: Snowball Edge Storage Optimized for data transfer only       Device type: EDGE_CG    Capacity: T42   Description: Snowball Edge Compute Optimized with GPU      Device type: EDGE_C    Capacity: T42   Description: Snowball Edge Compute Optimized without GPU      Device type: EDGE    Capacity: T100   Description: Snowball Edge Storage Optimized with EC2 Compute      Device type: STANDARD    Capacity: T50   Description: Original Snowball device  This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region        Device type: STANDARD    Capacity: T80   Description: Original Snowball device  This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region.       
    */
   createJob(callback?: (err: AWSError, data: Snowball.Types.CreateJobResult) => void): Request<Snowball.Types.CreateJobResult, AWSError>;
   /**
@@ -108,19 +108,19 @@ declare class Snowball extends Service {
    */
   describeReturnShippingLabel(callback?: (err: AWSError, data: Snowball.Types.DescribeReturnShippingLabelResult) => void): Request<Snowball.Types.DescribeReturnShippingLabelResult, AWSError>;
   /**
-   * Returns a link to an Amazon S3 presigned URL for the manifest file associated with the specified JobId value. You can access the manifest file for up to 60 minutes after this request has been made. To access the manifest file after 60 minutes have passed, you'll have to make another call to the GetJobManifest action. The manifest is an encrypted file that you can download after your job enters the WithCustomer status. The manifest is decrypted by using the UnlockCode code value, when you pass both values to the Snow device through the Snowball client when the client is started for the first time. As a best practice, we recommend that you don't save a copy of an UnlockCode value in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow device associated with that job. The credentials of a given job, including its manifest file and unlock code, expire 360 days after the job is created.
+   * Returns a link to an Amazon S3 presigned URL for the manifest file associated with the specified JobId value. You can access the manifest file for up to 60 minutes after this request has been made. To access the manifest file after 60 minutes have passed, you'll have to make another call to the GetJobManifest action. The manifest is an encrypted file that you can download after your job enters the WithCustomer status. This is the only valid status for calling this API as the manifest and UnlockCode code value are used for securing your device and should only be used when you have the device. The manifest is decrypted by using the UnlockCode code value, when you pass both values to the Snow device through the Snowball client when the client is started for the first time.  As a best practice, we recommend that you don't save a copy of an UnlockCode value in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow device associated with that job. The credentials of a given job, including its manifest file and unlock code, expire 360 days after the job is created.
    */
   getJobManifest(params: Snowball.Types.GetJobManifestRequest, callback?: (err: AWSError, data: Snowball.Types.GetJobManifestResult) => void): Request<Snowball.Types.GetJobManifestResult, AWSError>;
   /**
-   * Returns a link to an Amazon S3 presigned URL for the manifest file associated with the specified JobId value. You can access the manifest file for up to 60 minutes after this request has been made. To access the manifest file after 60 minutes have passed, you'll have to make another call to the GetJobManifest action. The manifest is an encrypted file that you can download after your job enters the WithCustomer status. The manifest is decrypted by using the UnlockCode code value, when you pass both values to the Snow device through the Snowball client when the client is started for the first time. As a best practice, we recommend that you don't save a copy of an UnlockCode value in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow device associated with that job. The credentials of a given job, including its manifest file and unlock code, expire 360 days after the job is created.
+   * Returns a link to an Amazon S3 presigned URL for the manifest file associated with the specified JobId value. You can access the manifest file for up to 60 minutes after this request has been made. To access the manifest file after 60 minutes have passed, you'll have to make another call to the GetJobManifest action. The manifest is an encrypted file that you can download after your job enters the WithCustomer status. This is the only valid status for calling this API as the manifest and UnlockCode code value are used for securing your device and should only be used when you have the device. The manifest is decrypted by using the UnlockCode code value, when you pass both values to the Snow device through the Snowball client when the client is started for the first time.  As a best practice, we recommend that you don't save a copy of an UnlockCode value in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow device associated with that job. The credentials of a given job, including its manifest file and unlock code, expire 360 days after the job is created.
    */
   getJobManifest(callback?: (err: AWSError, data: Snowball.Types.GetJobManifestResult) => void): Request<Snowball.Types.GetJobManifestResult, AWSError>;
   /**
-   * Returns the UnlockCode code value for the specified job. A particular UnlockCode value can be accessed for up to 360 days after the associated job has been created. The UnlockCode value is a 29-character code with 25 alphanumeric characters and 4 hyphens. This code is used to decrypt the manifest file when it is passed along with the manifest to the Snow device through the Snowball client when the client is started for the first time. As a best practice, we recommend that you don't save a copy of the UnlockCode in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow device associated with that job.
+   * Returns the UnlockCode code value for the specified job. A particular UnlockCode value can be accessed for up to 360 days after the associated job has been created. The UnlockCode value is a 29-character code with 25 alphanumeric characters and 4 hyphens. This code is used to decrypt the manifest file when it is passed along with the manifest to the Snow device through the Snowball client when the client is started for the first time. The only valid status for calling this API is WithCustomer as the manifest and Unlock code values are used for securing your device and should only be used when you have the device. As a best practice, we recommend that you don't save a copy of the UnlockCode in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow device associated with that job.
    */
   getJobUnlockCode(params: Snowball.Types.GetJobUnlockCodeRequest, callback?: (err: AWSError, data: Snowball.Types.GetJobUnlockCodeResult) => void): Request<Snowball.Types.GetJobUnlockCodeResult, AWSError>;
   /**
-   * Returns the UnlockCode code value for the specified job. A particular UnlockCode value can be accessed for up to 360 days after the associated job has been created. The UnlockCode value is a 29-character code with 25 alphanumeric characters and 4 hyphens. This code is used to decrypt the manifest file when it is passed along with the manifest to the Snow device through the Snowball client when the client is started for the first time. As a best practice, we recommend that you don't save a copy of the UnlockCode in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow device associated with that job.
+   * Returns the UnlockCode code value for the specified job. A particular UnlockCode value can be accessed for up to 360 days after the associated job has been created. The UnlockCode value is a 29-character code with 25 alphanumeric characters and 4 hyphens. This code is used to decrypt the manifest file when it is passed along with the manifest to the Snow device through the Snowball client when the client is started for the first time. The only valid status for calling this API is WithCustomer as the manifest and Unlock code values are used for securing your device and should only be used when you have the device. As a best practice, we recommend that you don't save a copy of the UnlockCode in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow device associated with that job.
    */
   getJobUnlockCode(callback?: (err: AWSError, data: Snowball.Types.GetJobUnlockCodeResult) => void): Request<Snowball.Types.GetJobUnlockCodeResult, AWSError>;
   /**
@@ -179,6 +179,14 @@ declare class Snowball extends Service {
    * Lists all long-term pricing types.
    */
   listLongTermPricing(callback?: (err: AWSError, data: Snowball.Types.ListLongTermPricingResult) => void): Request<Snowball.Types.ListLongTermPricingResult, AWSError>;
+  /**
+   * Lists all supported versions for Snow on-device services. Returns an array of ServiceVersion object containing the supported versions for a particular service.
+   */
+  listServiceVersions(params: Snowball.Types.ListServiceVersionsRequest, callback?: (err: AWSError, data: Snowball.Types.ListServiceVersionsResult) => void): Request<Snowball.Types.ListServiceVersionsResult, AWSError>;
+  /**
+   * Lists all supported versions for Snow on-device services. Returns an array of ServiceVersion object containing the supported versions for a particular service.
+   */
+  listServiceVersions(callback?: (err: AWSError, data: Snowball.Types.ListServiceVersionsResult) => void): Request<Snowball.Types.ListServiceVersionsResult, AWSError>;
   /**
    * While a cluster's ClusterState value is in the AwaitingQuorum state, you can update some of the information associated with a cluster. Once the cluster changes to a different job state, usually 60 minutes after the cluster being created, this action is no longer available.
    */
@@ -427,7 +435,7 @@ declare namespace Snowball {
      */
     RoleARN: RoleARN;
     /**
-     * The type of Snow Family Devices to use for this cluster.   For cluster jobs, Amazon Web Services Snow Family currently supports only the EDGE device type.  For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the Snowcone User Guide or "https://docs.aws.amazon.com/snowball/latest/developer-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the Snowcone User Guide.
+     * The type of Snow Family devices to use for this cluster.   For cluster jobs, Amazon Web Services Snow Family currently supports only the EDGE device type.  For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the Snowcone User Guide or "https://docs.aws.amazon.com/snowball/latest/developer-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the Snowcone User Guide.
      */
     SnowballType: SnowballType;
     /**
@@ -503,7 +511,7 @@ declare namespace Snowball {
      */
     ClusterId?: ClusterId;
     /**
-     * The type of Snow Family Devices to use for this job.   For cluster jobs, Amazon Web Services Snow Family currently supports only the EDGE device type.  The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type for cluster jobs is EDGE. For more information, see Snowball Edge Device Options in the Snowball Edge Developer Guide. For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the Snowcone User Guide or "https://docs.aws.amazon.com/snowball/latest/developer-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the Snowcone User Guide.
+     * The type of Snow Family devices to use for this job.   For cluster jobs, Amazon Web Services Snow Family currently supports only the EDGE device type.  The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type for cluster jobs is EDGE. For more information, see Snowball Edge Device Options in the Snowball Edge Developer Guide. For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the Snowcone User Guide or "https://docs.aws.amazon.com/snowball/latest/developer-guide/snow-device-types.html" (Snow Family Devices and Capacity) in the Snowcone User Guide.
      */
     SnowballType?: SnowballType;
     /**
@@ -543,7 +551,7 @@ declare namespace Snowball {
      */
     IsLongTermPricingAutoRenew?: JavaBoolean;
     /**
-     * The type of Snow Family Devices to use for the long-term pricing job.
+     * The type of Snow Family devices to use for the long-term pricing job.
      */
     SnowballType?: SnowballType;
   }
@@ -587,6 +595,17 @@ declare namespace Snowball {
      */
     TotalObjects?: Long;
   }
+  export interface DependentService {
+    /**
+     * The name of the dependent service.
+     */
+    ServiceName?: ServiceName;
+    /**
+     * The version of the dependent service.
+     */
+    ServiceVersion?: ServiceVersion;
+  }
+  export type DependentServiceList = DependentService[];
   export interface DescribeAddressRequest {
     /**
      * The automatically generated ID for a specific address.
@@ -674,6 +693,16 @@ declare namespace Snowball {
     SnowconeDeviceConfiguration?: SnowconeDeviceConfiguration;
   }
   export type DeviceServiceName = "NFS_ON_DEVICE_SERVICE"|"S3_ON_DEVICE_SERVICE"|string;
+  export interface EKSOnDeviceServiceConfiguration {
+    /**
+     * The Kubernetes version for EKS Anywhere on the Snow Family device.
+     */
+    KubernetesVersion?: String;
+    /**
+     * The version of EKS Anywhere on the Snow Family device.
+     */
+    EKSAnywhereVersion?: String;
+  }
   export interface Ec2AmiResource {
     /**
      * The ID of the AMI in Amazon EC2.
@@ -1027,6 +1056,42 @@ declare namespace Snowball {
      */
     NextToken?: String;
   }
+  export interface ListServiceVersionsRequest {
+    /**
+     * The name of the service for which you're requesting supported versions.
+     */
+    ServiceName: ServiceName;
+    /**
+     * A list of names and versions of dependant services of the requested service.
+     */
+    DependentServices?: DependentServiceList;
+    /**
+     * The maximum number of ListServiceVersions objects to return.
+     */
+    MaxResults?: ListLimit;
+    /**
+     * Because HTTP requests are stateless, this is the starting point for the next list of returned ListServiceVersionsRequest versions.
+     */
+    NextToken?: String;
+  }
+  export interface ListServiceVersionsResult {
+    /**
+     * A list of supported versions.
+     */
+    ServiceVersions: ServiceVersionList;
+    /**
+     * The name of the service for which the system provided supported versions.
+     */
+    ServiceName: ServiceName;
+    /**
+     * A list of names and versions of dependant services of the service for which the system provided supported versions.
+     */
+    DependentServices?: DependentServiceList;
+    /**
+     * Because HTTP requests are stateless, this is the starting point of the next list of returned ListServiceVersionsResult results.
+     */
+    NextToken?: String;
+  }
   export type Long = number;
   export type LongTermPricingAssociatedJobIdList = JobId[];
   export type LongTermPricingEntryList = LongTermPricingListEntry[];
@@ -1065,7 +1130,7 @@ declare namespace Snowball {
      */
     LongTermPricingStatus?: String;
     /**
-     * The type of Snow Family Devices associated with this long-term pricing job.
+     * The type of Snow Family devices associated with this long-term pricing job.
      */
     SnowballType?: SnowballType;
     /**
@@ -1107,6 +1172,10 @@ declare namespace Snowball {
      * Represents the Storage Gateway service Tape Gateway type on a Snow Family device.
      */
     TGWOnDeviceService?: TGWOnDeviceServiceConfiguration;
+    /**
+     * The configuration of EKS Anywhere on the Snow Family device.
+     */
+    EKSOnDeviceService?: EKSOnDeviceServiceConfiguration;
   }
   export type RemoteManagement = "INSTALLED_ONLY"|"INSTALLED_AUTOSTART"|string;
   export type ResourceARN = string;
@@ -1126,6 +1195,14 @@ declare namespace Snowball {
     TargetOnDeviceServices?: TargetOnDeviceServiceList;
   }
   export type S3ResourceList = S3Resource[];
+  export type ServiceName = "KUBERNETES"|"EKS_ANYWHERE"|string;
+  export interface ServiceVersion {
+    /**
+     * The version number of the requested service.
+     */
+    Version?: String;
+  }
+  export type ServiceVersionList = ServiceVersion[];
   export interface Shipment {
     /**
      * Status information for a shipment.
@@ -1153,8 +1230,8 @@ declare namespace Snowball {
   }
   export type ShippingLabelStatus = "InProgress"|"TimedOut"|"Succeeded"|"Failed"|string;
   export type ShippingOption = "SECOND_DAY"|"NEXT_DAY"|"EXPRESS"|"STANDARD"|string;
-  export type SnowballCapacity = "T50"|"T80"|"T100"|"T42"|"T98"|"T8"|"T14"|"NoPreference"|string;
-  export type SnowballType = "STANDARD"|"EDGE"|"EDGE_C"|"EDGE_CG"|"EDGE_S"|"SNC1_HDD"|"SNC1_SSD"|string;
+  export type SnowballCapacity = "T50"|"T80"|"T100"|"T42"|"T98"|"T8"|"T14"|"T32"|"NoPreference"|string;
+  export type SnowballType = "STANDARD"|"EDGE"|"EDGE_C"|"EDGE_CG"|"EDGE_S"|"SNC1_HDD"|"SNC1_SSD"|"V3_5C"|string;
   export interface SnowconeDeviceConfiguration {
     /**
      * Configures the wireless connection for the Snowcone device.

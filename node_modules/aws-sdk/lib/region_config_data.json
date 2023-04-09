@@ -67,7 +67,11 @@
     "*/sdb": {
       "endpoint": "{service}.{region}.amazonaws.com",
       "signatureVersion": "v2"
-    }
+    },
+    "*/resource-explorer-2": "dualstackByDefault",
+    "*/kendra-ranking": "dualstackByDefault",
+    "*/internetmonitor": "dualstackByDefault",
+    "*/codecatalyst": "globalDualstackByDefault"
   },
 
   "fipsRules": {
@@ -105,6 +109,7 @@
     "us-gov-*/runtime.lex": "fips.runtime.lex",
     "us-gov-*/acm-pca": "fipsWithServiceOnly",
     "us-gov-*/batch": "fipsWithServiceOnly",
+    "us-gov-*/cloudformation": "fipsWithServiceOnly",
     "us-gov-*/config": "fipsWithServiceOnly",
     "us-gov-*/eks": "fipsWithServiceOnly",
     "us-gov-*/elasticmapreduce": "fipsWithServiceOnly",
@@ -127,7 +132,11 @@
     "us-gov-west-1/organizations": "fipsWithServiceOnly",
     "us-gov-west-1/route53": {
       "endpoint": "route53.us-gov.amazonaws.com"
-    }
+    },
+    "*/resource-explorer-2": "fipsDualstackByDefault",
+    "*/kendra-ranking": "dualstackByDefault",
+    "*/internetmonitor": "dualstackByDefault",
+    "*/codecatalyst": "fipsGlobalDualstackByDefault"
   },
 
   "dualstackRules": {
@@ -223,6 +232,18 @@
     },
     "dualstackLegacyEc2": {
       "endpoint": "api.ec2.{region}.aws"
+    },
+    "dualstackByDefault": {
+      "endpoint": "{service}.{region}.api.aws"
+    },
+    "fipsDualstackByDefault": {
+      "endpoint": "{service}-fips.{region}.api.aws"
+    },
+    "globalDualstackByDefault": {
+      "endpoint": "{service}.global.api.aws"
+    },
+    "fipsGlobalDualstackByDefault": {
+      "endpoint": "{service}-fips.global.api.aws"
     }
   }
 }

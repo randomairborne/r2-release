@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.9](https://github.com/inspect-js/which-typed-array/compare/v1.1.8...v1.1.9) - 2022-11-02
+
+### Commits
+
+- [Dev Deps] update `aud`, `is-callable`, `tape` [`9a20b3c`](https://github.com/inspect-js/which-typed-array/commit/9a20b3cb8f5d087789a8160395517bffe27b4339)
+- [Refactor] use `gopd` instead of `es-abstract` helper [`00157af`](https://github.com/inspect-js/which-typed-array/commit/00157af909842b8b5affa5485d3574ec92d94065)
+- [Deps] update `is-typed-array` [`6714240`](https://github.com/inspect-js/which-typed-array/commit/6714240e748cbbb634cb1e405ad762bc52acde66)
+- [meta] add `sideEffects` flag [`89b96cc`](https://github.com/inspect-js/which-typed-array/commit/89b96cc3decc78d9621598e94fa1c2bb87eabf2e)
+
 ## [v1.1.8](https://github.com/inspect-js/which-typed-array/compare/v1.1.7...v1.1.8) - 2022-05-14
 
 ### Commits

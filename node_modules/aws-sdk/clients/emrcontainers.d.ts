@@ -20,11 +20,19 @@ declare class EMRcontainers extends Service {
    */
   cancelJobRun(callback?: (err: AWSError, data: EMRcontainers.Types.CancelJobRunResponse) => void): Request<EMRcontainers.Types.CancelJobRunResponse, AWSError>;
   /**
-   * Creates a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+   * Creates a job template. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
+   */
+  createJobTemplate(params: EMRcontainers.Types.CreateJobTemplateRequest, callback?: (err: AWSError, data: EMRcontainers.Types.CreateJobTemplateResponse) => void): Request<EMRcontainers.Types.CreateJobTemplateResponse, AWSError>;
+  /**
+   * Creates a job template. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
+   */
+  createJobTemplate(callback?: (err: AWSError, data: EMRcontainers.Types.CreateJobTemplateResponse) => void): Request<EMRcontainers.Types.CreateJobTemplateResponse, AWSError>;
+  /**
+   * Creates a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
    */
   createManagedEndpoint(params: EMRcontainers.Types.CreateManagedEndpointRequest, callback?: (err: AWSError, data: EMRcontainers.Types.CreateManagedEndpointResponse) => void): Request<EMRcontainers.Types.CreateManagedEndpointResponse, AWSError>;
   /**
-   * Creates a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+   * Creates a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
    */
   createManagedEndpoint(callback?: (err: AWSError, data: EMRcontainers.Types.CreateManagedEndpointResponse) => void): Request<EMRcontainers.Types.CreateManagedEndpointResponse, AWSError>;
   /**
@@ -36,11 +44,19 @@ declare class EMRcontainers extends Service {
    */
   createVirtualCluster(callback?: (err: AWSError, data: EMRcontainers.Types.CreateVirtualClusterResponse) => void): Request<EMRcontainers.Types.CreateVirtualClusterResponse, AWSError>;
   /**
-   * Deletes a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+   * Deletes a job template. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
+   */
+  deleteJobTemplate(params: EMRcontainers.Types.DeleteJobTemplateRequest, callback?: (err: AWSError, data: EMRcontainers.Types.DeleteJobTemplateResponse) => void): Request<EMRcontainers.Types.DeleteJobTemplateResponse, AWSError>;
+  /**
+   * Deletes a job template. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
+   */
+  deleteJobTemplate(callback?: (err: AWSError, data: EMRcontainers.Types.DeleteJobTemplateResponse) => void): Request<EMRcontainers.Types.DeleteJobTemplateResponse, AWSError>;
+  /**
+   * Deletes a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
    */
   deleteManagedEndpoint(params: EMRcontainers.Types.DeleteManagedEndpointRequest, callback?: (err: AWSError, data: EMRcontainers.Types.DeleteManagedEndpointResponse) => void): Request<EMRcontainers.Types.DeleteManagedEndpointResponse, AWSError>;
   /**
-   * Deletes a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+   * Deletes a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
    */
   deleteManagedEndpoint(callback?: (err: AWSError, data: EMRcontainers.Types.DeleteManagedEndpointResponse) => void): Request<EMRcontainers.Types.DeleteManagedEndpointResponse, AWSError>;
   /**
@@ -60,11 +76,19 @@ declare class EMRcontainers extends Service {
    */
   describeJobRun(callback?: (err: AWSError, data: EMRcontainers.Types.DescribeJobRunResponse) => void): Request<EMRcontainers.Types.DescribeJobRunResponse, AWSError>;
   /**
-   * Displays detailed information about a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+   * Displays detailed information about a specified job template. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
+   */
+  describeJobTemplate(params: EMRcontainers.Types.DescribeJobTemplateRequest, callback?: (err: AWSError, data: EMRcontainers.Types.DescribeJobTemplateResponse) => void): Request<EMRcontainers.Types.DescribeJobTemplateResponse, AWSError>;
+  /**
+   * Displays detailed information about a specified job template. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
+   */
+  describeJobTemplate(callback?: (err: AWSError, data: EMRcontainers.Types.DescribeJobTemplateResponse) => void): Request<EMRcontainers.Types.DescribeJobTemplateResponse, AWSError>;
+  /**
+   * Displays detailed information about a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
    */
   describeManagedEndpoint(params: EMRcontainers.Types.DescribeManagedEndpointRequest, callback?: (err: AWSError, data: EMRcontainers.Types.DescribeManagedEndpointResponse) => void): Request<EMRcontainers.Types.DescribeManagedEndpointResponse, AWSError>;
   /**
-   * Displays detailed information about a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+   * Displays detailed information about a managed endpoint. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
    */
   describeManagedEndpoint(callback?: (err: AWSError, data: EMRcontainers.Types.DescribeManagedEndpointResponse) => void): Request<EMRcontainers.Types.DescribeManagedEndpointResponse, AWSError>;
   /**
@@ -84,11 +108,19 @@ declare class EMRcontainers extends Service {
    */
   listJobRuns(callback?: (err: AWSError, data: EMRcontainers.Types.ListJobRunsResponse) => void): Request<EMRcontainers.Types.ListJobRunsResponse, AWSError>;
   /**
-   * Lists managed endpoints based on a set of parameters. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+   * Lists job templates based on a set of parameters. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
+   */
+  listJobTemplates(params: EMRcontainers.Types.ListJobTemplatesRequest, callback?: (err: AWSError, data: EMRcontainers.Types.ListJobTemplatesResponse) => void): Request<EMRcontainers.Types.ListJobTemplatesResponse, AWSError>;
+  /**
+   * Lists job templates based on a set of parameters. Job template stores values of StartJobRun API request in a template and can be used to start a job run. Job template allows two use cases: avoid repeating recurring StartJobRun API request values, enforcing certain values in StartJobRun API request.
+   */
+  listJobTemplates(callback?: (err: AWSError, data: EMRcontainers.Types.ListJobTemplatesResponse) => void): Request<EMRcontainers.Types.ListJobTemplatesResponse, AWSError>;
+  /**
+   * Lists managed endpoints based on a set of parameters. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
    */
   listManagedEndpoints(params: EMRcontainers.Types.ListManagedEndpointsRequest, callback?: (err: AWSError, data: EMRcontainers.Types.ListManagedEndpointsResponse) => void): Request<EMRcontainers.Types.ListManagedEndpointsResponse, AWSError>;
   /**
-   * Lists managed endpoints based on a set of parameters. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR Studio can communicate with your virtual cluster.
+   * Lists managed endpoints based on a set of parameters. A managed endpoint is a gateway that connects Amazon EMR Studio to Amazon EMR on EKS so that Amazon EMR Studio can communicate with your virtual cluster.
    */
   listManagedEndpoints(callback?: (err: AWSError, data: EMRcontainers.Types.ListManagedEndpointsResponse) => void): Request<EMRcontainers.Types.ListManagedEndpointsResponse, AWSError>;
   /**
@@ -116,11 +148,11 @@ declare class EMRcontainers extends Service {
    */
   startJobRun(callback?: (err: AWSError, data: EMRcontainers.Types.StartJobRunResponse) => void): Request<EMRcontainers.Types.StartJobRunResponse, AWSError>;
   /**
-   * Assigns tags to resources. A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your AWS resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. For example, you can define a set of tags for your Amazon EMR on EKS clusters to help you track each cluster's owner and stack level. We recommend that you devise a consistent set of tag keys for each resource type. You can then search and filter the resources based on the tags that you add.
+   * Assigns tags to resources. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your Amazon Web Services resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. For example, you can define a set of tags for your Amazon EMR on EKS clusters to help you track each cluster's owner and stack level. We recommend that you devise a consistent set of tag keys for each resource type. You can then search and filter the resources based on the tags that you add.
    */
   tagResource(params: EMRcontainers.Types.TagResourceRequest, callback?: (err: AWSError, data: EMRcontainers.Types.TagResourceResponse) => void): Request<EMRcontainers.Types.TagResourceResponse, AWSError>;
   /**
-   * Assigns tags to resources. A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your AWS resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. For example, you can define a set of tags for your Amazon EMR on EKS clusters to help you track each cluster's owner and stack level. We recommend that you devise a consistent set of tag keys for each resource type. You can then search and filter the resources based on the tags that you add.
+   * Assigns tags to resources. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your Amazon Web Services resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. For example, you can define a set of tags for your Amazon EMR on EKS clusters to help you track each cluster's owner and stack level. We recommend that you devise a consistent set of tag keys for each resource type. You can then search and filter the resources based on the tags that you add.
    */
   tagResource(callback?: (err: AWSError, data: EMRcontainers.Types.TagResourceResponse) => void): Request<EMRcontainers.Types.TagResourceResponse, AWSError>;
   /**
@@ -204,13 +236,13 @@ declare namespace EMRcontainers {
   }
   export interface ContainerInfo {
     /**
-     * The information about the EKS cluster.
+     * The information about the Amazon EKS cluster.
      */
     eksInfo?: EksInfo;
   }
   export interface ContainerProvider {
     /**
-     * The type of the container provider. EKS is the only supported type as of now.
+     * The type of the container provider. Amazon EKS is the only supported type as of now.
      */
     type: ContainerProviderType;
     /**
@@ -223,6 +255,46 @@ declare namespace EMRcontainers {
     info?: ContainerInfo;
   }
   export type ContainerProviderType = "EKS"|string;
+  export interface CreateJobTemplateRequest {
+    /**
+     * The specified name of the job template.
+     */
+    name: ResourceNameString;
+    /**
+     * The client token of the job template.
+     */
+    clientToken: ClientToken;
+    /**
+     * The job template data which holds values of StartJobRun API request.
+     */
+    jobTemplateData: JobTemplateData;
+    /**
+     * The tags that are associated with the job template.
+     */
+    tags?: TagMap;
+    /**
+     * The KMS key ARN used to encrypt the job template.
+     */
+    kmsKeyArn?: KmsKeyArn;
+  }
+  export interface CreateJobTemplateResponse {
+    /**
+     * This output display the created job template ID.
+     */
+    id?: ResourceIdString;
+    /**
+     * This output displays the name of the created job template.
+     */
+    name?: ResourceNameString;
+    /**
+     * This output display the ARN of the created job template.
+     */
+    arn?: JobTemplateArn;
+    /**
+     * This output displays the date and time when the job template was created.
+     */
+    createdAt?: _Date;
+  }
   export interface CreateManagedEndpointRequest {
     /**
      * The name of the managed endpoint.
@@ -245,7 +317,7 @@ declare namespace EMRcontainers {
      */
     executionRoleArn: IAMRoleArn;
     /**
-     * The certificate ARN provided by users for the managed endpoint. This fiedd is under deprecation and will be removed in future releases.
+     * The certificate ARN provided by users for the managed endpoint. This field is under deprecation and will be removed in future releases.
      */
     certificateArn?: ACMCertArn;
     /**
@@ -312,6 +384,18 @@ declare namespace EMRcontainers {
     arn?: VirtualClusterArn;
   }
   export type _Date = Date;
+  export interface DeleteJobTemplateRequest {
+    /**
+     * The ID of the job template that will be deleted.
+     */
+    id: ResourceIdString;
+  }
+  export interface DeleteJobTemplateResponse {
+    /**
+     * This output contains the ID of the job template that was deleted.
+     */
+    id?: ResourceIdString;
+  }
   export interface DeleteManagedEndpointRequest {
     /**
      * The ID of the managed endpoint.
@@ -360,6 +444,18 @@ declare namespace EMRcontainers {
      */
     jobRun?: JobRun;
   }
+  export interface DescribeJobTemplateRequest {
+    /**
+     * The ID of the job template that will be described.
+     */
+    id: ResourceIdString;
+  }
+  export interface DescribeJobTemplateResponse {
+    /**
+     * This output displays information about the specified job template.
+     */
+    jobTemplate?: JobTemplate;
+  }
   export interface DescribeManagedEndpointRequest {
     /**
      * This output displays ID of the managed endpoint.
@@ -390,7 +486,7 @@ declare namespace EMRcontainers {
   }
   export interface EksInfo {
     /**
-     * The namespaces of the EKS cluster.
+     * The namespaces of the Amazon EKS cluster.
      */
     namespace?: KubernetesNamespace;
   }
@@ -486,6 +582,10 @@ declare namespace EMRcontainers {
      * The job driver parameters specified for spark submit.
      */
     sparkSubmitJobDriver?: SparkSubmitJobDriver;
+    /**
+     * The job driver for job type.
+     */
+    sparkSqlJobDriver?: SparkSqlJobDriver;
   }
   export interface JobRun {
     /**
@@ -552,10 +652,82 @@ declare namespace EMRcontainers {
      * The assigned tags of the job run.
      */
     tags?: TagMap;
+    /**
+     * The configuration of the retry policy that the job runs on.
+     */
+    retryPolicyConfiguration?: RetryPolicyConfiguration;
+    /**
+     * The current status of the retry policy executed on the job.
+     */
+    retryPolicyExecution?: RetryPolicyExecution;
   }
   export type JobRunState = "PENDING"|"SUBMITTED"|"RUNNING"|"FAILED"|"CANCELLED"|"CANCEL_PENDING"|"COMPLETED"|string;
   export type JobRunStates = JobRunState[];
   export type JobRuns = JobRun[];
+  export interface JobTemplate {
+    /**
+     * The name of the job template.
+     */
+    name?: ResourceNameString;
+    /**
+     * The ID of the job template.
+     */
+    id?: ResourceIdString;
+    /**
+     * The ARN of the job template.
+     */
+    arn?: JobTemplateArn;
+    /**
+     *  The date and time when the job template was created.
+     */
+    createdAt?: _Date;
+    /**
+     *  The user who created the job template.
+     */
+    createdBy?: RequestIdentityUserArn;
+    /**
+     * The tags assigned to the job template.
+     */
+    tags?: TagMap;
+    /**
+     * The job template data which holds values of StartJobRun API request.
+     */
+    jobTemplateData: JobTemplateData;
+    /**
+     *  The KMS key ARN used to encrypt the job template.
+     */
+    kmsKeyArn?: KmsKeyArn;
+    /**
+     * The error message in case the decryption of job template fails.
+     */
+    decryptionError?: String2048;
+  }
+  export type JobTemplateArn = string;
+  export interface JobTemplateData {
+    /**
+     * The execution role ARN of the job run.
+     */
+    executionRoleArn: ParametricIAMRoleArn;
+    /**
+     *  The release version of Amazon EMR.
+     */
+    releaseLabel: ParametricReleaseLabel;
+    /**
+     *  The configuration settings that are used to override defaults configuration.
+     */
+    configurationOverrides?: ParametricConfigurationOverrides;
+    jobDriver: JobDriver;
+    /**
+     * The configuration of parameters existing in the job template.
+     */
+    parameterConfiguration?: TemplateParameterConfigurationMap;
+    /**
+     * The tags assigned to jobs started using the job template.
+     */
+    jobTags?: TagMap;
+  }
+  export type JobTemplates = JobTemplate[];
+  export type KmsKeyArn = string;
   export type KubernetesNamespace = string;
   export interface ListJobRunsRequest {
     /**
@@ -594,6 +766,34 @@ declare namespace EMRcontainers {
     jobRuns?: JobRuns;
     /**
      * This output displays the token for the next set of job runs.
+     */
+    nextToken?: NextToken;
+  }
+  export interface ListJobTemplatesRequest {
+    /**
+     * The date and time after which the job templates were created.
+     */
+    createdAfter?: _Date;
+    /**
+     *  The date and time before which the job templates were created.
+     */
+    createdBefore?: _Date;
+    /**
+     *  The maximum number of job templates that can be listed.
+     */
+    maxResults?: JavaInteger;
+    /**
+     *  The token for the next set of job templates to return.
+     */
+    nextToken?: NextToken;
+  }
+  export interface ListJobTemplatesResponse {
+    /**
+     * This output lists information about the specified job templates.
+     */
+    templates?: JobTemplates;
+    /**
+     *  This output displays the token for the next set of job templates.
      */
     nextToken?: NextToken;
   }
@@ -655,7 +855,7 @@ declare namespace EMRcontainers {
      */
     containerProviderId?: String1024;
     /**
-     * The container provider type of the virtual cluster. EKS is the only supported type as of now.
+     * The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
      */
     containerProviderType?: ContainerProviderType;
     /**
@@ -705,11 +905,65 @@ declare namespace EMRcontainers {
     s3MonitoringConfiguration?: S3MonitoringConfiguration;
   }
   export type NextToken = string;
+  export interface ParametricCloudWatchMonitoringConfiguration {
+    /**
+     *  The name of the log group for log publishing.
+     */
+    logGroupName?: TemplateParameter;
+    /**
+     *  The specified name prefix for log streams.
+     */
+    logStreamNamePrefix?: String256;
+  }
+  export interface ParametricConfigurationOverrides {
+    /**
+     *  The configurations for the application running by the job run.
+     */
+    applicationConfiguration?: ConfigurationList;
+    /**
+     *  The configurations for monitoring. 
+     */
+    monitoringConfiguration?: ParametricMonitoringConfiguration;
+  }
+  export type ParametricIAMRoleArn = string;
+  export interface ParametricMonitoringConfiguration {
+    /**
+     *  Monitoring configurations for the persistent application UI.
+     */
+    persistentAppUI?: TemplateParameter;
+    /**
+     *  Monitoring configurations for CloudWatch.
+     */
+    cloudWatchMonitoringConfiguration?: ParametricCloudWatchMonitoringConfiguration;
+    /**
+     *  Amazon S3 configuration for monitoring log publishing.
+     */
+    s3MonitoringConfiguration?: ParametricS3MonitoringConfiguration;
+  }
+  export type ParametricReleaseLabel = string;
+  export interface ParametricS3MonitoringConfiguration {
+    /**
+     * Amazon S3 destination URI for log publishing.
+     */
+    logUri?: UriString;
+  }
   export type PersistentAppUI = "ENABLED"|"DISABLED"|string;
   export type ReleaseLabel = string;
   export type RequestIdentityUserArn = string;
   export type ResourceIdString = string;
   export type ResourceNameString = string;
+  export interface RetryPolicyConfiguration {
+    /**
+     * The maximum number of attempts on the job's driver.
+     */
+    maxAttempts: JavaInteger;
+  }
+  export interface RetryPolicyExecution {
+    /**
+     * The current number of attempts made on the driver of the job.
+     */
+    currentAttemptCount: JavaInteger;
+  }
   export type RsiArn = string;
   export interface S3MonitoringConfiguration {
     /**
@@ -718,6 +972,17 @@ declare namespace EMRcontainers {
     logUri: UriString;
   }
   export type SensitivePropertiesMap = {[key: string]: String1024};
+  export interface SparkSqlJobDriver {
+    /**
+     * The SQL file to be executed.
+     */
+    entryPoint?: EntryPointPath;
+    /**
+     * The Spark parameters to be included in the Spark SQL command.
+     */
+    sparkSqlParameters?: SparkSqlParameters;
+  }
+  export type SparkSqlParameters = string;
   export interface SparkSubmitJobDriver {
     /**
      * The entry point of job application.
@@ -749,15 +1014,15 @@ declare namespace EMRcontainers {
     /**
      * The execution role ARN for the job run.
      */
-    executionRoleArn: IAMRoleArn;
+    executionRoleArn?: IAMRoleArn;
     /**
      * The Amazon EMR release version to use for the job run.
      */
-    releaseLabel: ReleaseLabel;
+    releaseLabel?: ReleaseLabel;
     /**
      * The job driver for the job run.
      */
-    jobDriver: JobDriver;
+    jobDriver?: JobDriver;
     /**
      * The configuration overrides for the job run.
      */
@@ -766,6 +1031,18 @@ declare namespace EMRcontainers {
      * The tags assigned to job runs.
      */
     tags?: TagMap;
+    /**
+     * The job template ID to be used to start the job run.
+     */
+    jobTemplateId?: ResourceIdString;
+    /**
+     * The values of job template parameters to start a job run.
+     */
+    jobTemplateParameters?: TemplateParameterInputMap;
+    /**
+     * The retry policy configuration for the job run.
+     */
+    retryPolicyConfiguration?: RetryPolicyConfiguration;
   }
   export interface StartJobRunResponse {
     /**
@@ -787,6 +1064,7 @@ declare namespace EMRcontainers {
   }
   export type String1024 = string;
   export type String128 = string;
+  export type String2048 = string;
   export type String256 = string;
   export type StringEmpty256 = string;
   export type SubnetIds = String256[];
@@ -804,6 +1082,21 @@ declare namespace EMRcontainers {
   }
   export interface TagResourceResponse {
   }
+  export type TemplateParameter = string;
+  export interface TemplateParameterConfiguration {
+    /**
+     * The type of the job template parameter. Allowed values are: ‘STRING’, ‘NUMBER’.
+     */
+    type?: TemplateParameterDataType;
+    /**
+     * The default value for the job template parameter.
+     */
+    defaultValue?: String1024;
+  }
+  export type TemplateParameterConfigurationMap = {[key: string]: TemplateParameterConfiguration};
+  export type TemplateParameterDataType = "NUMBER"|"STRING"|string;
+  export type TemplateParameterInputMap = {[key: string]: String1024};
+  export type TemplateParameterName = string;
   export interface UntagResourceRequest {
     /**
      * The ARN of resources.

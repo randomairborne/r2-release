@@ -29,11 +29,11 @@ declare class EKS extends Service {
    */
   associateIdentityProviderConfig(callback?: (err: AWSError, data: EKS.Types.AssociateIdentityProviderConfigResponse) => void): Request<EKS.Types.AssociateIdentityProviderConfigResponse, AWSError>;
   /**
-   * Creates an Amazon EKS add-on. Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters. Amazon EKS add-ons require clusters running version 1.18 or later because Amazon EKS add-ons rely on the Server-side Apply Kubernetes feature, which is only available in Kubernetes 1.18 and later. For more information, see Amazon EKS add-ons in the Amazon EKS User Guide.
+   * Creates an Amazon EKS add-on. Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters. For more information, see Amazon EKS add-ons in the Amazon EKS User Guide.
    */
   createAddon(params: EKS.Types.CreateAddonRequest, callback?: (err: AWSError, data: EKS.Types.CreateAddonResponse) => void): Request<EKS.Types.CreateAddonResponse, AWSError>;
   /**
-   * Creates an Amazon EKS add-on. Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters. Amazon EKS add-ons require clusters running version 1.18 or later because Amazon EKS add-ons rely on the Server-side Apply Kubernetes feature, which is only available in Kubernetes 1.18 and later. For more information, see Amazon EKS add-ons in the Amazon EKS User Guide.
+   * Creates an Amazon EKS add-on. Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters. For more information, see Amazon EKS add-ons in the Amazon EKS User Guide.
    */
   createAddon(callback?: (err: AWSError, data: EKS.Types.CreateAddonResponse) => void): Request<EKS.Types.CreateAddonResponse, AWSError>;
   /**
@@ -53,11 +53,11 @@ declare class EKS extends Service {
    */
   createFargateProfile(callback?: (err: AWSError, data: EKS.Types.CreateFargateProfileResponse) => void): Request<EKS.Types.CreateFargateProfileResponse, AWSError>;
   /**
-   * Creates a managed node group for an Amazon EKS cluster. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster. All node groups are created with the latest AMI release version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template. For more information about using launch templates, see Launch template support. An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are managed by Amazon Web Services for an Amazon EKS cluster. Each node group uses a version of the Amazon EKS optimized Amazon Linux 2 AMI. For more information, see Managed Node Groups in the Amazon EKS User Guide. 
+   * Creates a managed node group for an Amazon EKS cluster. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster. All node groups are created with the latest AMI release version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template. For more information about using launch templates, see Launch template support. An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are managed by Amazon Web Services for an Amazon EKS cluster. For more information, see Managed node groups in the Amazon EKS User Guide.  Windows AMI types are only supported for commercial Regions that support Windows Amazon EKS. 
    */
   createNodegroup(params: EKS.Types.CreateNodegroupRequest, callback?: (err: AWSError, data: EKS.Types.CreateNodegroupResponse) => void): Request<EKS.Types.CreateNodegroupResponse, AWSError>;
   /**
-   * Creates a managed node group for an Amazon EKS cluster. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster. All node groups are created with the latest AMI release version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template. For more information about using launch templates, see Launch template support. An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are managed by Amazon Web Services for an Amazon EKS cluster. Each node group uses a version of the Amazon EKS optimized Amazon Linux 2 AMI. For more information, see Managed Node Groups in the Amazon EKS User Guide. 
+   * Creates a managed node group for an Amazon EKS cluster. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster. All node groups are created with the latest AMI release version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template. For more information about using launch templates, see Launch template support. An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are managed by Amazon Web Services for an Amazon EKS cluster. For more information, see Managed node groups in the Amazon EKS User Guide.  Windows AMI types are only supported for commercial Regions that support Windows Amazon EKS. 
    */
   createNodegroup(callback?: (err: AWSError, data: EKS.Types.CreateNodegroupResponse) => void): Request<EKS.Types.CreateNodegroupResponse, AWSError>;
   /**
@@ -109,11 +109,19 @@ declare class EKS extends Service {
    */
   describeAddon(callback?: (err: AWSError, data: EKS.Types.DescribeAddonResponse) => void): Request<EKS.Types.DescribeAddonResponse, AWSError>;
   /**
-   * Describes the Kubernetes versions that the add-on can be used with.
+   * Returns configuration options.
+   */
+  describeAddonConfiguration(params: EKS.Types.DescribeAddonConfigurationRequest, callback?: (err: AWSError, data: EKS.Types.DescribeAddonConfigurationResponse) => void): Request<EKS.Types.DescribeAddonConfigurationResponse, AWSError>;
+  /**
+   * Returns configuration options.
+   */
+  describeAddonConfiguration(callback?: (err: AWSError, data: EKS.Types.DescribeAddonConfigurationResponse) => void): Request<EKS.Types.DescribeAddonConfigurationResponse, AWSError>;
+  /**
+   * Describes the versions for an add-on. Information such as the Kubernetes versions that you can use the add-on with, the owner, publisher, and the type of the add-on are returned. 
    */
   describeAddonVersions(params: EKS.Types.DescribeAddonVersionsRequest, callback?: (err: AWSError, data: EKS.Types.DescribeAddonVersionsResponse) => void): Request<EKS.Types.DescribeAddonVersionsResponse, AWSError>;
   /**
-   * Describes the Kubernetes versions that the add-on can be used with.
+   * Describes the versions for an add-on. Information such as the Kubernetes versions that you can use the add-on with, the owner, publisher, and the type of the add-on are returned. 
    */
   describeAddonVersions(callback?: (err: AWSError, data: EKS.Types.DescribeAddonVersionsResponse) => void): Request<EKS.Types.DescribeAddonVersionsResponse, AWSError>;
   /**
@@ -277,11 +285,11 @@ declare class EKS extends Service {
    */
   updateNodegroupConfig(callback?: (err: AWSError, data: EKS.Types.UpdateNodegroupConfigResponse) => void): Request<EKS.Types.UpdateNodegroupConfigResponse, AWSError>;
   /**
-   * Updates the Kubernetes version or AMI version of an Amazon EKS managed node group. You can update a node group using a launch template only if the node group was originally deployed with a launch template. If you need to update a custom AMI in a node group that was deployed with a launch template, then update your custom AMI, specify the new ID in a new version of the launch template, and then update the node group to the new version of the launch template. If you update without a launch template, then you can update to the latest available AMI version of a node group's current Kubernetes version by not specifying a Kubernetes version in the request. You can update to the latest AMI version of your cluster's current Kubernetes version by specifying your cluster's Kubernetes version in the request. For more information, see Amazon EKS optimized Amazon Linux 2 AMI versions in the Amazon EKS User Guide. You cannot roll back a node group to an earlier Kubernetes version or AMI version. When a node in a managed node group is terminated due to a scaling action or update, the pods in that node are drained first. Amazon EKS attempts to drain the nodes gracefully and will fail if it is unable to do so. You can force the update if Amazon EKS is unable to drain the nodes as a result of a pod disruption budget issue.
+   * Updates the Kubernetes version or AMI version of an Amazon EKS managed node group. You can update a node group using a launch template only if the node group was originally deployed with a launch template. If you need to update a custom AMI in a node group that was deployed with a launch template, then update your custom AMI, specify the new ID in a new version of the launch template, and then update the node group to the new version of the launch template. If you update without a launch template, then you can update to the latest available AMI version of a node group's current Kubernetes version by not specifying a Kubernetes version in the request. You can update to the latest AMI version of your cluster's current Kubernetes version by specifying your cluster's Kubernetes version in the request. For information about Linux versions, see Amazon EKS optimized Amazon Linux AMI versions in the Amazon EKS User Guide. For information about Windows versions, see Amazon EKS optimized Windows AMI versions in the Amazon EKS User Guide.  You cannot roll back a node group to an earlier Kubernetes version or AMI version. When a node in a managed node group is terminated due to a scaling action or update, the pods in that node are drained first. Amazon EKS attempts to drain the nodes gracefully and will fail if it is unable to do so. You can force the update if Amazon EKS is unable to drain the nodes as a result of a pod disruption budget issue.
    */
   updateNodegroupVersion(params: EKS.Types.UpdateNodegroupVersionRequest, callback?: (err: AWSError, data: EKS.Types.UpdateNodegroupVersionResponse) => void): Request<EKS.Types.UpdateNodegroupVersionResponse, AWSError>;
   /**
-   * Updates the Kubernetes version or AMI version of an Amazon EKS managed node group. You can update a node group using a launch template only if the node group was originally deployed with a launch template. If you need to update a custom AMI in a node group that was deployed with a launch template, then update your custom AMI, specify the new ID in a new version of the launch template, and then update the node group to the new version of the launch template. If you update without a launch template, then you can update to the latest available AMI version of a node group's current Kubernetes version by not specifying a Kubernetes version in the request. You can update to the latest AMI version of your cluster's current Kubernetes version by specifying your cluster's Kubernetes version in the request. For more information, see Amazon EKS optimized Amazon Linux 2 AMI versions in the Amazon EKS User Guide. You cannot roll back a node group to an earlier Kubernetes version or AMI version. When a node in a managed node group is terminated due to a scaling action or update, the pods in that node are drained first. Amazon EKS attempts to drain the nodes gracefully and will fail if it is unable to do so. You can force the update if Amazon EKS is unable to drain the nodes as a result of a pod disruption budget issue.
+   * Updates the Kubernetes version or AMI version of an Amazon EKS managed node group. You can update a node group using a launch template only if the node group was originally deployed with a launch template. If you need to update a custom AMI in a node group that was deployed with a launch template, then update your custom AMI, specify the new ID in a new version of the launch template, and then update the node group to the new version of the launch template. If you update without a launch template, then you can update to the latest available AMI version of a node group's current Kubernetes version by not specifying a Kubernetes version in the request. You can update to the latest AMI version of your cluster's current Kubernetes version by specifying your cluster's Kubernetes version in the request. For information about Linux versions, see Amazon EKS optimized Amazon Linux AMI versions in the Amazon EKS User Guide. For information about Windows versions, see Amazon EKS optimized Windows AMI versions in the Amazon EKS User Guide.  You cannot roll back a node group to an earlier Kubernetes version or AMI version. When a node in a managed node group is terminated due to a scaling action or update, the pods in that node are drained first. Amazon EKS attempts to drain the nodes gracefully and will fail if it is unable to do so. You can force the update if Amazon EKS is unable to drain the nodes as a result of a pod disruption budget issue.
    */
   updateNodegroupVersion(callback?: (err: AWSError, data: EKS.Types.UpdateNodegroupVersionResponse) => void): Request<EKS.Types.UpdateNodegroupVersionResponse, AWSError>;
   /**
@@ -350,7 +358,7 @@ declare class EKS extends Service {
   waitFor(state: "fargateProfileDeleted", callback?: (err: AWSError, data: EKS.Types.DescribeFargateProfileResponse) => void): Request<EKS.Types.DescribeFargateProfileResponse, AWSError>;
 }
 declare namespace EKS {
-  export type AMITypes = "AL2_x86_64"|"AL2_x86_64_GPU"|"AL2_ARM_64"|"CUSTOM"|"BOTTLEROCKET_ARM_64"|"BOTTLEROCKET_x86_64"|"BOTTLEROCKET_ARM_64_NVIDIA"|"BOTTLEROCKET_x86_64_NVIDIA"|string;
+  export type AMITypes = "AL2_x86_64"|"AL2_x86_64_GPU"|"AL2_ARM_64"|"CUSTOM"|"BOTTLEROCKET_ARM_64"|"BOTTLEROCKET_x86_64"|"BOTTLEROCKET_ARM_64_NVIDIA"|"BOTTLEROCKET_x86_64_NVIDIA"|"WINDOWS_CORE_2019_x86_64"|"WINDOWS_FULL_2019_x86_64"|"WINDOWS_CORE_2022_x86_64"|"WINDOWS_FULL_2022_x86_64"|string;
   export interface Addon {
     /**
      * The name of the add-on.
@@ -385,17 +393,33 @@ declare namespace EKS {
      */
     modifiedAt?: Timestamp;
     /**
-     * The Amazon Resource Name (ARN) of the IAM role that is bound to the Kubernetes service account used by the add-on.
+     * The Amazon Resource Name (ARN) of the IAM role that's bound to the Kubernetes service account that the add-on uses.
      */
     serviceAccountRoleArn?: String;
     /**
      * The metadata that you apply to the add-on to assist with categorization and organization. Each tag consists of a key and an optional value. You define both. Add-on tags do not propagate to any other resources associated with the cluster. 
      */
     tags?: TagMap;
+    /**
+     * The publisher of the add-on.
+     */
+    publisher?: String;
+    /**
+     * The owner of the add-on.
+     */
+    owner?: String;
+    /**
+     * Information about an Amazon EKS add-on from the Amazon Web Services Marketplace.
+     */
+    marketplaceInformation?: MarketplaceInformation;
+    /**
+     * The configuration values that you provided.
+     */
+    configurationValues?: String;
   }
   export interface AddonHealth {
     /**
-     * An object that represents the add-on's health issues.
+     * An object representing the health issues for an add-on.
      */
     issues?: AddonIssueList;
   }
@@ -409,9 +433,21 @@ declare namespace EKS {
      */
     type?: String;
     /**
-     * An object that represents information about available add-on versions and compatible Kubernetes versions.
+     * An object representing information about available add-on versions and compatible Kubernetes versions.
      */
     addonVersions?: AddonVersionInfoList;
+    /**
+     * The publisher of the add-on.
+     */
+    publisher?: String;
+    /**
+     * The owner of the add-on.
+     */
+    owner?: String;
+    /**
+     * Information about the add-on from the Amazon Web Services Marketplace.
+     */
+    marketplaceInformation?: MarketplaceInformation;
   }
   export interface AddonIssue {
     /**
@@ -429,7 +465,7 @@ declare namespace EKS {
   }
   export type AddonIssueCode = "AccessDenied"|"InternalFailure"|"ClusterUnreachable"|"InsufficientNumberOfReplicas"|"ConfigurationConflict"|"AdmissionRequestDenied"|"UnsupportedAddonModification"|"K8sResourceNotFound"|string;
   export type AddonIssueList = AddonIssue[];
-  export type AddonStatus = "CREATING"|"ACTIVE"|"CREATE_FAILED"|"UPDATING"|"DELETING"|"DELETE_FAILED"|"DEGRADED"|string;
+  export type AddonStatus = "CREATING"|"ACTIVE"|"CREATE_FAILED"|"UPDATING"|"DELETING"|"DELETE_FAILED"|"DEGRADED"|"UPDATE_FAILED"|string;
   export interface AddonVersionInfo {
     /**
      * The version of the add-on.
@@ -440,9 +476,13 @@ declare namespace EKS {
      */
     architecture?: StringList;
     /**
-     * An object that represents the compatibilities of a version.
+     * An object representing the compatibilities of a version.
      */
     compatibilities?: Compatibilities;
+    /**
+     * Whether the add-on requires configuration.
+     */
+    requiresConfiguration?: Boolean;
   }
   export type AddonVersionInfoList = AddonVersionInfo[];
   export type Addons = AddonInfo[];
@@ -469,7 +509,7 @@ declare namespace EKS {
      */
     clusterName: String;
     /**
-     * An object that represents an OpenID Connect (OIDC) identity provider configuration.
+     * An object representing an OpenID Connect (OIDC) identity provider configuration.
      */
     oidc: OidcIdentityProviderConfigRequest;
     /**
@@ -575,7 +615,41 @@ declare namespace EKS {
      * The configuration used to connect to a cluster for registration.
      */
     connectorConfig?: ConnectorConfigResponse;
+    /**
+     * The ID of your local Amazon EKS cluster on an Amazon Web Services Outpost. This property isn't available for an Amazon EKS cluster on the Amazon Web Services cloud.
+     */
+    id?: String;
+    /**
+     * An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost. This object isn't available for clusters on the Amazon Web Services cloud.
+     */
+    health?: ClusterHealth;
+    /**
+     * An object representing the configuration of your local Amazon EKS cluster on an Amazon Web Services Outpost. This object isn't available for clusters on the Amazon Web Services cloud.
+     */
+    outpostConfig?: OutpostConfigResponse;
   }
+  export interface ClusterHealth {
+    /**
+     * An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services Outpost.
+     */
+    issues?: ClusterIssueList;
+  }
+  export interface ClusterIssue {
+    /**
+     * The error code of the issue.
+     */
+    code?: ClusterIssueCode;
+    /**
+     * A description of the issue.
+     */
+    message?: String;
+    /**
+     * The resource IDs that the issue relates to.
+     */
+    resourceIds?: StringList;
+  }
+  export type ClusterIssueCode = "AccessDenied"|"ClusterUnreachable"|"ConfigurationConflict"|"InternalFailure"|"ResourceLimitExceeded"|"ResourceNotFound"|string;
+  export type ClusterIssueList = ClusterIssue[];
   export type ClusterName = string;
   export type ClusterStatus = "CREATING"|"ACTIVE"|"DELETING"|"FAILED"|"UPDATING"|"PENDING"|string;
   export type Compatibilities = Compatibility[];
@@ -626,13 +700,25 @@ declare namespace EKS {
      */
     roleArn?: String;
   }
+  export interface ControlPlanePlacementRequest {
+    /**
+     * The name of the placement group for the Kubernetes control plane instances. This setting can't be changed after cluster creation. 
+     */
+    groupName?: String;
+  }
+  export interface ControlPlanePlacementResponse {
+    /**
+     * The name of the placement group for the Kubernetes control plane instances.
+     */
+    groupName?: String;
+  }
   export interface CreateAddonRequest {
     /**
      * The name of the cluster to create the add-on for.
      */
     clusterName: ClusterName;
     /**
-     * The name of the add-on. The name must match one of the names returned by  DescribeAddonVersions .
+     * The name of the add-on. The name must match one of the names that  DescribeAddonVersions  returns.
      */
     addonName: String;
     /**
@@ -644,7 +730,7 @@ declare namespace EKS {
      */
     serviceAccountRoleArn?: RoleArn;
     /**
-     * How to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on.
+     * How to resolve field value conflicts for an Amazon EKS add-on. Conflicts are handled based on the value you choose:    None – If the self-managed version of the add-on is installed on your cluster, Amazon EKS doesn't change the value. Creation of the add-on might fail.    Overwrite – If the self-managed version of the add-on is installed on your cluster and the Amazon EKS default value is different than the existing value, Amazon EKS changes the value to the Amazon EKS default value.    Preserve – Not supported. You can set this value when updating an add-on though. For more information, see UpdateAddon.   If you don't currently have the self-managed version of the add-on installed on your cluster, the Amazon EKS add-on is installed. Amazon EKS sets all values to default values, regardless of the option that you specify.
      */
     resolveConflicts?: ResolveConflicts;
     /**
@@ -655,6 +741,10 @@ declare namespace EKS {
      * The metadata to apply to the cluster to assist with categorization and organization. Each tag consists of a key and an optional value. You define both.
      */
     tags?: TagMap;
+    /**
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against the schema in  DescribeAddonConfiguration .
+     */
+    configurationValues?: String;
   }
   export interface CreateAddonResponse {
     addon?: Addon;
@@ -665,7 +755,7 @@ declare namespace EKS {
      */
     name: ClusterName;
     /**
-     * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
+     * The desired Kubernetes version for your cluster. If you don't specify a value here, the default version available in Amazon EKS is used.  The default version might not be the latest version available. 
      */
     version?: String;
     /**
@@ -696,6 +786,10 @@ declare namespace EKS {
      * The encryption configuration for the cluster.
      */
     encryptionConfig?: EncryptionConfigList;
+    /**
+     * An object representing the configuration of your local Amazon EKS cluster on an Amazon Web Services Outpost. Before creating a local cluster on an Outpost, review Local clusters for Amazon EKS on Amazon Web Services Outposts in the Amazon EKS User Guide. This object isn't available for creating Amazon EKS clusters on the Amazon Web Services cloud.
+     */
+    outpostConfig?: OutpostConfigRequest;
   }
   export interface CreateClusterResponse {
     /**
@@ -753,7 +847,7 @@ declare namespace EKS {
      */
     scalingConfig?: NodegroupScalingConfig;
     /**
-     * The root device disk size (in GiB) for your node group instances. The default disk size is 20 GiB. If you specify launchTemplate, then don't specify diskSize, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
+     * The root device disk size (in GiB) for your node group instances. The default disk size is 20 GiB for Linux and Bottlerocket. The default disk size is 50 GiB for Windows. If you specify launchTemplate, then don't specify diskSize, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
      */
     diskSize?: BoxedInteger;
     /**
@@ -761,15 +855,15 @@ declare namespace EKS {
      */
     subnets: StringList;
     /**
-     * Specify the instance types for a node group. If you specify a GPU instance type, be sure to specify AL2_x86_64_GPU with the amiType parameter. If you specify launchTemplate, then you can specify zero or one instance type in your launch template or you can specify 0-20 instance types for instanceTypes. If however, you specify an instance type in your launch template and specify any instanceTypes, the node group deployment will fail. If you don't specify an instance type in a launch template or for instanceTypes, then t3.medium is used, by default. If you specify Spot for capacityType, then we recommend specifying multiple values for instanceTypes. For more information, see Managed node group capacity types and Launch template support in the Amazon EKS User Guide.
+     * Specify the instance types for a node group. If you specify a GPU instance type, make sure to also specify an applicable GPU AMI type with the amiType parameter. If you specify launchTemplate, then you can specify zero or one instance type in your launch template or you can specify 0-20 instance types for instanceTypes. If however, you specify an instance type in your launch template and specify any instanceTypes, the node group deployment will fail. If you don't specify an instance type in a launch template or for instanceTypes, then t3.medium is used, by default. If you specify Spot for capacityType, then we recommend specifying multiple values for instanceTypes. For more information, see Managed node group capacity types and Launch template support in the Amazon EKS User Guide.
      */
     instanceTypes?: StringList;
     /**
-     * The AMI type for your node group. GPU instance types should use the AL2_x86_64_GPU AMI type. Non-GPU instances should use the AL2_x86_64 AMI type. Arm instances should use the AL2_ARM_64 AMI type. All types use the Amazon EKS optimized Amazon Linux 2 AMI. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify amiType, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
+     * The AMI type for your node group. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify amiType, or the node group deployment will fail. If your launch template uses a Windows custom AMI, then add eks:kube-proxy-windows to your Windows nodes rolearn in the aws-auth ConfigMap. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
      */
     amiType?: AMITypes;
     /**
-     * The remote access (SSH) configuration to use with your node group. If you specify launchTemplate, then don't specify remoteAccess, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
+     * The remote access configuration to use with your node group. For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify launchTemplate, then don't specify remoteAccess, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
      */
     remoteAccess?: RemoteAccessConfig;
     /**
@@ -809,7 +903,7 @@ declare namespace EKS {
      */
     version?: String;
     /**
-     * The AMI version of the Amazon EKS optimized AMI to use with your node group. By default, the latest available AMI version for the node group's current Kubernetes version is used. For more information, see Amazon EKS optimized Amazon Linux 2 AMI versions in the Amazon EKS User Guide. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify releaseVersion, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
+     * The AMI version of the Amazon EKS optimized AMI to use with your node group. By default, the latest available AMI version for the node group's current Kubernetes version is used. For information about Linux versions, see Amazon EKS optimized Amazon Linux AMI versions in the Amazon EKS User Guide. Amazon EKS managed node groups support the November 2022 and later releases of the Windows AMIs. For information about Windows versions, see Amazon EKS optimized Windows AMI versions in the Amazon EKS User Guide. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify releaseVersion, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
      */
     releaseVersion?: String;
   }
@@ -829,7 +923,7 @@ declare namespace EKS {
      */
     addonName: String;
     /**
-     * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops managing any settings for the add-on. If an IAM account is associated with the add-on, it is not removed.
+     * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops managing any settings for the add-on. If an IAM account is associated with the add-on, it isn't removed.
      */
     preserve?: Boolean;
   }
@@ -889,6 +983,30 @@ declare namespace EKS {
   export interface DeregisterClusterResponse {
     cluster?: Cluster;
   }
+  export interface DescribeAddonConfigurationRequest {
+    /**
+     * The name of the add-on. The name must match one of the names that  DescribeAddonVersions  returns.
+     */
+    addonName: String;
+    /**
+     * The version of the add-on. The version must match one of the versions returned by  DescribeAddonVersions .
+     */
+    addonVersion: String;
+  }
+  export interface DescribeAddonConfigurationResponse {
+    /**
+     * The name of the add-on.
+     */
+    addonName?: String;
+    /**
+     * The version of the add-on. The version must match one of the versions returned by  DescribeAddonVersions .
+     */
+    addonVersion?: String;
+    /**
+     * A JSON schema that's used to validate the configuration values that you provide when an addon is created or updated.
+     */
+    configurationSchema?: String;
+  }
   export interface DescribeAddonRequest {
     /**
      * The name of the cluster.
@@ -904,7 +1022,7 @@ declare namespace EKS {
   }
   export interface DescribeAddonVersionsRequest {
     /**
-     * The Kubernetes versions that the add-on can be used with.
+     * The Kubernetes versions that you can use the add-on with.
      */
     kubernetesVersion?: String;
     /**
@@ -919,11 +1037,23 @@ declare namespace EKS {
      * The name of the add-on. The name must match one of the names returned by  ListAddons .
      */
     addonName?: String;
+    /**
+     * The type of the add-on. For valid types, don't specify a value for this property.
+     */
+    types?: StringList;
+    /**
+     * The publisher of the add-on. For valid publishers, don't specify a value for this property.
+     */
+    publishers?: StringList;
+    /**
+     * The owner of the add-on. For valid owners, don't specify a value for this property.
+     */
+    owners?: StringList;
   }
   export type DescribeAddonVersionsRequestMaxResults = number;
   export interface DescribeAddonVersionsResponse {
     /**
-     * The list of available versions with Kubernetes version compatibility.
+     * The list of available versions with Kubernetes version compatibility and other properties.
      */
     addons?: Addons;
     /**
@@ -965,7 +1095,7 @@ declare namespace EKS {
      */
     clusterName: String;
     /**
-     * An object that represents an identity provider configuration.
+     * An object representing an identity provider configuration.
      */
     identityProviderConfig: IdentityProviderConfig;
   }
@@ -1021,7 +1151,7 @@ declare namespace EKS {
      */
     clusterName: String;
     /**
-     * An object that represents an identity provider configuration.
+     * An object representing an identity provider configuration.
      */
     identityProviderConfig: IdentityProviderConfig;
     /**
@@ -1129,7 +1259,7 @@ declare namespace EKS {
   }
   export interface IdentityProviderConfigResponse {
     /**
-     * An object that represents an OpenID Connect (OIDC) identity provider configuration.
+     * An object representing an OpenID Connect (OIDC) identity provider configuration.
      */
     oidc?: OidcIdentityProviderConfig;
   }
@@ -1177,15 +1307,15 @@ declare namespace EKS {
   }
   export interface LaunchTemplateSpecification {
     /**
-     * The name of the launch template.
+     * The name of the launch template. You must specify either the launch template name or the launch template ID in the request, but not both.
      */
     name?: String;
     /**
-     * The version of the launch template to use. If no version is specified, then the template's default version is used.
+     * The version number of the launch template to use. If no version is specified, then the template's default version is used.
      */
     version?: String;
     /**
-     * The ID of the launch template.
+     * The ID of the launch template. You must specify either the launch template ID or the launch template name in the request, but not both.
      */
     id?: String;
   }
@@ -1376,6 +1506,16 @@ declare namespace EKS {
      * The cluster control plane logging configuration for your cluster.
      */
     clusterLogging?: LogSetups;
+  }
+  export interface MarketplaceInformation {
+    /**
+     * The product ID from the Amazon Web Services Marketplace.
+     */
+    productId?: String;
+    /**
+     * The product URL from the Amazon Web Services Marketplace.
+     */
+    productUrl?: String;
   }
   export interface Nodegroup {
     /**
@@ -1604,6 +1744,34 @@ declare namespace EKS {
      */
     requiredClaims?: requiredClaimsMap;
   }
+  export interface OutpostConfigRequest {
+    /**
+     * The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts. Only a single Outpost ARN is supported.
+     */
+    outpostArns: StringList;
+    /**
+     * The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on Outposts. Choose an instance type based on the number of nodes that your cluster will have. For more information, see Capacity considerations in the Amazon EKS User Guide. The instance type that you specify is used for all Kubernetes control plane instances. The instance type can't be changed after cluster creation. The control plane is not automatically scaled by Amazon EKS.  
+     */
+    controlPlaneInstanceType: String;
+    /**
+     * An object representing the placement configuration for all the control plane instances of your local Amazon EKS cluster on an Amazon Web Services Outpost. For more information, see Capacity considerations in the Amazon EKS User Guide.
+     */
+    controlPlanePlacement?: ControlPlanePlacementRequest;
+  }
+  export interface OutpostConfigResponse {
+    /**
+     * The ARN of the Outpost that you specified for use with your local Amazon EKS cluster on Outposts.
+     */
+    outpostArns: StringList;
+    /**
+     * The Amazon EC2 instance type used for the control plane. The instance type is the same for all control plane instances.
+     */
+    controlPlaneInstanceType: String;
+    /**
+     * An object representing the placement configuration for all the control plane instances of your local Amazon EKS cluster on an Amazon Web Services Outpost. For more information, see Capacity considerations in the Amazon EKS User Guide.
+     */
+    controlPlanePlacement?: ControlPlanePlacementResponse;
+  }
   export type PercentCapacity = number;
   export interface Provider {
     /**
@@ -1634,15 +1802,15 @@ declare namespace EKS {
   }
   export interface RemoteAccessConfig {
     /**
-     * The Amazon EC2 SSH key that provides access for SSH communication with the nodes in the managed node group. For more information, see Amazon EC2 key pairs and Linux instances in the Amazon Elastic Compute Cloud User Guide for Linux Instances.
+     * The Amazon EC2 SSH key name that provides access for SSH communication with the nodes in the managed node group. For more information, see Amazon EC2 key pairs and Linux instances in the Amazon Elastic Compute Cloud User Guide for Linux Instances. For Windows, an Amazon EC2 SSH key is used to obtain the RDP password. For more information, see Amazon EC2 key pairs and Windows instances in the Amazon Elastic Compute Cloud User Guide for Windows Instances.
      */
     ec2SshKey?: String;
     /**
-     * The security groups that are allowed SSH access (port 22) to the nodes. If you specify an Amazon EC2 SSH key but do not specify a source security group when you create a managed node group, then port 22 on the nodes is opened to the internet (0.0.0.0/0). For more information, see Security Groups for Your VPC in the Amazon Virtual Private Cloud User Guide.
+     * The security group IDs that are allowed SSH access (port 22) to the nodes. For Windows, the port is 3389. If you specify an Amazon EC2 SSH key but don't specify a source security group when you create a managed node group, then the port on the nodes is opened to the internet (0.0.0.0/0). For more information, see Security Groups for Your VPC in the Amazon Virtual Private Cloud User Guide.
      */
     sourceSecurityGroups?: StringList;
   }
-  export type ResolveConflicts = "OVERWRITE"|"NONE"|string;
+  export type ResolveConflicts = "OVERWRITE"|"NONE"|"PRESERVE"|string;
   export type RoleArn = string;
   export type String = string;
   export type StringList = String[];
@@ -1734,13 +1902,17 @@ declare namespace EKS {
      */
     serviceAccountRoleArn?: RoleArn;
     /**
-     * How to resolve parameter value conflicts when applying the new version of the add-on to the cluster.
+     * How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Conflicts are handled based on the option you choose:    None – Amazon EKS doesn't change the value. The update might fail.    Overwrite – Amazon EKS overwrites the changed value back to the Amazon EKS default value.    Preserve – Amazon EKS preserves the value. If you choose this option, we recommend that you test any field and value changes on a non-production cluster before updating the add-on on your production cluster.  
      */
     resolveConflicts?: ResolveConflicts;
     /**
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
      */
     clientRequestToken?: String;
+    /**
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against the schema in DescribeAddonConfiguration.
+     */
+    configurationValues?: String;
   }
   export interface UpdateAddonResponse {
     update?: Update;
@@ -1840,7 +2012,7 @@ declare namespace EKS {
      */
     version?: String;
     /**
-     * The AMI version of the Amazon EKS optimized AMI to use for the update. By default, the latest available AMI version for the node group's Kubernetes version is used. For more information, see Amazon EKS optimized Amazon Linux 2 AMI versions  in the Amazon EKS User Guide. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify releaseVersion, or the node group update will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
+     * The AMI version of the Amazon EKS optimized AMI to use for the update. By default, the latest available AMI version for the node group's Kubernetes version is used. For information about Linux versions, see Amazon EKS optimized Amazon Linux AMI versions in the Amazon EKS User Guide. Amazon EKS managed node groups support the November 2022 and later releases of the Windows AMIs. For information about Windows versions, see Amazon EKS optimized Windows AMI versions in the Amazon EKS User Guide. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify releaseVersion, or the node group update will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
      */
     releaseVersion?: String;
     /**
@@ -1878,7 +2050,7 @@ declare namespace EKS {
      */
     addOrUpdateTaints?: taintsList;
     /**
-     * Kubernetes taints to be removed.
+     * Kubernetes taints to remove.
      */
     removeTaints?: taintsList;
   }
@@ -1889,7 +2061,7 @@ declare namespace EKS {
      */
     subnetIds?: StringList;
     /**
-     * Specify one or more security groups for the cross-account elastic network interfaces that Amazon EKS creates to use that allow communication between your nodes and the Kubernetes control plane. If you don't specify any security groups, then familiarize yourself with the difference between Amazon EKS defaults for clusters deployed with Kubernetes:   1.14 Amazon EKS platform version eks.2 and earlier   1.14 Amazon EKS platform version eks.3 and later    For more information, see Amazon EKS security group considerations in the  Amazon EKS User Guide .
+     * Specify one or more security groups for the cross-account elastic network interfaces that Amazon EKS creates to use that allow communication between your nodes and the Kubernetes control plane. If you don't specify any security groups, then familiarize yourself with the difference between Amazon EKS defaults for clusters deployed with Kubernetes. For more information, see Amazon EKS security group considerations in the  Amazon EKS User Guide .
      */
     securityGroupIds?: StringList;
     /**

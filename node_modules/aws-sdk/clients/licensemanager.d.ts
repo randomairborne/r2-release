@@ -36,27 +36,27 @@ declare class LicenseManager extends Service {
    */
   checkoutBorrowLicense(callback?: (err: AWSError, data: LicenseManager.Types.CheckoutBorrowLicenseResponse) => void): Request<LicenseManager.Types.CheckoutBorrowLicenseResponse, AWSError>;
   /**
-   * Checks out the specified license.
+   * Checks out the specified license.  If the account that created the license is the same that is performing the check out, you must specify the account as the beneficiary. 
    */
   checkoutLicense(params: LicenseManager.Types.CheckoutLicenseRequest, callback?: (err: AWSError, data: LicenseManager.Types.CheckoutLicenseResponse) => void): Request<LicenseManager.Types.CheckoutLicenseResponse, AWSError>;
   /**
-   * Checks out the specified license.
+   * Checks out the specified license.  If the account that created the license is the same that is performing the check out, you must specify the account as the beneficiary. 
    */
   checkoutLicense(callback?: (err: AWSError, data: LicenseManager.Types.CheckoutLicenseResponse) => void): Request<LicenseManager.Types.CheckoutLicenseResponse, AWSError>;
   /**
-   * Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon Web Services accounts.
+   * Creates a grant for the specified license. A grant shares the use of license entitlements with a specific Amazon Web Services account, an organization, or an organizational unit (OU). For more information, see Granted licenses in License Manager in the License Manager User Guide.
    */
   createGrant(params: LicenseManager.Types.CreateGrantRequest, callback?: (err: AWSError, data: LicenseManager.Types.CreateGrantResponse) => void): Request<LicenseManager.Types.CreateGrantResponse, AWSError>;
   /**
-   * Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon Web Services accounts.
+   * Creates a grant for the specified license. A grant shares the use of license entitlements with a specific Amazon Web Services account, an organization, or an organizational unit (OU). For more information, see Granted licenses in License Manager in the License Manager User Guide.
    */
   createGrant(callback?: (err: AWSError, data: LicenseManager.Types.CreateGrantResponse) => void): Request<LicenseManager.Types.CreateGrantResponse, AWSError>;
   /**
-   * Creates a new version of the specified grant.
+   * Creates a new version of the specified grant. For more information, see Granted licenses in License Manager in the License Manager User Guide.
    */
   createGrantVersion(params: LicenseManager.Types.CreateGrantVersionRequest, callback?: (err: AWSError, data: LicenseManager.Types.CreateGrantVersionResponse) => void): Request<LicenseManager.Types.CreateGrantVersionResponse, AWSError>;
   /**
-   * Creates a new version of the specified grant.
+   * Creates a new version of the specified grant. For more information, see Granted licenses in License Manager in the License Manager User Guide.
    */
   createGrantVersion(callback?: (err: AWSError, data: LicenseManager.Types.CreateGrantVersionResponse) => void): Request<LicenseManager.Types.CreateGrantVersionResponse, AWSError>;
   /**
@@ -292,13 +292,21 @@ declare class LicenseManager extends Service {
    */
   listLicenses(callback?: (err: AWSError, data: LicenseManager.Types.ListLicensesResponse) => void): Request<LicenseManager.Types.ListLicensesResponse, AWSError>;
   /**
-   * Lists grants that are received but not accepted.
+   * Lists grants that are received. Received grants are grants created while specifying the recipient as this Amazon Web Services account, your organization, or an organizational unit (OU) to which this member account belongs.
    */
   listReceivedGrants(params: LicenseManager.Types.ListReceivedGrantsRequest, callback?: (err: AWSError, data: LicenseManager.Types.ListReceivedGrantsResponse) => void): Request<LicenseManager.Types.ListReceivedGrantsResponse, AWSError>;
   /**
-   * Lists grants that are received but not accepted.
+   * Lists grants that are received. Received grants are grants created while specifying the recipient as this Amazon Web Services account, your organization, or an organizational unit (OU) to which this member account belongs.
    */
   listReceivedGrants(callback?: (err: AWSError, data: LicenseManager.Types.ListReceivedGrantsResponse) => void): Request<LicenseManager.Types.ListReceivedGrantsResponse, AWSError>;
+  /**
+   * Lists the grants received for all accounts in the organization.
+   */
+  listReceivedGrantsForOrganization(params: LicenseManager.Types.ListReceivedGrantsForOrganizationRequest, callback?: (err: AWSError, data: LicenseManager.Types.ListReceivedGrantsForOrganizationResponse) => void): Request<LicenseManager.Types.ListReceivedGrantsForOrganizationResponse, AWSError>;
+  /**
+   * Lists the grants received for all accounts in the organization.
+   */
+  listReceivedGrantsForOrganization(callback?: (err: AWSError, data: LicenseManager.Types.ListReceivedGrantsForOrganizationResponse) => void): Request<LicenseManager.Types.ListReceivedGrantsForOrganizationResponse, AWSError>;
   /**
    * Lists received licenses.
    */
@@ -307,6 +315,14 @@ declare class LicenseManager extends Service {
    * Lists received licenses.
    */
   listReceivedLicenses(callback?: (err: AWSError, data: LicenseManager.Types.ListReceivedLicensesResponse) => void): Request<LicenseManager.Types.ListReceivedLicensesResponse, AWSError>;
+  /**
+   * Lists the licenses received for all accounts in the organization.
+   */
+  listReceivedLicensesForOrganization(params: LicenseManager.Types.ListReceivedLicensesForOrganizationRequest, callback?: (err: AWSError, data: LicenseManager.Types.ListReceivedLicensesForOrganizationResponse) => void): Request<LicenseManager.Types.ListReceivedLicensesForOrganizationResponse, AWSError>;
+  /**
+   * Lists the licenses received for all accounts in the organization.
+   */
+  listReceivedLicensesForOrganization(callback?: (err: AWSError, data: LicenseManager.Types.ListReceivedLicensesForOrganizationResponse) => void): Request<LicenseManager.Types.ListReceivedLicensesForOrganizationResponse, AWSError>;
   /**
    * Lists resources managed using Systems Manager inventory.
    */
@@ -417,6 +433,7 @@ declare namespace LicenseManager {
      */
     Version?: String;
   }
+  export type ActivationOverrideBehavior = "DISTRIBUTED_GRANTS_ONLY"|"ALL_GRANTS_PERMITTED_BY_ISSUER"|string;
   export type AllowedOperation = "CreateGrant"|"CheckoutLicense"|"CheckoutBorrowLicense"|"CheckInLicense"|"ExtendConsumptionLicense"|"ListPurchasedLicenses"|"CreateToken"|string;
   export type AllowedOperationList = AllowedOperation[];
   export type Arn = string;
@@ -619,7 +636,7 @@ declare namespace LicenseManager {
      */
     LicenseArn: Arn;
     /**
-     * The grant principals.
+     * The grant principals. You can specify one of the following as an Amazon Resource Name (ARN):   An Amazon Web Services account, which includes only the account specified.     An organizational unit (OU), which includes all accounts in the OU.     An organization, which will include all accounts across your organization.  
      */
     Principals: PrincipalArnList;
     /**
@@ -674,6 +691,10 @@ declare namespace LicenseManager {
      * Current version of the grant.
      */
     SourceVersion?: String;
+    /**
+     * The options specified for the grant.
+     */
+    Options?: Options;
   }
   export interface CreateGrantVersionResponse {
     /**
@@ -739,11 +760,11 @@ declare namespace LicenseManager {
      */
     ResourceArn: Arn;
     /**
-     * Information that identifies the license type you are converting from. For the structure of the source license, see Convert a license type using the AWS CLI in the License Manager User Guide.
+     * Information that identifies the license type you are converting from. For the structure of the source license, see Convert a license type using the CLI  in the License Manager User Guide.
      */
     SourceLicenseContext: LicenseConversionContext;
     /**
-     * Information that identifies the license type you are converting to. For the structure of the destination license, see Convert a license type using the AWS CLI in the License Manager User Guide.
+     * Information that identifies the license type you are converting to. For the structure of the destination license, see Convert a license type using the CLI  in the License Manager User Guide.
      */
     DestinationLicenseContext: LicenseConversionContext;
   }
@@ -1122,7 +1143,7 @@ declare namespace LicenseManager {
      */
     Name?: FilterName;
     /**
-     * Filter values. Filter values are case-sensitive.
+     * The value of the filter, which is case-sensitive. You can only specify one value for the filter.
      */
     Values?: FilterValues;
   }
@@ -1388,6 +1409,10 @@ declare namespace LicenseManager {
      * Granted operations.
      */
     GrantedOperations: AllowedOperationList;
+    /**
+     * The options specified for the grant.
+     */
+    Options?: Options;
   }
   export type GrantList = Grant[];
   export type GrantStatus = "PENDING_WORKFLOW"|"PENDING_ACCEPT"|"REJECTED"|"ACTIVE"|"FAILED_WORKFLOW"|"DELETED"|"PENDING_DELETE"|"DISABLED"|"WORKFLOW_COMPLETED"|string;
@@ -2003,6 +2028,34 @@ declare namespace LicenseManager {
      */
     NextToken?: String;
   }
+  export interface ListReceivedGrantsForOrganizationRequest {
+    /**
+     * The Amazon Resource Name (ARN) of the received license.
+     */
+    LicenseArn: Arn;
+    /**
+     * Filters to scope the results. The following filters are supported:    ParentArn     GranteePrincipalArn   
+     */
+    Filters?: FilterList;
+    /**
+     * Token for the next set of results.
+     */
+    NextToken?: String;
+    /**
+     * Maximum number of results to return in a single call.
+     */
+    MaxResults?: MaxSize100;
+  }
+  export interface ListReceivedGrantsForOrganizationResponse {
+    /**
+     * Lists the grants the organization has received.
+     */
+    Grants?: GrantList;
+    /**
+     * Token for the next set of results.
+     */
+    NextToken?: String;
+  }
   export interface ListReceivedGrantsRequest {
     /**
      * Amazon Resource Names (ARNs) of the grants.
@@ -2026,6 +2079,30 @@ declare namespace LicenseManager {
      * Received grant details.
      */
     Grants?: GrantList;
+    /**
+     * Token for the next set of results.
+     */
+    NextToken?: String;
+  }
+  export interface ListReceivedLicensesForOrganizationRequest {
+    /**
+     * Filters to scope the results. The following filters are supported:    Beneficiary     ProductSKU   
+     */
+    Filters?: FilterList;
+    /**
+     * Token for the next set of results.
+     */
+    NextToken?: String;
+    /**
+     * Maximum number of results to return in a single call.
+     */
+    MaxResults?: MaxSize100;
+  }
+  export interface ListReceivedLicensesForOrganizationResponse {
+    /**
+     * Lists the licenses the organization has received.
+     */
+    Licenses?: GrantedLicenseList;
     /**
      * Token for the next set of results.
      */
@@ -2176,6 +2253,12 @@ declare namespace LicenseManager {
     Value?: String;
   }
   export type MetadataList = Metadata[];
+  export interface Options {
+    /**
+     * An activation option for your grant that determines the behavior of activating a grant. Activation options can only be used with granted licenses sourced from the Amazon Web Services Marketplace. Additionally, the operation must specify the value of ACTIVE for the Status parameter.   As a license administrator, you can optionally specify an ActivationOverrideBehavior when activating a grant.   As a grantor, you can optionally specify an ActivationOverrideBehavior when you activate a grant for a grantee account in your organization.   As a grantee, if the grantor creating the distributed grant doesn’t specify an ActivationOverrideBehavior, you can optionally specify one when you are activating the grant.    DISTRIBUTED_GRANTS_ONLY  Use this value to activate a grant without replacing any member account’s active grants for the same product.  ALL_GRANTS_PERMITTED_BY_ISSUER  Use this value to activate a grant and disable other active grants in any member accounts for the same product. This action will also replace their previously activated grants with this activated grant.  
+     */
+    ActivationOverrideBehavior?: ActivationOverrideBehavior;
+  }
   export interface OrganizationConfiguration {
     /**
      * Enables Organizations integration.
