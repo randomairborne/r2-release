@@ -25,4 +25,4 @@ inputs:
     default: ""
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'index.mjs'

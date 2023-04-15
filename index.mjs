@@ -1,7 +1,7 @@
-const clients3 = require("@aws-sdk/client-s3");
-const core = require('@actions/core');
-const fs = require('fs');
-const path = require('path');
+import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import core from "@actions/core";
+import fs from "fs";
+import path from "path";
 
 try {
     const endpoint = core.getInput('endpoint');
@@ -14,12 +14,11 @@ try {
         accessKeyId: accesskeyid,
         secretAccessKey: secretaccesskey,
     }
-    const client = new clients3.S3Client({
+    const client = new S3Client({
         endpoint: endpoint,
         credentials: credentials,
+        region: null
     });
-
-
     var fileStream = fs.createReadStream(file);
     fileStream.on('error', function (err) {
         console.log('File Error', err);
@@ -29,16 +28,16 @@ try {
     if (destination == "") {
         key = path.basename(file);
     } else { key = destination; }
-    const command = new clients3.PutObjectCommand({
+    const command = new PutObjectCommand({
         Bucket: bucket,
         Key: key,
         Body: fileStream,
     });
     try {
         await client.send(command);
-      } catch (err) {;
+    } catch (err) {
         core.setFailed(err);
-      }
+    }
 } catch (error) {
     core.setFailed(error.message);
 }
