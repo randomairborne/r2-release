@@ -1,4 +1,4 @@
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+const clients3 = require("@aws-sdk/client-s3");
 const core = require('@actions/core');
 const fs = require('fs');
 const path = require('path');
@@ -14,7 +14,7 @@ try {
         accessKeyId: accesskeyid,
         secretAccessKey: secretaccesskey,
     }
-    const client = new S3Client({
+    const client = new clients3.S3Client({
         endpoint: endpoint,
         credentials: credentials,
     });
@@ -29,7 +29,7 @@ try {
     if (destination == "") {
         key = path.basename(file);
     } else { key = destination; }
-    const command = new PutObjectCommand({
+    const command = new clients3.PutObjectCommand({
         Bucket: bucket,
         Key: key,
         Body: fileStream,
